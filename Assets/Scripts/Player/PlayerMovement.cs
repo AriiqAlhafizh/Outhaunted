@@ -1,79 +1,94 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D col;
-    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private PlayerInputHandler input;
 
     [Header("Movement Settings")]
-    public float movSpeed = 5f; // units per second (m/s kalau meter jadi satuan di game)
-    public PlayerDirection dir = PlayerDirection.Left;
-    [SerializeField] private float moveX;
-    [SerializeField] private float inputX;
+    public float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
+    public AttackDirection dir = AttackDirection.Left;
+    public float moveX;
 
     [Header("Jump Settings")]
-    public float jumpForce = 7.5f;
+    public float jumpForce;
     public float fallMultiplier = 2.5f; // Increases gravity when falling
     public float lowJumpMultiplier = 5f; // Increases gravity when jump is released early
     public float coyoteTime = 0.1f;
     public float jumpBufferTime = 0.15f;
-    
-    [SerializeField] private bool isJumping;
+    public bool isJumping;
+
     [SerializeField] private float coyoteTimeCounter;
     [SerializeField] private bool wasGrounded;
-    [SerializeField] private int maxJumps;
-    [SerializeField] private int jumpsLeft;
     [SerializeField] private float jumpBufferCounter;
 
-    [Header("Dash Settings")]
-    public float dashSpeed = 15f;
-    public float dashDuration = 0.2f;
-    public float dashCooldown = 1f; // Long cooldown after all dashes used
-    public float dashChainCooldown = 0.2f; // Short cooldown between consecutive dashes
+    // Ability Events
+    public delegate void MoveEvent();
+    public event MoveEvent OnMove;
 
-    [SerializeField] private int maxConsecutiveDashes;
-    [SerializeField] private int dashesLeft;
-    [SerializeField] private float dashDirection;
-    [SerializeField] private bool isDashing;
-    [SerializeField] private float dashTimeLeft;
-    [SerializeField] private float dashCooldownTimer;
-    [SerializeField] private float dashChainCooldownTimer;
+    public delegate void JumpEvent();
+    public event JumpEvent OnJump;
+
+    public delegate void LandEvent();
+    public event LandEvent OnLand;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        playerInput = GetComponent<PlayerInput>();
-        playerInput.SwitchCurrentActionMap("Player");
-        maxJumps = PlayerStatsManager.Instance.maxJumps;
-        maxConsecutiveDashes = PlayerStatsManager.Instance.maxDash;
-        jumpsLeft = maxJumps;
-        dashesLeft = maxConsecutiveDashes;
+        input = GetComponent<PlayerInputHandler>();
+
+        input.JumpPressed += JumpPressed;
+        input.JumpReleased += JumpReleased;
+
+        moveSpeed = PlayerStatsManager.Instance.CurrentCharacter.moveSpeed;
+        jumpForce = PlayerStatsManager.Instance.CurrentCharacter.jumpForce;
+    }
+
+    private void OnDisable()
+    {
+        input.JumpPressed -= JumpPressed;
+        input.JumpReleased -= JumpReleased;
     }
     private void Update()
     {
-        // DASH LOGIC
-        HandleDash();
-        if (isDashing)
-        {
-            // Skip the rest of Update while dashing
-            wasGrounded = IsGrounded();
-            return;
-        }
-
+        Move();
+        CheckGround();
+        JumpHandler();
+    }
+    public void Move()
+    {
         // HORIZONTAL MOVEMENT LOGIC
-        if (!IsGrounded() && (inputX > 0 && IsTouchingWall(Vector2.right)) || (inputX < 0 && IsTouchingWall(Vector2.left)))
-        {
-            moveX = 0f;
-        }
+        if (input.MovementVector.x < 0)
+            dir = AttackDirection.Left;
+        else if (input.MovementVector.x > 0)
+            dir = AttackDirection.Right;
+
+        // CHECK WALL
+        if ((input.MovementVector.x > 0 && IsTouchingWall(Vector2.right)))
+            moveX = Mathf.Min(0f, input.MovementVector.x); // allow left, block right
+        else if ((input.MovementVector.x < 0 && IsTouchingWall(Vector2.left)))
+            moveX = Mathf.Max(0f, input.MovementVector.x); // allow right, block left
         else
+            moveX = input.MovementVector.x;
+       
+
+        // CHECK ROOF
+        if (!IsGrounded() && IsTouchingRoof())
         {
-            moveX = inputX;
+            JumpReleased();
+            if (rb.linearVelocity.y > 0)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
         }
 
+        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+
+        OnMove?.Invoke();
+    }
+    public void CheckGround()
+    {
         // GROUND CHECK 
         bool grounded = IsGrounded();
 
@@ -81,29 +96,27 @@ public class PlayerMovement : MonoBehaviour
         if (grounded && !wasGrounded && rb.linearVelocity.y < 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
+            OnLand?.Invoke();
         }
 
-        rb.linearVelocity = new Vector2(moveX * movSpeed, rb.linearVelocity.y);
-
-        // JUMP LOGIC
-        if (jumpBufferCounter > 0)
+        // Update wasGrounded for next frame
+        wasGrounded = grounded;
+    }
+    public void JumpHandler()
+    {
+        // Handle jump buffer: if buffer is active and coyote time is available, jump
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
         {
-            StartJump();
+            PerformJump(jumpForce);
+            jumpBufferCounter = 0f; // Consume buffer
         }
         jumpBufferCounter -= Time.deltaTime;
 
-        // GROUNDED LOGIC 
-        /*
-         * Reset Jump
-         * Reset Dash
-         * CoyoteTime
-         */
+        // Update coyote time
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
-            jumpsLeft = maxJumps;
-            dashesLeft = maxConsecutiveDashes; // Reset dashes on landing
-            //dashChainCooldownTimer = 0f;
         }
         else
         {
@@ -121,95 +134,53 @@ public class PlayerMovement : MonoBehaviour
             // Jump released early: apply extra gravity
             rb.linearVelocity += (lowJumpMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
         }
-
-        // Update wasGrounded for next frame
-        wasGrounded = grounded;
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void JumpPressed()
     {
-        inputX = context.ReadValue<Vector2>().x;
-        if (inputX < 0)
-            dir = PlayerDirection.Left;
-        else if (inputX > 0)
-            dir = PlayerDirection.Right;
-    }
-
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.started)
+        // Only allow jump if within coyote time (recently grounded)
+        if (coyoteTimeCounter > 0f)
         {
+            PerformJump(jumpForce);
+            jumpBufferCounter = 0f; // Consume buffer
+        }
+        else
+        {
+            // If not grounded, start jump buffer
             jumpBufferCounter = jumpBufferTime;
         }
-        else if (context.canceled)
-        {
-            isJumping = false;
-        }
     }
-
-    private void StartJump()
+    public void ForceJump(float extJumpForce)
     {
-        if ((coyoteTimeCounter > 0 || jumpsLeft > 1))
+        // Only allow jump if within coyote time (recently grounded)
+        if (coyoteTimeCounter > 0f)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            isJumping = true;
-            if (!IsGrounded())
-                jumpsLeft--;
-            jumpBufferCounter = 0; // Consume buffer
-        }
-    }
-    public void Dash(InputAction.CallbackContext context)
-    {
-        if (context.started && !isDashing)
-        {
-            // Can dash if: have dashes left, and chain cooldown is over, and not in long cooldown
-            if (dashesLeft > 0 && dashChainCooldownTimer <= 0f && dashCooldownTimer <= 0f)
-            {
-                StartDash();
-            }
-        }
-    }
-    private void StartDash()
-    {
-        isDashing = true;
-        dashTimeLeft = dashDuration;
-        //dashDirection = Mathf.Abs(inputX) > 0.01f ? Mathf.Sign(inputX) : Mathf.Sign(transform.localScale.x);
-        dashDirection = (dir == PlayerDirection.Left) ? -1 : 1;
-        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
-
-        dashesLeft--;
-
-        if (dashesLeft > 0)
-        {
-            dashChainCooldownTimer = dashChainCooldown; // Short cooldown before next dash
+            PerformJump(extJumpForce);
+            jumpBufferCounter = 0f; // Consume buffer
         }
         else
         {
-            dashCooldownTimer = dashCooldown; // Long cooldown after all dashes used
+            // If not grounded, start jump buffer
+            jumpBufferCounter = jumpBufferTime;
         }
     }
-    private void HandleDash()
-    {
-        if (isDashing)
-        {
-            dashTimeLeft -= Time.deltaTime;
-            rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
-            moveX = 0f;
 
-            if (dashTimeLeft <= 0)
-            {
-                isDashing = false;
-            }
-        }
-        else
-        {
-            if (dashChainCooldownTimer > 0)
-                dashChainCooldownTimer -= Time.deltaTime;
-            if (dashCooldownTimer > 0)
-                dashCooldownTimer -= Time.deltaTime;
-        }
+    private void PerformJump(float jumpForce)
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        isJumping = true;
+        OnJump?.Invoke();
     }
-    private bool IsGrounded()
+
+    public void JumpReleased()
+    {
+        isJumping = false;
+    }
+    public void ResetCoyoteTime()
+    {
+        coyoteTimeCounter = coyoteTime;
+    }
+    public bool IsGrounded()
     {
         float extraHeight = 0.1f;
         float rayLength = .2f + extraHeight;
@@ -241,5 +212,21 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawRay(bottom, direction * (rayLength), hitBottom.collider ? Color.red : Color.green);
 
         return hitTop.collider != null || hitBottom.collider != null;
+    }
+
+    private bool IsTouchingRoof()
+    {
+        float extraDistance = 0.1f;
+        float rayLength = .2f + extraDistance;
+        Vector2 left = new(rb.position.x - col.bounds.extents.x + 0.01f, col.bounds.max.y);
+        Vector2 right = new(rb.position.x + col.bounds.extents.x - 0.01f, col.bounds.max.y);
+
+        RaycastHit2D hitLeft = Physics2D.Raycast(left, Vector2.up, rayLength, LayerMask.GetMask("Ground"));
+        RaycastHit2D hitRight = Physics2D.Raycast(right, Vector2.up, rayLength, LayerMask.GetMask("Ground"));
+
+        Debug.DrawRay(left, Vector2.up * (rayLength), hitLeft.collider ? Color.red : Color.green);
+        Debug.DrawRay(right, Vector2.up * (rayLength), hitRight.collider ? Color.red : Color.green);
+
+        return hitLeft.collider != null || hitRight.collider != null;
     }
 }
