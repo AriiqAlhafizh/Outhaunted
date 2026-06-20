@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultiplier = 5f; // Increases gravity when jump is released early
     public float coyoteTime = 0.1f;
     public float jumpBufferTime = 0.15f;
+    public bool isJumping;
 
-    [SerializeField] private bool isJumping;
     [SerializeField] private float coyoteTimeCounter;
     [SerializeField] private bool wasGrounded;
     [SerializeField] private float jumpBufferCounter;
@@ -45,6 +45,12 @@ public class PlayerMovement : MonoBehaviour
 
         moveSpeed = PlayerStatsManager.Instance.CurrentCharacter.moveSpeed;
         jumpForce = PlayerStatsManager.Instance.CurrentCharacter.jumpForce;
+    }
+
+    private void OnDisable()
+    {
+        input.JumpPressed -= JumpPressed;
+        input.JumpReleased -= JumpReleased;
     }
     private void Update()
     {
@@ -102,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         // Handle jump buffer: if buffer is active and coyote time is available, jump
         if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
         {
-            PerformJump();
+            PerformJump(jumpForce);
             jumpBufferCounter = 0f; // Consume buffer
         }
         jumpBufferCounter -= Time.deltaTime;
@@ -135,7 +141,21 @@ public class PlayerMovement : MonoBehaviour
         // Only allow jump if within coyote time (recently grounded)
         if (coyoteTimeCounter > 0f)
         {
-            PerformJump();
+            PerformJump(jumpForce);
+            jumpBufferCounter = 0f; // Consume buffer
+        }
+        else
+        {
+            // If not grounded, start jump buffer
+            jumpBufferCounter = jumpBufferTime;
+        }
+    }
+    public void ForceJump(float extJumpForce)
+    {
+        // Only allow jump if within coyote time (recently grounded)
+        if (coyoteTimeCounter > 0f)
+        {
+            PerformJump(extJumpForce);
             jumpBufferCounter = 0f; // Consume buffer
         }
         else
@@ -145,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void PerformJump()
+    private void PerformJump(float jumpForce)
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isJumping = true;

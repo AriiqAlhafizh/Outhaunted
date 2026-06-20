@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,12 +20,12 @@ public enum AttackType
 public class PlayerAttack : MonoBehaviour
 {
     [Header("References")]
-    // NOTE: attack anims are subject to change
-    public List<AttackAnim> attackAnims;
+    public Slash attackAnim;
     public PlayerInputHandler input;
 
     [Header("Settings")]
     public float attackCooldown = 0.5f; // Cooldown in seconds
+    public float attackDamage;
 
     [Header("Debug")]
     [SerializeField] private AttackDirection atkDir = AttackDirection.Right;
@@ -32,19 +33,29 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float lastAttackTime = -Mathf.Infinity;
 
     // Events
-    public delegate void PogoEvent();
-    public event PogoEvent OnPogo;
+    public event Action OnPogo;
+
+    public event Action<GameObject> OnAttackHit;
+
 
     private void Start()
     {
+        attackAnim = GetComponentInChildren<Slash>();
         input = GetComponent<PlayerInputHandler>();
+        
+        attackDamage = PlayerStatsManager.Instance.CurrentCharacter.attackDamage;
+
         input.AttackPressed += Attack;
+    }
+    private void OnDisable()
+    {
+        input.AttackPressed -= Attack;
     }
     private void Update()
     {
-        MoveAttackDirection();
+        GetAttackDirection();
     }
-    public void MoveAttackDirection()
+    public void GetAttackDirection()
     {
         // Update lastXDir if X input is non-zero
         if (input.MovementVector.x < 0)
@@ -70,8 +81,30 @@ public class PlayerAttack : MonoBehaviour
     }
     private void StartAttack(AttackDirection dir)
     {
-        if (dir == AttackDirection.Down)
+        
+        attackAnim.TriggerAttack(dir);
+    }
+
+    public void RegisterHit(GameObject enemy)
+    {
+        if (atkDir == AttackDirection.Down)
             OnPogo?.Invoke();
-        attackAnims[(int)dir].TriggerAttack();
+
+        OnAttackHit?.Invoke(enemy);
+
+        Debug.Log($"Hit {enemy.name} for {attackDamage} damage with a {atkDir} attack!");
+    }
+
+    public void IncreaseDamage(float amount)
+    {
+        attackDamage += amount;
+    }
+    public void DecreaseDamage(float amount)
+    {
+        attackDamage -= amount;
+    }
+    public void ResetDamage()
+    {
+        attackDamage = PlayerStatsManager.Instance.CurrentCharacter.attackDamage;
     }
 }

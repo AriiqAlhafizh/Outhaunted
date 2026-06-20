@@ -1,7 +1,6 @@
-using System.Collections;
 using UnityEngine;
 
-public class BasicComboAbility : Ability
+public class PogoComboAbility : Ability
 {
     public float dmgMultiplier = .15f;
     public int maxCombo = 10;
@@ -9,15 +8,15 @@ public class BasicComboAbility : Ability
 
     private void Start()
     {
-        context.Attack.OnAttackHit += Combo;
-        PlayerStatsManager.Instance.OnDamaged += ResetCombo;
+        context.Attack.OnPogo += Combo;
+        context.Movement.OnLand += ResetCombo;
     }
     private void OnDisable()
     {
-        context.Attack.OnAttackHit -= Combo;
-        PlayerStatsManager.Instance.OnDamaged -= ResetCombo;
+        context.Attack.OnPogo -= Combo;
+        context.Movement.OnLand -= ResetCombo;
     }
-    private void Combo(GameObject enemy)
+    private void Combo()
     {
         if (curCombo < maxCombo)
         {
@@ -26,7 +25,7 @@ public class BasicComboAbility : Ability
         }
     }
 
-    private void ResetCombo(int damage)
+    private void ResetCombo()
     {
         curCombo = 0;
         context.Attack.ResetDamage();

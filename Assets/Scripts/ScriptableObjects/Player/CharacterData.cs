@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 public enum PlayerType
 {
@@ -15,6 +16,12 @@ public class CharacterData : ScriptableObject
     public int maxHealth;
     public float moveSpeed;
     public float jumpForce;
+    public float attackDamage;
+    public float attackCooldown;
 
+    [Header("Abilities")]
     public List<Ability> startingAbilities;
+
+    [Header("Animator Settings")]
+    public AnimatorController attackAnimator;
 }
