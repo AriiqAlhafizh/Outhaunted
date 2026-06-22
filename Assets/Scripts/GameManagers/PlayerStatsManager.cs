@@ -6,13 +6,14 @@ public class PlayerStatsManager : MonoBehaviour
     public static PlayerStatsManager Instance;
     
     public CharacterData CurrentCharacter;
+    public PlayerContext CurrentPlayerContext;
 
     public int MaxHealth;
     public int CurrentHealth;
+    public Vector3 PlayerPosition;
+    public float iFrame;
+    public bool inIFrame;
 
-    // Event
-    public event Action<int> OnDamaged;
-    public event Action OnDeath;
 
     private void Awake()
     {
@@ -29,15 +30,18 @@ public class PlayerStatsManager : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    private void Update()
     {
-        CurrentHealth -= damage;
-        OnDamaged?.Invoke(damage);
-
-        if (CurrentHealth <= 0)
+        if (CurrentPlayerContext == null)
         {
-            CurrentHealth = 0;
-            OnDeath?.Invoke();
+            FindPlayerContext();
+            Debug.Log("Got Player Context");
         }
+        PlayerPosition = CurrentPlayerContext.Position;
+    }
+
+    private void FindPlayerContext()
+    {
+        CurrentPlayerContext = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerContext>();
     }
 }
