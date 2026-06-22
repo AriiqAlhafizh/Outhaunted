@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
     public AttackDirection dir = AttackDirection.Left;
     public float moveX;
+    public bool canMove;
 
     [Header("Jump Settings")]
     public float jumpForce;
@@ -43,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
         input.JumpPressed += JumpPressed;
         input.JumpReleased += JumpReleased;
 
+        canMove = true;
+
         moveSpeed = PlayerStatsManager.Instance.CurrentCharacter.moveSpeed;
         jumpForce = PlayerStatsManager.Instance.CurrentCharacter.jumpForce;
     }
@@ -54,13 +58,15 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
-        Move();
         CheckGround();
         JumpHandler();
+        Move();
     }
     public void Move()
     {
-        // HORIZONTAL MOVEMENT LOGIC
+        if (canMove)
+        {
+            // HORIZONTAL MOVEMENT LOGIC
         if (input.MovementVector.x < 0)
             dir = AttackDirection.Left;
         else if (input.MovementVector.x > 0)
@@ -85,7 +91,8 @@ public class PlayerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
-        OnMove?.Invoke();
+            OnMove?.Invoke();
+        }
     }
     public void CheckGround()
     {
@@ -228,5 +235,26 @@ public class PlayerMovement : MonoBehaviour
         Debug.DrawRay(right, Vector2.up * (rayLength), hitRight.collider ? Color.red : Color.green);
 
         return hitLeft.collider != null || hitRight.collider != null;
+    }
+    public void OnHitKnockback(Vector2 sourcePos)
+    {
+        StartCoroutine(KnockbackCoroutine(sourcePos));
+    }
+
+    public IEnumerator KnockbackCoroutine(Vector2 sourcePos)
+    {
+        PlayerStatsManager.Instance.inIFrame = true;
+        canMove = false;
+        if (sourcePos.x < transform.position.x)
+        {
+            rb.linearVelocity = new Vector2(5f, 5f);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(-5f, 5f);
+        }
+        yield return new WaitForSeconds(PlayerStatsManager.Instance.iFrame);
+        PlayerStatsManager.Instance.inIFrame = false;
+        canMove = true;
     }
 }
