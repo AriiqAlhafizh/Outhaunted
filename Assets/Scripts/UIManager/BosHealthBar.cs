@@ -14,7 +14,6 @@ public class BosHealthBar : MonoBehaviour
     void Start()
     {
         CurrentHealth = maxHealth;
-        HealthBarSlider.value = CurrentHealth;
     }
 
     void Update()
@@ -24,6 +23,7 @@ public class BosHealthBar : MonoBehaviour
     public void UpdateHealthBar()
     {
         //HealthBarSlider.value = (float)CurrentHealth / maxHealth;
+        HealthBarSlider.value = CurrentHealth;
         HealthBarText.text = $"{CurrentHealth} / {maxHealth}";
         HealthBarSlider .value = CurrentHealth;
         HealthBarSlider.maxValue = maxHealth;
