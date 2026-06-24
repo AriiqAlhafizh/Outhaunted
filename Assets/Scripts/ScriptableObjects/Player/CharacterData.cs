@@ -11,6 +11,7 @@ public class CharacterData : ScriptableObject
 {
     [Header("Player Settings")]
     public PlayerType playerType;
+    public GameObject characterPrefab;
 
     [Header("Stats")]
     public int maxHealth;
