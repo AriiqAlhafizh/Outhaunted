@@ -52,9 +52,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TripleTController
   Attacks:
+  - {fileID: 7888091654299387174}
   - {fileID: 5949322758654204591}
   currentPhase: 0
-  startingAttacks: 1
+  startingAttacks: 2
   delayBetweenAttacks: 2
 --- !u!114 &3810470764841687963
 MonoBehaviour:

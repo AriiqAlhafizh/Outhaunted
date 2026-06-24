@@ -12,6 +12,10 @@ public class BossController : MonoBehaviour
      *  BounceAttack
      *  StompAttack
      */
+
+    [Header("Boss Stats")]
+    public int MaxHealth;
+    public int currentHealth;
     [Header("Boss MoveSet")]
     public List<BossAttack> Attacks = new();
 
