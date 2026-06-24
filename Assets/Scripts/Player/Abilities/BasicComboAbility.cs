@@ -10,12 +10,12 @@ public class BasicComboAbility : Ability
     private void Start()
     {
         context.Attack.OnAttackHit += Combo;
-        context.Health.OnDamaged += ResetCombo;
+        PlayerStatsManager.Instance.OnDamaged += ResetCombo;
     }
     private void OnDisable()
     {
         context.Attack.OnAttackHit -= Combo;
-        context.Health.OnDamaged -= ResetCombo;
+        PlayerStatsManager.Instance.OnDamaged -= ResetCombo;
     }
     private void Combo(GameObject enemy)
     {
@@ -26,7 +26,7 @@ public class BasicComboAbility : Ability
         }
     }
 
-    private void ResetCombo(int damage)
+    private void ResetCombo()
     {
         curCombo = 0;
         context.Attack.ResetDamage();

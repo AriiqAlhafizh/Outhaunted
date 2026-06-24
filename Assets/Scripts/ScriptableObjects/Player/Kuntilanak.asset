@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Kuntilanak
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
   playerType: 0
+  characterPrefab: {fileID: 2913607416162824942, guid: 37b9e1669900c944a9998ae3090207a3, type: 3}
   maxHealth: 100
   moveSpeed: 6.25
   jumpForce: 12.5

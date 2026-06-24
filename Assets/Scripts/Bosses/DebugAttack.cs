@@ -4,8 +4,9 @@ using UnityEngine;
 public class DebugAttack : BossAttack
 {
     
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         ActionEvent += DebugEvent;
     }
 

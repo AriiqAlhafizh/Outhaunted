@@ -1,19 +1,29 @@
 using System;
 using UnityEngine;
+using static PlayerMovement;
 
 public class PlayerStatsManager : MonoBehaviour
 {
     public static PlayerStatsManager Instance;
-    
+
+    [Header("Player Settings")]
     public CharacterData CurrentCharacter;
     public PlayerContext CurrentPlayerContext;
 
+    [Header("Stats")]
     public int MaxHealth;
     public int CurrentHealth;
     public Vector3 PlayerPosition;
     public float iFrame;
     public bool inIFrame;
 
+    [Header("Game")]
+    public bool IsGamePaused;
+    public bool InGame;
+
+    // Event
+    public event Action OnDamaged;
+    public event Action OnDeath;
 
     private void Awake()
     {
@@ -21,8 +31,9 @@ public class PlayerStatsManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            MaxHealth = CurrentCharacter.maxHealth;
-            CurrentHealth = MaxHealth;
+            ResetStats();
+            IsGamePaused = false;
+            InGame = false;
         }
         else
         {
@@ -32,16 +43,49 @@ public class PlayerStatsManager : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentPlayerContext == null)
+        if (InGame)
         {
-            FindPlayerContext();
-            Debug.Log("Got Player Context");
+            if (CurrentPlayerContext == null)
+            {
+                FindPlayerContext();
+                Debug.Log("Got Player Context");
+            }
+            PlayerPosition = CurrentPlayerContext.Position;
         }
-        PlayerPosition = CurrentPlayerContext.Position;
     }
 
     private void FindPlayerContext()
     {
         CurrentPlayerContext = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerContext>();
+    }
+
+    public void ResetStats()
+    {
+        MaxHealth = CurrentCharacter.maxHealth;
+        CurrentHealth = MaxHealth;
+    }
+
+    public void SetCharacterData(CharacterData characterData)
+    {
+        CurrentCharacter = characterData;
+        ResetStats();
+    }
+    public void GotoScene(string sceneName)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    public void TakeDamage()
+    {
+        CurrentHealth -= 1;
+        OnDamaged?.Invoke();
+
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            OnDeath?.Invoke();
+        }
+
+        Debug.Log($"Player took {1}. Current health: {CurrentHealth}");
     }
 }
