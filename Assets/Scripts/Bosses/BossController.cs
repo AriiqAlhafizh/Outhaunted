@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
     [Header("Boss Stats")]
     public int MaxHealth;
     public int currentHealth;
+
     [Header("Boss MoveSet")]
     public List<BossAttack> Attacks = new();
 

@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 706438085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.44, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1058,6 +1058,7 @@ GameObject:
   - component: {fileID: 2130627886}
   - component: {fileID: 2130627885}
   - component: {fileID: 2130627888}
+  - component: {fileID: 2130627889}
   - component: {fileID: 2130627887}
   m_Layer: 0
   m_Name: RayapBesi
@@ -1075,7 +1076,7 @@ Transform:
   m_GameObject: {fileID: 2130627883}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.47, y: -1.6, z: 0}
+  m_LocalPosition: {x: 7.47, y: -2.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1117,7 +1118,7 @@ MonoBehaviour:
   MaxHealth: 100
   currentHealth: 0
   Attacks:
-  - {fileID: 2130627888}
+  - {fileID: 2130627889}
   currentPhase: 0
   startingAttacks: 1
   delayBetweenAttacks: 2
@@ -1164,6 +1165,32 @@ MonoBehaviour:
   AnimationAttackTrigger: 
   projectilePrefab: {fileID: 7599129567625866015, guid: ca38b6f241110ed4db308ae1f06d8d76, type: 3}
   projectileDelay: 0.2
+--- !u!114 &2130627889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130627883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f12f3743bbf9dd44b720a8923dfa5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpikeGroundAttack
+  DelayBeforeAttack: 0
+  Duration: 0
+  Cooldown: 20
+  IsReady: 1
+  animator: {fileID: 0}
+  AnimationStartTrigger: 
+  AnimationAttackTrigger: 
+  startPosY: -1.5
+  warningDelay: 2
+  attackDelay: 2
+  numberOfAttacks: 5
+  spikePrefab: {fileID: 8804245414008704552, guid: 4fd0d7072b5851e4e927e8f741195515, type: 3}
+  warningPrefab: {fileID: 3240370177005617103, guid: 7cf96c82a0ac4844fa5586d5ec2f6f59, type: 3}
+  distanceBetweenSpikes: 2
 --- !u!1001 &1578557744721446301
 PrefabInstance:
   m_ObjectHideFlags: 0

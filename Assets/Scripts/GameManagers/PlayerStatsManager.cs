@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static PlayerMovement;
 
 public class PlayerStatsManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class PlayerStatsManager : MonoBehaviour
     [Header("Game")]
     public bool IsGamePaused;
     public bool InGame;
+
+    // Event
+    public event Action OnDamaged;
+    public event Action OnDeath;
 
     private void Awake()
     {
@@ -68,5 +73,19 @@ public class PlayerStatsManager : MonoBehaviour
     public void GotoScene(string sceneName)
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    public void TakeDamage()
+    {
+        CurrentHealth -= 1;
+        OnDamaged?.Invoke();
+
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            OnDeath?.Invoke();
+        }
+
+        Debug.Log($"Player took {1}. Current health: {CurrentHealth}");
     }
 }
