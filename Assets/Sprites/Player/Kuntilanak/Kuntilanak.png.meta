@@ -1,0 +1,1400 @@
+fileFormatVersion: 2
+guid: f08e931767b379f4c9bb49d6443789c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7885917561968698261
+    second: Kuntilanak_0
+  - first:
+      213: 7615289393872205712
+    second: Kuntilanak_1
+  - first:
+      213: 59610578836555507
+    second: Kuntilanak_2
+  - first:
+      213: -1353705637062782482
+    second: Kuntilanak_3
+  - first:
+      213: -5185298469471274293
+    second: Kuntilanak_4
+  - first:
+      213: 1702725475334787367
+    second: Kuntilanak_5
+  - first:
+      213: -6821856768388221057
+    second: Kuntilanak_6
+  - first:
+      213: 1291600500796037851
+    second: Kuntilanak_7
+  - first:
+      213: -8663945392123324359
+    second: Kuntilanak_8
+  - first:
+      213: 1950152068794243345
+    second: Kuntilanak_9
+  - first:
+      213: 5641918444980039449
+    second: Kuntilanak_10
+  - first:
+      213: 3548595854301863372
+    second: Kuntilanak_11
+  - first:
+      213: -1063149089489419317
+    second: Kuntilanak_12
+  - first:
+      213: 4100153742408384027
+    second: Kuntilanak_13
+  - first:
+      213: -6833369173788618493
+    second: Kuntilanak_14
+  - first:
+      213: -2105155159903664382
+    second: Kuntilanak_15
+  - first:
+      213: 6200425599065635622
+    second: Kuntilanak_16
+  - first:
+      213: -8508668159973709810
+    second: Kuntilanak_17
+  - first:
+      213: -2958492500965570266
+    second: Kuntilanak_18
+  - first:
+      213: -4027050749851421889
+    second: Kuntilanak_19
+  - first:
+      213: 5831596493436101268
+    second: Kuntilanak_20
+  - first:
+      213: 6152151052435727092
+    second: Kuntilanak_21
+  - first:
+      213: -8151210293593601295
+    second: Kuntilanak_22
+  - first:
+      213: -2844718356988372339
+    second: Kuntilanak_23
+  - first:
+      213: -8340831266151162111
+    second: Kuntilanak_24
+  - first:
+      213: 6298200567731931921
+    second: Kuntilanak_25
+  - first:
+      213: -9196315563026064645
+    second: Kuntilanak_26
+  - first:
+      213: -8356632821934892487
+    second: Kuntilanak_27
+  - first:
+      213: -1179696501135540708
+    second: Kuntilanak_28
+  - first:
+      213: -599833222763734645
+    second: Kuntilanak_29
+  - first:
+      213: -4541941271255863877
+    second: Kuntilanak_30
+  - first:
+      213: 5265325785437419629
+    second: Kuntilanak_31
+  - first:
+      213: 3089738628817777089
+    second: Kuntilanak_32
+  - first:
+      213: 308933422799281663
+    second: Kuntilanak_33
+  - first:
+      213: -8623409157131504985
+    second: Kuntilanak_34
+  - first:
+      213: 8736097198406538709
+    second: Kuntilanak_35
+  - first:
+      213: 5762737223139526521
+    second: Kuntilanak_36
+  - first:
+      213: -1880524476972434721
+    second: Kuntilanak_37
+  - first:
+      213: -4003644403391817212
+    second: Kuntilanak_38
+  - first:
+      213: 5941478702148984712
+    second: Kuntilanak_39
+  - first:
+      213: -4769853456379886443
+    second: Kuntilanak_40
+  - first:
+      213: -7480000212772667992
+    second: Kuntilanak_41
+  - first:
+      213: -2509628189832306947
+    second: Kuntilanak_42
+  - first:
+      213: -275734328110749513
+    second: Kuntilanak_43
+  - first:
+      213: 554823417042081229
+    second: Kuntilanak_44
+  - first:
+      213: -6881741434680924831
+    second: Kuntilanak_45
+  - first:
+      213: 2042607880899975953
+    second: Kuntilanak_46
+  - first:
+      213: -1907361128432947040
+    second: Kuntilanak_47
+  - first:
+      213: 569901447523403826
+    second: Kuntilanak_48
+  - first:
+      213: -8692237260034783050
+    second: Kuntilanak_49
+  - first:
+      213: 7234149250149785726
+    second: Kuntilanak_50
+  - first:
+      213: 3482282543626184475
+    second: Kuntilanak_51
+  - first:
+      213: -2529239345496666540
+    second: Kuntilanak_52
+  - first:
+      213: 1228396875353922561
+    second: Kuntilanak_53
+  - first:
+      213: 688670402928767322
+    second: Kuntilanak_54
+  - first:
+      213: 5019481440126715136
+    second: Kuntilanak_55
+  - first:
+      213: 9207566203407934391
+    second: Kuntilanak_56
+  - first:
+      213: 2314767716823785375
+    second: Kuntilanak_57
+  - first:
+      213: 1885531904451908159
+    second: Kuntilanak_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kuntilanak_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593a821cd38607d60800000000000000
+      internalID: 7885917561968698261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0977d8f2b51fea960800000000000000
+      internalID: 7615289393872205712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f688607187c3d000800000000000000
+      internalID: 59610578836555507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1dd6435eba63de0800000000000000
+      internalID: -1353705637062782482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcab9c0d38e1a08b0800000000000000
+      internalID: -5185298469471274293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72196536ccb41a710800000000000000
+      internalID: 1702725475334787367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7730a3b965e351a0800000000000000
+      internalID: -6821856768388221057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda1aa1ffcface110800000000000000
+      internalID: 1291600500796037851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9385b15c19b73c780800000000000000
+      internalID: -8663945392123324359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119597669f4501b10800000000000000
+      internalID: 1950152068794243345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f62ccfeee1c4e40800000000000000
+      internalID: 5641918444980039449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd1613d0252f3130800000000000000
+      internalID: 3548595854301863372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc304b1398fee31f0800000000000000
+      internalID: -1063149089489419317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_13
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e7dbcea1ca6e830800000000000000
+      internalID: 4100153742408384027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3019931f0fefa21a0800000000000000
+      internalID: -6833369173788618493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 928
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2078cd0298cf8c2e0800000000000000
+      internalID: -2105155159903664382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 932
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bbb882b365c0650800000000000000
+      internalID: 6200425599065635622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_17
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 928
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e08271da3632be980800000000000000
+      internalID: -8508668159973709810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6294a41ceb251f6d0800000000000000
+      internalID: -2958492500965570266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33b2a2edaa0d18c0800000000000000
+      internalID: -4027050749851421889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4922ca81d1efde050800000000000000
+      internalID: 5831596493436101268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_21
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 672
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f22af469c4d06550800000000000000
+      internalID: 6152151052435727092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 674
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa88d8cc6511ee80800000000000000
+      internalID: -8151210293593601295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_23
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 672
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8adcade9b78588d0800000000000000
+      internalID: -2844718356988372339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10f9691b72a6f3c80800000000000000
+      internalID: -8340831266151162111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_25
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b43db0c04b76750800000000000000
+      internalID: 6298200567731931921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_26
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa5f6738bf106080800000000000000
+      internalID: -9196315563026064645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_27
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a533a49b6470c80800000000000000
+      internalID: -8356632821934892487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e7b035840e0afe0800000000000000
+      internalID: -1179696501135540708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8990b8acd6fca7f0800000000000000
+      internalID: -599833222763734645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbdab106a78c7f0c0800000000000000
+      internalID: -4541941271255863877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_31
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68b3bba7e1321940800000000000000
+      internalID: 5265325785437419629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c17c7ba9e4f0ea20800000000000000
+      internalID: 3089738628817777089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_33
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd523daf4d894400800000000000000
+      internalID: 308933422799281663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_34
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a273547f0f735880800000000000000
+      internalID: -8623409157131504985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_35
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 416
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d59e4abd1adc3970800000000000000
+      internalID: 8736097198406538709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_36
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 416
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977072fd8fa59ff40800000000000000
+      internalID: 5762737223139526521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_37
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 416
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda71ae93f807e5e0800000000000000
+      internalID: -1880524476972434721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a99d890a23078c0800000000000000
+      internalID: -4003644403391817212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f932a766f547250800000000000000
+      internalID: 5941478702148984712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594cecd9d831ecdb0800000000000000
+      internalID: -4769853456379886443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_41
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 160
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8adb6ddef63b13890800000000000000
+      internalID: -7480000212772667992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_42
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 160
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfe1dba35720c2dd0800000000000000
+      internalID: -2509628189832306947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_43
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 160
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8e398e6156c2cf0800000000000000
+      internalID: -275734328110749513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_44
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc59cdd45f023b700800000000000000
+      internalID: 554823417042081229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_45
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165a1cd40a42f70a0800000000000000
+      internalID: -6881741434680924831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_46
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 160
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bd474ab0dc85c10800000000000000
+      internalID: 2042607880899975953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kuntilanak_47
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 159
+        width: 251
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae36ca6b6a525524f8e44f49511e4345
+      internalID: -1907361128432947040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9f38f774ddf265c4bab43933512b733b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kuntilanak_0: 7885917561968698261
+      Kuntilanak_1: 7615289393872205712
+      Kuntilanak_10: 5641918444980039449
+      Kuntilanak_11: 3548595854301863372
+      Kuntilanak_12: -1063149089489419317
+      Kuntilanak_13: 4100153742408384027
+      Kuntilanak_14: -6833369173788618493
+      Kuntilanak_15: -2105155159903664382
+      Kuntilanak_16: 6200425599065635622
+      Kuntilanak_17: -8508668159973709810
+      Kuntilanak_18: -2958492500965570266
+      Kuntilanak_19: -4027050749851421889
+      Kuntilanak_2: 59610578836555507
+      Kuntilanak_20: 5831596493436101268
+      Kuntilanak_21: 6152151052435727092
+      Kuntilanak_22: -8151210293593601295
+      Kuntilanak_23: -2844718356988372339
+      Kuntilanak_24: -8340831266151162111
+      Kuntilanak_25: 6298200567731931921
+      Kuntilanak_26: -9196315563026064645
+      Kuntilanak_27: -8356632821934892487
+      Kuntilanak_28: -1179696501135540708
+      Kuntilanak_29: -599833222763734645
+      Kuntilanak_3: -1353705637062782482
+      Kuntilanak_30: -4541941271255863877
+      Kuntilanak_31: 5265325785437419629
+      Kuntilanak_32: 3089738628817777089
+      Kuntilanak_33: 308933422799281663
+      Kuntilanak_34: -8623409157131504985
+      Kuntilanak_35: 8736097198406538709
+      Kuntilanak_36: 5762737223139526521
+      Kuntilanak_37: -1880524476972434721
+      Kuntilanak_38: -4003644403391817212
+      Kuntilanak_39: 5941478702148984712
+      Kuntilanak_4: -5185298469471274293
+      Kuntilanak_40: -4769853456379886443
+      Kuntilanak_41: -7480000212772667992
+      Kuntilanak_42: -2509628189832306947
+      Kuntilanak_43: -275734328110749513
+      Kuntilanak_44: 554823417042081229
+      Kuntilanak_45: -6881741434680924831
+      Kuntilanak_46: 2042607880899975953
+      Kuntilanak_47: -1907361128432947040
+      Kuntilanak_5: 1702725475334787367
+      Kuntilanak_6: -6821856768388221057
+      Kuntilanak_7: 1291600500796037851
+      Kuntilanak_8: -8663945392123324359
+      Kuntilanak_9: 1950152068794243345
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
