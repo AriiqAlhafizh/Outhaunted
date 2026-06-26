@@ -10,6 +10,9 @@ public class PlayerInputHandler : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerInput playerInput;
 
+    public bool IsMoving => MovementVector.x != 0;
+    public bool IsInAir => MovementVector.y != 0;
+
     public event Action UpPressed;
     public event Action RightPressed;
     public event Action DownPressed;

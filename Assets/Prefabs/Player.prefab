@@ -444,7 +444,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3693857053803898406
 Animator:
@@ -479,7 +479,6 @@ GameObject:
   - component: {fileID: 2084695304486922936}
   - component: {fileID: 5607673917505971961}
   - component: {fileID: 5717735888134139373}
-  - component: {fileID: 5511251351544176639}
   - component: {fileID: 8519475905671683526}
   m_Layer: 6
   m_Name: AttackSprite
@@ -560,7 +559,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!60 &5717735888134139373
 PolygonCollider2D:
@@ -685,18 +684,6 @@ PolygonCollider2D:
       - {x: 0.47, y: -1.29}
       - {x: 0.59999996, y: -1.25}
   m_UseDelaunayMesh: 1
---- !u!114 &5511251351544176639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318932944664449686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b208f72b3a87bd94f96d6033112ded9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Slash
 --- !u!95 &8519475905671683526
 Animator:
   serializedVersion: 7
