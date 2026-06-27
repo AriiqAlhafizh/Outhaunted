@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 public enum PlayerType
 {
@@ -22,7 +21,4 @@ public class CharacterData : ScriptableObject
 
     [Header("Abilities")]
     public List<Ability> startingAbilities;
-
-    [Header("Animator Settings")]
-    public AnimatorController attackAnimator;
 }
