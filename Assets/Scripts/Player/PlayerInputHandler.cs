@@ -9,21 +9,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerAnimations pAnimation;
+    //[SerializeField] private PlayerAnimations pAnimation;
 
     public bool IsMoving => MovementVector.x != 0;
-    //public bool IS_MOVING
-    //{
-    //    get => IsMoving;
-    //    set
-    //    {
-    //        if (IsMoving != value)
-    //        {
-    //            IsMoving = value;
-
-    //        }
-    //    }
-    //}
     public bool IsInAir => MovementVector.y != 0;
 
     public event Action UpPressed;
@@ -42,27 +30,26 @@ public class PlayerInputHandler : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Player");
 
-        pAnimation = GetComponent<PlayerAnimations>();
+        //pAnimation = GetComponent<PlayerAnimations>();
 
-        JumpPressed += StartJumpAnimation;
-        JumpReleased += StartOnAirAnimation;
-        AttackPressed += StartAttackAnimation;
+        //JumpPressed += StartJumpAnimation;
+        //JumpReleased += StartOnAirAnimation;
+        //AttackPressed += StartAttackAnimation;
     }
     private void OnDisable()
     {
-        JumpPressed -= StartJumpAnimation;
-        JumpReleased -= StartOnAirAnimation;
-        AttackPressed -= StartAttackAnimation;
+        //JumpPressed -= StartJumpAnimation;
+        //JumpReleased -= StartOnAirAnimation;
+        //AttackPressed -= StartAttackAnimation;
     }
 
-    private void Update()
-    {
-        SetAnimationMovementBool();
-    }
+    //private void Update()
+    //{
+    //    SetAnimationMovementBool();
+    //}
     public void OnMove(InputAction.CallbackContext context)
     {
         MovementVector = context.ReadValue<Vector2>();
-
 
         if (context.performed)
         {
@@ -99,26 +86,26 @@ public class PlayerInputHandler : MonoBehaviour
     }
 
     // ANIMATION
-    public void StartAttackAnimation()
-    {
-        pAnimation.StartAttack();
-    }
+    //public void StartAttackAnimation()
+    //{
+    //    pAnimation.StartAttack();
+    //}
 
-    public void StartJumpAnimation()
-    {
-        pAnimation.StartJump();
-    }
+    //public void StartJumpAnimation()
+    //{
+    //    pAnimation.StartJump();
+    //}
 
-    public void StartOnAirAnimation()
-    {
-        pAnimation.StartOnAir();
-    }
+    //public void StartOnAirAnimation()
+    //{
+    //    pAnimation.StartOnAir();
+    //}
 
-    public void SetAnimationMovementBool()
-    {
-        if (!IsMoving && !IsInAir)
-            pAnimation.SetBool(pAnimation.IsWalkingHash, false);
-        else if (IsMoving && !IsInAir)
-            pAnimation.SetBool(pAnimation.IsWalkingHash, true);
-    }
+    //public void SetAnimationMovementBool()
+    //{
+    //    if (!IsMoving && !IsInAir)
+    //        pAnimation.SetBool(pAnimation.IsWalkingHash, false);
+    //    else if (IsMoving && !IsInAir)
+    //        pAnimation.SetBool(pAnimation.IsWalkingHash, true);
+    //}
 }

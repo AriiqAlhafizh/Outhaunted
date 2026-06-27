@@ -70,16 +70,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
-            //if (input.IsMoving && IsGrounded())
-            //{
-            //    pAnimation.SetBool(pAnimation.IsWalkingHash, true);
-            //    pAnimation.StartWalk();
-            //}
-            //else
-            //{
-            //    pAnimation.SetBool(pAnimation.IsWalkingHash, false);
-            //    pAnimation.StartIdle();
-            //}
+            if (input.IsMoving && IsGrounded())
+            {
+                pAnimation.SetBool(pAnimation.IsWalkingHash, true);
+                pAnimation.StartWalk();
+            }
+            else if (IsGrounded())
+            {
+                pAnimation.SetBool(pAnimation.IsWalkingHash, false);
+                pAnimation.StartIdle();
+            }
 
             // HORIZONTAL MOVEMENT LOGIC
             if (input.MovementVector.x < 0)
@@ -125,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 
+            //pAnimation.SetBool(pAnimation.IsFallingHash, false);
             pAnimation.StartLanding(); // TODO: FIX LANDING ANIMATION LOGIC
 
             OnLand?.Invoke();
@@ -158,14 +159,23 @@ public class PlayerMovement : MonoBehaviour
         {
             // Falling: apply extra gravity
             rb.linearVelocity += (fallMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
-            //pAnimation.StartOnAir();
+            if (rb.linearVelocity.y < -1f)
+            {
+                pAnimation.StartOnAir();
+            }
         }
         else if (rb.linearVelocity.y > 0 && !isJumping)
         {
             // Jump released early: apply extra gravity
             rb.linearVelocity += (lowJumpMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
-            //pAnimation.StartOnAir();
         }
+
+        //// Falling
+        //if (rb.linearVelocity.y < 0)
+        //{
+        //    pAnimation.SetBool(pAnimation.IsFallingHash, true);
+        //    pAnimation.StartOnAir();
+        //}
     }
 
     public void JumpPressed()
@@ -199,7 +209,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformJump(float jumpForce)
     {
-        //pAnimation.StartJump();
+        pAnimation.StartJump();
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isJumping = true;
         OnJump?.Invoke();
@@ -216,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded()
     {
         float extraHeight = 0.1f;
-        float rayLength = .2f + extraHeight;
+        float rayLength = .0f + extraHeight;
 
         // Cast from left and right bottom corners
         Vector2 leftOrigin = new(col.bounds.min.x + 0.01f, col.bounds.min.y);
@@ -279,7 +289,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(-5f, 5f);
         }
+        pAnimation.StartHurt();
+
         yield return new WaitForSeconds(PlayerStatsManager.Instance.iFrame);
+
         PlayerStatsManager.Instance.inIFrame = false;
         canMove = true;
     }

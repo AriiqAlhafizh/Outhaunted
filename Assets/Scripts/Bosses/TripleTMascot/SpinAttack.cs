@@ -7,10 +7,10 @@ public class SpinAttack : BossAttack
     public float spinDuration = 2f;
     public float spinDistance = 5f;
     public AnimationCurve spinCurve;
+    public Collider2D col;
 
     public override void Start()
     {
-        base.Start();
         Duration = spinDuration;
         ActionEvent += ExecuteAttack;
     }
@@ -22,11 +22,14 @@ public class SpinAttack : BossAttack
 
     private void ExecuteAttack()
     {
+        
         StartCoroutine(SpinCoroutine());
     }
 
     private IEnumerator SpinCoroutine() 
     {
+        animator.Play("Attack");
+        col.enabled = true;
         Vector3 startPos = transform.position;
         Vector3 playerPos = PlayerStatsManager.Instance.PlayerPosition;
 
@@ -48,5 +51,7 @@ public class SpinAttack : BossAttack
         }
 
         transform.position = targetPos;
+        animator.Play("Base");
+        col.enabled = false;
     }
 }

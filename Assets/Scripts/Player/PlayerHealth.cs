@@ -15,9 +15,9 @@ public class PlayerHealth : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             if (!PlayerStatsManager.Instance.inIFrame)
             { 
