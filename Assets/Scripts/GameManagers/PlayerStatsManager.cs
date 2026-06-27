@@ -31,7 +31,6 @@ public class PlayerStatsManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            ResetStats();
             IsGamePaused = false;
             InGame = false;
         }
