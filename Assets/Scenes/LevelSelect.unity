@@ -828,6 +828,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2826522934585804428, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1827299261, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
+    - target: {fileID: 3028060212704806725, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3405642233082329731, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_Name
       value: BossLevel (1)
@@ -839,6 +847,14 @@ PrefabInstance:
     - target: {fileID: 4081897647597481163, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -220.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857776134647626889, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1827299261, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
+    - target: {fileID: 8104036683827589662, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.8149719
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1948,8 +1964,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4fb9789ecd9fcc24498fd698b7885ab4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3163,10 +3179,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3028060212704806725, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3405642233082329731, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_Name
       value: BossLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 5857776134647626889, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 227330775, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
     - target: {fileID: 6445688146196198022, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 9
@@ -3342,6 +3366,10 @@ PrefabInstance:
     - target: {fileID: 6445688146196198022, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104036683827589662, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.8149719
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
