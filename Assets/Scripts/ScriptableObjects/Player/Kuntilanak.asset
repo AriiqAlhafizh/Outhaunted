@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
   playerType: 0
   characterPrefab: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-  maxHealth: 100
+  maxHealth: 5
   moveSpeed: 6.25
   jumpForce: 12.5
-  attackDamage: 15
+  attackDamage: 6
   attackCooldown: 1
   startingAbilities:
   - {fileID: 249245270695397205, guid: fd9adecce9a6fe64a94a085be13e4004, type: 3}

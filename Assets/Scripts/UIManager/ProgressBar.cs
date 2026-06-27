@@ -9,21 +9,20 @@ public class BossHealth : MonoBehaviour
     public int current;
     public Image mask;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        BossStatsManager.Instance.OnDamaged += GetCurrentFill;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        GetCurrentFill();
+        BossStatsManager.Instance.OnDamaged -= GetCurrentFill;
     }
 
     void GetCurrentFill()
     {
-        float fillAmount = (float)current / maximum;
+        int currHealth = BossStatsManager.Instance.CurrentHealth;
+        float fillAmount = (float)currHealth / maximum;
         mask.fillAmount = fillAmount;
     }   
 }
