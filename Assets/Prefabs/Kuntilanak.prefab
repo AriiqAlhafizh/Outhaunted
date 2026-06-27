@@ -84,6 +84,7 @@ MonoBehaviour:
   defaultController: {fileID: 0}
   overrideController: {fileID: 22100000, guid: c5a93adc9a200f042834fddfacd8c76f, type: 2}
   isAttacking: 0
+  isInAbility: 0
 --- !u!114 &5243301706125800731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,8 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KuntilanakAttack
   input: {fileID: 0}
   pAnimation: {fileID: 0}
+  playerPogo: {fileID: 0}
   attackCooldown: 0.5
   attackDamage: 0
+  canAttack: 1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
@@ -560,6 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KuntilanakSideAttack
   spriteOffset: {x: 0.6, y: 0.45}
   animator: {fileID: 0}
+  direction: 0
 --- !u!1 &8696794209239629511
 GameObject:
   m_ObjectHideFlags: 0

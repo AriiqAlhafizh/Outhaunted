@@ -12,23 +12,24 @@ public class BossAttack : MonoBehaviour
 
     [Header("Animation Settings")]
     public Animator animator;
-    public string AnimationStartTrigger;
-    public string AnimationAttackTrigger;
+    public string AnimationStart;
+    public string AnimationAttack;
 
     public virtual void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
     public IEnumerator Execute()
     {
         if (IsReady)
         {
-            animator.SetTrigger(AnimationStartTrigger);
+            animator.Play(AnimationStart);
             yield return new WaitForSeconds(DelayBeforeAttack);
-            animator.SetTrigger(AnimationAttackTrigger);
+            animator.Play(AnimationAttack);
             ActionEvent?.Invoke();
             yield return new WaitForSeconds(Duration);
             StartCoroutine(StartCDCoroutine());
+            animator.SetTrigger("EndAttack");
         }
     }
 

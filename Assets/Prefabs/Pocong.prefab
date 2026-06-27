@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee1d1b62f9552349ae4309577afccfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PocongSideAttack
-  spriteOffset: {x: 0, y: 0}
+  spriteOffset: {x: 0.6, y: 0.45}
   animator: {fileID: 0}
   direction: 0
 --- !u!1 &5330264819161359538
@@ -368,6 +368,7 @@ MonoBehaviour:
   defaultController: {fileID: 0}
   overrideController: {fileID: 0}
   isAttacking: 0
+  isInAbility: 0
 --- !u!114 &2318328742152663122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +386,7 @@ MonoBehaviour:
   playerPogo: {fileID: 0}
   attackCooldown: 0.5
   attackDamage: 0
+  canAttack: 1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
