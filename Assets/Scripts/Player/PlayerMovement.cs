@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D col;
     [SerializeField] private PlayerInputHandler input;
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private PlayerAnimations pAnimation;
 
     [Header("Movement Settings")]
     public float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
-    public AttackDirection dir = AttackDirection.Left;
+    public AttackDirection dir = AttackDirection.Right;
     public float moveX;
     public bool canMove;
 
@@ -41,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         input = GetComponent<PlayerInputHandler>();
+        sr = GetComponentInChildren<SpriteRenderer>();
+        pAnimation = GetComponent<PlayerAnimations>();
 
         input.JumpPressed += JumpPressed;
         input.JumpReleased += JumpReleased;
@@ -66,30 +70,47 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
+            //if (input.IsMoving && IsGrounded())
+            //{
+            //    pAnimation.SetBool(pAnimation.IsWalkingHash, true);
+            //    pAnimation.StartWalk();
+            //}
+            //else
+            //{
+            //    pAnimation.SetBool(pAnimation.IsWalkingHash, false);
+            //    pAnimation.StartIdle();
+            //}
+
             // HORIZONTAL MOVEMENT LOGIC
-        if (input.MovementVector.x < 0)
-            dir = AttackDirection.Left;
-        else if (input.MovementVector.x > 0)
-            dir = AttackDirection.Right;
+            if (input.MovementVector.x < 0)
+            {
+                dir = AttackDirection.Left;
+                sr.flipX = true;
+            }
+            else if (input.MovementVector.x > 0)
+            {
+                dir = AttackDirection.Right;
+                sr.flipX = false;
+            }
 
-        // CHECK WALL
-        if ((input.MovementVector.x > 0 && IsTouchingWall(Vector2.right)))
-            moveX = Mathf.Min(0f, input.MovementVector.x); // allow left, block right
-        else if ((input.MovementVector.x < 0 && IsTouchingWall(Vector2.left)))
-            moveX = Mathf.Max(0f, input.MovementVector.x); // allow right, block left
-        else
-            moveX = input.MovementVector.x;
-       
+            // CHECK WALL
+            if ((input.MovementVector.x > 0 && IsTouchingWall(Vector2.right)))
+                moveX = Mathf.Min(0f, input.MovementVector.x); // allow left, block right
+            else if ((input.MovementVector.x < 0 && IsTouchingWall(Vector2.left)))
+                moveX = Mathf.Max(0f, input.MovementVector.x); // allow right, block left
+            else
+                moveX = input.MovementVector.x;
 
-        // CHECK ROOF
-        if (!IsGrounded() && IsTouchingRoof())
-        {
-            JumpReleased();
-            if (rb.linearVelocity.y > 0)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-        }
 
-        rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
+            // CHECK ROOF
+            if (!IsGrounded() && IsTouchingRoof())
+            {
+                JumpReleased();
+                if (rb.linearVelocity.y > 0)
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            }
+
+            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
 
             OnMove?.Invoke();
         }
@@ -103,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
         if (grounded && !wasGrounded && rb.linearVelocity.y < 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
+            pAnimation.StartLanding(); // TODO: FIX LANDING ANIMATION LOGIC
 
             OnLand?.Invoke();
         }
@@ -135,11 +158,13 @@ public class PlayerMovement : MonoBehaviour
         {
             // Falling: apply extra gravity
             rb.linearVelocity += (fallMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
+            //pAnimation.StartOnAir();
         }
         else if (rb.linearVelocity.y > 0 && !isJumping)
         {
             // Jump released early: apply extra gravity
             rb.linearVelocity += (lowJumpMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
+            //pAnimation.StartOnAir();
         }
     }
 
@@ -174,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformJump(float jumpForce)
     {
+        //pAnimation.StartJump();
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isJumping = true;
         OnJump?.Invoke();
@@ -208,7 +234,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsTouchingWall(Vector2 direction)
     {
         float extraDistance = 0.1f;
-        float rayLength = .6f + extraDistance;
+        float rayLength = .3f + extraDistance;
         Vector2 top = new(rb.position.x, col.bounds.max.y - 0.01f);
         Vector2 bottom = new(rb.position.x, col.bounds.min.y + 0.01f);
 

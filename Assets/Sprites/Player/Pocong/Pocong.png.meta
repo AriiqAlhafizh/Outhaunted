@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: e900cbfaf4f98474dab5d67bc52c09c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6062958812280367955
+    second: Pocong_0
+  - first:
+      213: -560284060831214446
+    second: Pocong_1
+  - first:
+      213: 820986673238279649
+    second: Pocong_2
+  - first:
+      213: 3307002879149476936
+    second: Pocong_3
+  - first:
+      213: -4244280116740634390
+    second: Pocong_4
+  - first:
+      213: -4495182205358722725
+    second: Pocong_5
+  - first:
+      213: -6084429292449099934
+    second: Pocong_6
+  - first:
+      213: -6373824553751756895
+    second: Pocong_7
+  - first:
+      213: -6875913820051910658
+    second: Pocong_8
+  - first:
+      213: -2386469776674322866
+    second: Pocong_9
+  - first:
+      213: -7572978337949034416
+    second: Pocong_10
+  - first:
+      213: 7656534457060028868
+    second: Pocong_11
+  - first:
+      213: -2534115144343791990
+    second: Pocong_12
+  - first:
+      213: -1092260244882589217
+    second: Pocong_13
+  - first:
+      213: -8410815973887922374
+    second: Pocong_14
+  - first:
+      213: -5614863766928714933
+    second: Pocong_15
+  - first:
+      213: 7386001627782177167
+    second: Pocong_16
+  - first:
+      213: -556729765751707770
+    second: Pocong_17
+  - first:
+      213: 716554013980672853
+    second: Pocong_18
+  - first:
+      213: -3077267622317848937
+    second: Pocong_19
+  - first:
+      213: 1288740853660877787
+    second: Pocong_20
+  - first:
+      213: 7141008022334187509
+    second: Pocong_21
+  - first:
+      213: 7411939729050982139
+    second: Pocong_22
+  - first:
+      213: -5739086646157820791
+    second: Pocong_23
+  - first:
+      213: 5475312387567327257
+    second: Pocong_24
+  - first:
+      213: -2817521981230817947
+    second: Pocong_25
+  - first:
+      213: 7181926770562498391
+    second: Pocong_26
+  - first:
+      213: 5104594566837045162
+    second: Pocong_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pocong_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35babc5bae4f32450800000000000000
+      internalID: 6062958812280367955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29497dc7d987938f0800000000000000
+      internalID: -560284060831214446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e582bf870bb46b00800000000000000
+      internalID: 820986673238279649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c06eae895d4ed20800000000000000
+      internalID: 3307002879149476936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8cb6298b94915c0800000000000000
+      internalID: -4244280116740634390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51bfe8c997ed91c0800000000000000
+      internalID: -4495182205358722725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f07929bc3cf8ba0800000000000000
+      internalID: -6084429292449099934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afb6fc9650ab87a0800000000000000
+      internalID: -6373824553751756895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1184
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff4b919fc8d390a0800000000000000
+      internalID: -6875913820051910658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e460f16d16e81eed0800000000000000
+      internalID: -2386469776674322866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058d1d2335067e690800000000000000
+      internalID: -7572978337949034416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1f99bc589714a60800000000000000
+      internalID: 7656534457060028868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 930
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a865379d3b305dcd0800000000000000
+      internalID: -2534115144343791990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9fd75281387d0f0800000000000000
+      internalID: -1092260244882589217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_14
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3faa352f67c64b80800000000000000
+      internalID: -8410815973887922374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b43900e172ff312b0800000000000000
+      internalID: -5614863766928714933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_16
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 928
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81e9660959508660800000000000000
+      internalID: 7386001627782177167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687ab7c4a391648f0800000000000000
+      internalID: -556729765751707770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553c2b94416b1f900800000000000000
+      internalID: 716554013980672853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7960fecc6695b45d0800000000000000
+      internalID: -3077267622317848937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_20
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 672
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd38df57af682e110800000000000000
+      internalID: 1288740853660877787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_21
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 672
+        width: 512
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7a17d26f4f91360800000000000000
+      internalID: 7141008022334187509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_22
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 416
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf650b6d9ef7cd660800000000000000
+      internalID: 7411939729050982139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 512
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c33903a1baa50b0800000000000000
+      internalID: -5739086646157820791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 160
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9181f376b973cfb40800000000000000
+      internalID: 5475312387567327257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_25
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 416
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56dd1e99fa626e8d0800000000000000
+      internalID: -2817521981230817947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pocong_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 160
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372ee69ff95c2a34d87a9a5ec5687a4d
+      internalID: 7181926770562498391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7487fc084a0d4944394f78f673f3aa03
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":768.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Pocong_0: 6062958812280367955
+      Pocong_1: -560284060831214446
+      Pocong_10: -7572978337949034416
+      Pocong_11: 7656534457060028868
+      Pocong_12: -2534115144343791990
+      Pocong_13: -1092260244882589217
+      Pocong_14: -8410815973887922374
+      Pocong_15: -5614863766928714933
+      Pocong_16: 7386001627782177167
+      Pocong_17: -556729765751707770
+      Pocong_18: 716554013980672853
+      Pocong_19: -3077267622317848937
+      Pocong_2: 820986673238279649
+      Pocong_20: 1288740853660877787
+      Pocong_21: 7141008022334187509
+      Pocong_22: 7411939729050982139
+      Pocong_23: -5739086646157820791
+      Pocong_24: 5475312387567327257
+      Pocong_25: -2817521981230817947
+      Pocong_26: 7181926770562498391
+      Pocong_27: 5104594566837045162
+      Pocong_28: -797654641
+      Pocong_29: -1572613746
+      Pocong_3: 3307002879149476936
+      Pocong_30: -757196775
+      Pocong_31: 689155010
+      Pocong_32: 2118924306
+      Pocong_33: 1969928721
+      Pocong_34: 436432465
+      Pocong_4: -4244280116740634390
+      Pocong_5: -4495182205358722725
+      Pocong_6: -6084429292449099934
+      Pocong_7: -6373824553751756895
+      Pocong_8: -6875913820051910658
+      Pocong_9: -2386469776674322866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
