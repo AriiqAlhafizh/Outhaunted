@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using UnityEditor.Animations;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {

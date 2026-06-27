@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static PlayerMovement;
 
 public class PlayerStatsManager : MonoBehaviour
@@ -31,7 +32,6 @@ public class PlayerStatsManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            ResetStats();
             IsGamePaused = false;
             InGame = false;
         }
@@ -84,6 +84,9 @@ public class PlayerStatsManager : MonoBehaviour
         {
             CurrentHealth = 0;
             OnDeath?.Invoke();
+
+            // TEMP
+            SceneManager.LoadScene("MainMenu");
         }
 
         Debug.Log($"Player took {1}. Current health: {CurrentHealth}");

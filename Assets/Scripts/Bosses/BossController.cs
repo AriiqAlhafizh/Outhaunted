@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -40,11 +41,11 @@ public class BossController : MonoBehaviour
     {
         if (PlayerStatsManager.Instance.PlayerPosition.x > transform.position.x)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
     private IEnumerator AttackCycleCoroutine()
@@ -87,6 +88,7 @@ public class BossController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("MainMenu");
         Debug.Log("Boss has been defeated!");
     }
 }
