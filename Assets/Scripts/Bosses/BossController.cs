@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossController : MonoBehaviour
 {
@@ -87,6 +88,7 @@ public class BossController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("MainMenu");
         Debug.Log("Boss has been defeated!");
     }
 }
