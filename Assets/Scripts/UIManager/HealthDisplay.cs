@@ -13,12 +13,12 @@ public class HealthDisplay : MonoBehaviour
     void Start()
     {
         OnHealthChange();
-        PlayerStatsManager.instance.OnDamage += OnHealthChange;
+        PlayerStatsManager.Instance.OnDamaged += OnHealthChange;
     }
 
     void OnDestroy()
     {
-        PlayerStatsManager.instance.OnDamage -= OnHealthChange;
+        PlayerStatsManager.Instance.OnDamaged -= OnHealthChange;
     }
 
     void OnHealthChange()

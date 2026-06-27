@@ -90,4 +90,11 @@ public class CameraZoomController : MonoBehaviour
             yield return null;
         }
     }
+    public void Back()
+    {
+        if (currentRoutine != null)
+            StopCoroutine(currentRoutine);
+        currentRoutine = StartCoroutine(ZoomOutRoutine());
+        currentTarget = null;
+    }
 }
