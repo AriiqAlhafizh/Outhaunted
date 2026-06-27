@@ -24,10 +24,12 @@ public class PlayerAttack : MonoBehaviour
     //public SideAttack attackAnim;
     public PlayerInputHandler input;
     public PlayerAnimations pAnimation;
+    public PogoAbility playerPogo;
 
     [Header("Settings")]
     public float attackCooldown = 0.5f; // Cooldown in seconds
     public float attackDamage;
+    public bool canAttack = true;
 
     [Header("Debug")]
     public AttackDirection atkDir = AttackDirection.Right;
@@ -44,6 +46,14 @@ public class PlayerAttack : MonoBehaviour
 
     private void Start()
     {
+        try
+        {
+            playerPogo = GetComponent<PogoAbility>();
+        }
+        catch (Exception)
+        {
+            Debug.Log("Player doesn't have PogoAbility component");
+        }
         //attackAnim = GetComponentInChildren<SideAttack>();
         input = GetComponent<PlayerInputHandler>();
         pAnimation = GetComponent<PlayerAnimations>();
@@ -76,13 +86,23 @@ public class PlayerAttack : MonoBehaviour
             atkDir = AttackDirection.Down;
         else
         {
-            AttackDirectionChanged?.Invoke(lastXDir);
             atkDir = lastXDir;
+        }
+
+        if (playerPogo != null)
+        {
+            AttackDirectionChanged?.Invoke(atkDir);
+        }
+        else
+        {
+            AttackDirectionChanged?.Invoke(lastXDir);
         }
     }
     public void Attack()
     {
-        if (Time.time >= lastAttackTime + attackCooldown)
+        if (Time.time >= lastAttackTime + attackCooldown 
+            && canAttack 
+            && !PlayerStatsManager.Instance.inIFrame)
         {
             StartAttack();
             lastAttackTime = Time.time;
@@ -91,15 +111,15 @@ public class PlayerAttack : MonoBehaviour
     protected virtual void StartAttack()
     {
         StartCoroutine(AttackCooldown());
-        OnAttack?.Invoke();
         pAnimation.StartAttack();
+        OnAttack?.Invoke();
         // add animation on other child scripts here
     }
 
     protected IEnumerator AttackCooldown()
     {
         pAnimation.SetIsAttacking(true);
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(pAnimation.GetAnimationLength("Attack_1"));
         pAnimation.SetIsAttacking(false);
     }
 

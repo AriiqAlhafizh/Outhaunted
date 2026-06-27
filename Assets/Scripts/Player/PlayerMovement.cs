@@ -159,7 +159,10 @@ public class PlayerMovement : MonoBehaviour
         {
             // Falling: apply extra gravity
             rb.linearVelocity += (fallMultiplier - 1) * Physics2D.gravity.y * Time.deltaTime * Vector2.up;
-            pAnimation.StartOnAir();
+            if (rb.linearVelocity.y < -1f)
+            {
+                pAnimation.StartOnAir();
+            }
         }
         else if (rb.linearVelocity.y > 0 && !isJumping)
         {
@@ -223,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded()
     {
         float extraHeight = 0.1f;
-        float rayLength = .2f + extraHeight;
+        float rayLength = .0f + extraHeight;
 
         // Cast from left and right bottom corners
         Vector2 leftOrigin = new(col.bounds.min.x + 0.01f, col.bounds.min.y);
@@ -286,7 +289,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(-5f, 5f);
         }
+        pAnimation.StartHurt();
+
         yield return new WaitForSeconds(PlayerStatsManager.Instance.iFrame);
+
         PlayerStatsManager.Instance.inIFrame = false;
         canMove = true;
     }

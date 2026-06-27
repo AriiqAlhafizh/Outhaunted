@@ -10,7 +10,9 @@ public class PlayerAnimations : MonoBehaviour
 
     private int currentStateHash;
     [SerializeField] private bool isAttacking;
+    [SerializeField] private bool isInAbility;
 
+    public readonly int PlayerHurt = Animator.StringToHash("Hurt");
     public readonly int PlayerIdle = Animator.StringToHash("Idle");
     public readonly int PlayerWalk = Animator.StringToHash("Walk");
     public readonly int PlayerJump = Animator.StringToHash("Jump");
@@ -48,19 +50,23 @@ public class PlayerAnimations : MonoBehaviour
 
     public void SetTrigger(int triggerHash)
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
             animator.SetTrigger(triggerHash);
     }
 
     public void SetBool(int boolHash, bool value)
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
             animator.SetBool(boolHash, value);
     }
-
+    
+    public void StartHurt()
+    {
+        ChangeAnimationState(PlayerHurt);
+    }
     public void StartIdle()
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
         {
             ChangeAnimationState(PlayerIdle);
         }
@@ -68,7 +74,7 @@ public class PlayerAnimations : MonoBehaviour
 
     public void StartWalk()
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
         {
             ChangeAnimationState(PlayerWalk);
         }
@@ -76,19 +82,19 @@ public class PlayerAnimations : MonoBehaviour
 
     public void StartJump()
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
             ChangeAnimationState(PlayerJump);
     }
 
     public void StartOnAir()
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
             ChangeAnimationState(PlayerOnAir);
     }
 
     public void StartLanding()
     {
-        if (!isAttacking)
+        if (!isAttacking && !isInAbility)
             ChangeAnimationState(PlayerLanding);
     }
 
@@ -100,5 +106,27 @@ public class PlayerAnimations : MonoBehaviour
     public void SetIsAttacking(bool value)
     {
         isAttacking = value;
+    }
+
+    public void SetInAbility(bool value)
+    {
+        isInAbility = value;
+    }
+
+    public float GetAnimationLength(string name)
+    {
+        // Get all clips assigned to the Animator Controller
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+
+        foreach (AnimationClip clip in clips)
+        {
+            if (clip.name == name)
+            {
+                return clip.length; // Returns length in seconds
+            }
+        }
+
+        Debug.LogWarning($"Clip named {name} not found!");
+        return 0f;
     }
 }

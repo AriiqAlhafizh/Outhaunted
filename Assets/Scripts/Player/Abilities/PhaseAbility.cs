@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class PhaseAbility : Ability
 {
+    private static readonly int PhaseThroughHash = Animator.StringToHash("PhaseThrough");
+    [SerializeField] PlayerAnimations pAnimation;
+
     [Header("Phase Settings")]
     [SerializeField] private float phaseCooldown = 1f;
     [SerializeField] private float phaseDuration = 1f;
@@ -17,6 +20,8 @@ public class PhaseAbility : Ability
     private int playerLayer;
     private void Start()
     {
+        pAnimation = GetComponent<PlayerAnimations>();
+
         context.Input.DashPressed += StartPhase;
         enemyLayer = LayerMask.NameToLayer(enemyLayerName);
         playerLayer = LayerMask.NameToLayer(playerLayerName);
@@ -28,6 +33,10 @@ public class PhaseAbility : Ability
             yield break;
 
         inPhaseMode = true;
+        context.Attack.canAttack = false;
+        pAnimation.SetInAbility(true);
+        pAnimation.animator.Play(PhaseThroughHash);
+
         // Ignore collisions between player and enemy layers
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
 
@@ -36,6 +45,8 @@ public class PhaseAbility : Ability
         // Re-enable collisions between player and enemy layers
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
         inPhaseMode = false;
+        context.Attack.canAttack = true;
+        pAnimation.SetInAbility(false);
     }
 
     private void StartPhase()
