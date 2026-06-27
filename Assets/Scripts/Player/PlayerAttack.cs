@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,29 +21,34 @@ public enum AttackType
 public class PlayerAttack : MonoBehaviour
 {
     [Header("References")]
-    public Slash attackAnim;
+    //public SideAttack attackAnim;
     public PlayerInputHandler input;
+    public PlayerAnimations pAnimation;
 
     [Header("Settings")]
     public float attackCooldown = 0.5f; // Cooldown in seconds
     public float attackDamage;
 
     [Header("Debug")]
-    [SerializeField] private AttackDirection atkDir = AttackDirection.Right;
+    public AttackDirection atkDir = AttackDirection.Right;
     [SerializeField] private AttackDirection lastXDir = AttackDirection.Right;
     [SerializeField] private float lastAttackTime = -Mathf.Infinity;
 
     // Events
     public event Action OnPogo;
 
+    public event Action<AttackDirection> AttackDirectionChanged;
+    public event Action<AttackDirection> OnAttack;
     public event Action<GameObject> OnAttackHit;
 
 
     private void Start()
     {
-        attackAnim = GetComponentInChildren<Slash>();
+        //attackAnim = GetComponentInChildren<SideAttack>();
         input = GetComponent<PlayerInputHandler>();
+        pAnimation = GetComponent<PlayerAnimations>();
         
+        attackCooldown = PlayerStatsManager.Instance.CurrentCharacter.attackCooldown;
         attackDamage = PlayerStatsManager.Instance.CurrentCharacter.attackDamage;
 
         input.AttackPressed += Attack;
@@ -69,7 +75,10 @@ public class PlayerAttack : MonoBehaviour
         else if (input.MovementVector.y < 0)
             atkDir = AttackDirection.Down;
         else
+        {
+            AttackDirectionChanged?.Invoke(lastXDir);
             atkDir = lastXDir;
+        }
     }
     public void Attack()
     {
@@ -81,8 +90,16 @@ public class PlayerAttack : MonoBehaviour
     }
     private void StartAttack(AttackDirection dir)
     {
-        
-        attackAnim.TriggerAttack(dir);
+        StartCoroutine(AttackCooldown());
+        OnAttack?.Invoke(dir);
+        pAnimation.StartAttack();
+    }
+
+    private IEnumerator AttackCooldown()
+    {
+        pAnimation.SetIsAttacking(true);
+        yield return new WaitForSeconds(attackCooldown);
+        pAnimation.SetIsAttacking(false);
     }
 
     public void RegisterHit(GameObject enemy)
