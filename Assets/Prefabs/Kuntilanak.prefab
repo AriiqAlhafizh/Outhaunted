@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &866819533554813727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4214074438260785662}
-  m_Layer: 0
-  m_Name: VFX
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4214074438260785662
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866819533554813727}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6744498531469993618}
-  m_Father: {fileID: 1674165084419539350}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4052693101160497168
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +11,8 @@ GameObject:
   - component: {fileID: 1674165084419539350}
   - component: {fileID: 8458937732598722652}
   - component: {fileID: 8509701796548009981}
-  - component: {fileID: 4861387622257472875}
+  - component: {fileID: 6363489492223828900}
+  - component: {fileID: 5243301706125800731}
   - component: {fileID: 1642815808010818006}
   - component: {fileID: 44857554293668000}
   - component: {fileID: 5238122994066905853}
@@ -70,7 +39,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4591012629509064504}
-  - {fileID: 4214074438260785662}
+  - {fileID: 6744498531469993618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8458937732598722652
@@ -99,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6995d19e99e20468bf05ed241d069d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerContext
---- !u!114 &4861387622257472875
+--- !u!114 &6363489492223828900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,15 +77,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 4052693101160497168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5dd0feca5c2dd744abc338347869e28, type: 3}
+  m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
+  animator: {fileID: 0}
+  defaultController: {fileID: 0}
+  overrideController: {fileID: 22100000, guid: c5a93adc9a200f042834fddfacd8c76f, type: 2}
+  isAttacking: 0
+  isInAbility: 0
+--- !u!114 &5243301706125800731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052693101160497168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b098197593b2148a6e897c51ee2734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KuntilanakAttack
   input: {fileID: 0}
+  pAnimation: {fileID: 0}
+  playerPogo: {fileID: 0}
   attackCooldown: 0.5
   attackDamage: 0
+  canAttack: 1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
+  attackIndex: 0
 --- !u!114 &1642815808010818006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +135,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   col: {fileID: 0}
   input: {fileID: 0}
+  sr: {fileID: 0}
+  pAnimation: {fileID: 0}
   moveSpeed: 0
   dir: 1
   moveX: 0
@@ -397,7 +389,7 @@ GameObject:
   - component: {fileID: 2558301898019843409}
   - component: {fileID: 328128077524227466}
   - component: {fileID: 6307466228434512301}
-  - component: {fileID: 9129384012405784257}
+  - component: {fileID: 4505554473419769371}
   m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
@@ -413,12 +405,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7881092840438203881}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4214074438260785662}
+  m_Father: {fileID: 1674165084419539350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2558301898019843409
 Animator:
@@ -557,7 +549,7 @@ PolygonCollider2D:
       - {x: 0.4733963, y: 0.21047193}
       - {x: 0.3690982, y: 0.41123098}
   m_UseDelaunayMesh: 1
---- !u!114 &9129384012405784257
+--- !u!114 &4505554473419769371
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -566,10 +558,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7881092840438203881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1723fb9470913c4c87d4b40b6c67187, type: 3}
+  m_Script: {fileID: 11500000, guid: 807ae7b1c2886444abe46e71da28f5dc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SideAttack
-  spriteOffset: {x: 0.6, y: 0.472}
+  m_EditorClassIdentifier: Assembly-CSharp::KuntilanakSideAttack
+  spriteOffset: {x: 0.6, y: 0.45}
+  animator: {fileID: 0}
+  direction: 0
 --- !u!1 &8696794209239629511
 GameObject:
   m_ObjectHideFlags: 0

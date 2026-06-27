@@ -1,3 +1,4 @@
+using System;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -6,7 +7,8 @@ public class SideAttack : Ability
     [Header("Attack Settings")]
     public Vector2 spriteOffset;
 
-    Animator animator;
+    public Animator animator;
+    public AttackDirection direction;
     Collider2D col;
 
     protected override void Awake()
@@ -36,13 +38,15 @@ public class SideAttack : Ability
         }
     }
 
-    public void TriggerAttack(AttackDirection dir)
+    public virtual void TriggerAttack()
     {
-        animator.SetTrigger("Attack1");
+        if (direction == AttackDirection.Left || direction == AttackDirection.Right)
+            animator.SetTrigger("Attack1");
     }
 
     public void ChangeAttackDirection(AttackDirection dir)
     {
+        direction = dir;
         if (dir == AttackDirection.Right)
         {
             transform.localPosition = new Vector2(1, 1) * spriteOffset;
@@ -53,5 +57,7 @@ public class SideAttack : Ability
             transform.localPosition = new Vector2(-1, 1) * spriteOffset;
             transform.rotation = new Quaternion(0, 180, 0, 0);
         }
+
+        //Debug.Log("Attack direction changed to: " + dir);
     }
 }

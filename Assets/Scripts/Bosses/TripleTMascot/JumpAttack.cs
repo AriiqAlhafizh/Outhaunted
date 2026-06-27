@@ -5,6 +5,9 @@ public class JumpAttack : BossAttack
 {
     Vector3 playerPos;
 
+    public string AnimationOnAir = "OnAir";
+    public string AnimationLanding = "Landing";
+
     [Header("Jump Attack Settings")]
     public float jumpHeight = 2f;
     public float jumpDuration = 1f;
@@ -41,6 +44,7 @@ public class JumpAttack : BossAttack
     private IEnumerator JumpCoroutine(Vector3 startPos, Vector3 targetPos)
     {
         float timeElapsed = 0f;
+        animator.Play(AnimationOnAir);
 
         while (timeElapsed < jumpDuration)
         {
@@ -61,5 +65,6 @@ public class JumpAttack : BossAttack
         }
 
         transform.position = targetPos;
+        animator.Play(AnimationLanding);
     }
 }

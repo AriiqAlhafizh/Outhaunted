@@ -17,7 +17,7 @@ MonoBehaviour:
   maxHealth: 100
   moveSpeed: 6.25
   jumpForce: 12.5
-  attackDamage: 100
+  attackDamage: 15
   attackCooldown: 1
   startingAbilities:
   - {fileID: 249245270695397205, guid: fd9adecce9a6fe64a94a085be13e4004, type: 3}

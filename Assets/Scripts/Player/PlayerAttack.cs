@@ -24,26 +24,36 @@ public class PlayerAttack : MonoBehaviour
     //public SideAttack attackAnim;
     public PlayerInputHandler input;
     public PlayerAnimations pAnimation;
+    public PogoAbility playerPogo;
 
     [Header("Settings")]
     public float attackCooldown = 0.5f; // Cooldown in seconds
     public float attackDamage;
+    public bool canAttack = true;
 
     [Header("Debug")]
     public AttackDirection atkDir = AttackDirection.Right;
-    [SerializeField] private AttackDirection lastXDir = AttackDirection.Right;
-    [SerializeField] private float lastAttackTime = -Mathf.Infinity;
+    [SerializeField] protected AttackDirection lastXDir = AttackDirection.Right;
+    [SerializeField] protected float lastAttackTime = -Mathf.Infinity;
 
     // Events
     public event Action OnPogo;
 
     public event Action<AttackDirection> AttackDirectionChanged;
-    public event Action<AttackDirection> OnAttack;
+    public virtual event Action OnAttack;
     public event Action<GameObject> OnAttackHit;
 
 
     private void Start()
     {
+        try
+        {
+            playerPogo = GetComponent<PogoAbility>();
+        }
+        catch (Exception)
+        {
+            Debug.Log("Player doesn't have PogoAbility component");
+        }
         //attackAnim = GetComponentInChildren<SideAttack>();
         input = GetComponent<PlayerInputHandler>();
         pAnimation = GetComponent<PlayerAnimations>();
@@ -76,29 +86,40 @@ public class PlayerAttack : MonoBehaviour
             atkDir = AttackDirection.Down;
         else
         {
-            AttackDirectionChanged?.Invoke(lastXDir);
             atkDir = lastXDir;
+        }
+
+        if (playerPogo != null)
+        {
+            AttackDirectionChanged?.Invoke(atkDir);
+        }
+        else
+        {
+            AttackDirectionChanged?.Invoke(lastXDir);
         }
     }
     public void Attack()
     {
-        if (Time.time >= lastAttackTime + attackCooldown)
+        if (Time.time >= lastAttackTime + attackCooldown 
+            && canAttack 
+            && !PlayerStatsManager.Instance.inIFrame)
         {
-            StartAttack(atkDir);
+            StartAttack();
             lastAttackTime = Time.time;
         }
     }
-    private void StartAttack(AttackDirection dir)
+    protected virtual void StartAttack()
     {
         StartCoroutine(AttackCooldown());
-        OnAttack?.Invoke(dir);
         pAnimation.StartAttack();
+        OnAttack?.Invoke();
+        // add animation on other child scripts here
     }
 
-    private IEnumerator AttackCooldown()
+    protected IEnumerator AttackCooldown()
     {
         pAnimation.SetIsAttacking(true);
-        yield return new WaitForSeconds(attackCooldown);
+        yield return new WaitForSeconds(pAnimation.GetAnimationLength("Attack_1"));
         pAnimation.SetIsAttacking(false);
     }
 

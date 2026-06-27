@@ -22,13 +22,18 @@ public class BasicComboAbility : Ability
         if (curCombo < maxCombo)
         {
             curCombo++;
+        }
+
+        if (curCombo == maxCombo)
+        {
             context.Attack.IncreaseDamage(dmgMultiplier * context.Attack.attackDamage);
+            context.Attack.pAnimation.OverrideAnimation();
         }
     }
-
     private void ResetCombo()
     {
         curCombo = 0;
+        context.Attack.pAnimation.ResetAnimation();
         context.Attack.ResetDamage();
     }
 }
