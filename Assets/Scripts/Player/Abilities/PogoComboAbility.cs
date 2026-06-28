@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PogoComboAbility : Ability
 {
+    private static readonly int PogoUpgradeHash = Animator.StringToHash("PogoUpgrade");
     public PocongSideAttack pocongSideAttack;
 
     public float dmgMultiplier = .15f;
@@ -30,13 +31,13 @@ public class PogoComboAbility : Ability
         if (curCombo == maxCombo)
         {
             context.Attack.IncreaseDamage(dmgMultiplier * context.Attack.attackDamage);
-            pocongSideAttack.animator.SetBool("PogoUpgrade", true);
+            pocongSideAttack.animator.SetBool(PogoUpgradeHash, true);
         }
     }
 
     private void ResetCombo()
     {
-        pocongSideAttack.animator.SetBool("PogoUpgrade", false);
+        pocongSideAttack.animator.SetBool(PogoUpgradeHash, false);
         curCombo = 0;
         context.Attack.ResetDamage();
     }

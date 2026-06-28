@@ -34,7 +34,7 @@ public class SpikeGroundAttack : BossAttack
     {
         for (int iteration = 0; iteration < numberOfAttacks; iteration++)
         {
-            float playerX = PlayerStatsManager.Instance.PlayerPosition.x;
+            float playerX = PlayerManager.Instance.PlayerPosition.x;
             for (int i = 0; i < 10; i++)
             {
                 Instantiate(warningPrefab, new Vector3(playerX + (i * distanceBetweenSpikes), startPosY, 0f), Quaternion.identity);

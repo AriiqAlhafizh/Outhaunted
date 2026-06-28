@@ -1,10 +1,9 @@
 using System;
-using System.Xml.Linq;
 using UnityEngine;
 
-public class BossStatsManager : MonoBehaviour
+public class BossManager : MonoBehaviour
 {
-    public static BossStatsManager Instance;
+    public static BossManager Instance;
 
     public BossData CurrentBoss;
     public int MaxHealth;

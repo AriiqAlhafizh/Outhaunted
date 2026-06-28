@@ -5,7 +5,7 @@ public class LevelSelect : MonoBehaviour
 {
     public void SetBoss(BossData bossData)
     {
-        BossStatsManager.Instance.SetBossGameObject(bossData);
+        BossManager.Instance.SetBossGameObject(bossData);
     }
 
     public void GotoBossScene()

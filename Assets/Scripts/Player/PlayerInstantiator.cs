@@ -10,15 +10,15 @@ public class PlayerInstantiator : MonoBehaviour
     }
     public void SpawnPlayer()
     {
-        GameObject player = Instantiate(PlayerStatsManager.Instance.CurrentCharacter.characterPrefab, spawnPos, Quaternion.identity);
-        foreach (var ability in PlayerStatsManager.Instance.CurrentCharacter.startingAbilities)
+        GameObject player = Instantiate(PlayerManager.Instance.CurrentCharacter.characterPrefab, spawnPos, Quaternion.identity);
+        foreach (var ability in PlayerManager.Instance.CurrentCharacter.startingAbilities)
         {
             Type abilityType = ability.GetType();
             player.AddComponent(abilityType);
         }
         
-        PlayerStatsManager.Instance.ResetStats();
-        PlayerStatsManager.Instance.InGame = true;
+        PlayerManager.Instance.ResetStats();
+        PlayerManager.Instance.InGame = true;
 
         Destroy(gameObject);
     }

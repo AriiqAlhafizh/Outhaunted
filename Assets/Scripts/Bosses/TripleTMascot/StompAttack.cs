@@ -48,7 +48,7 @@ public class StompAttack : BossAttack
             // Part 1: Jump to hoverHeight
             animator.Play(AnimationGoUp);
             Vector3 startPos = transform.position;
-            Vector3 playerPos = PlayerStatsManager.Instance.PlayerPosition;
+            Vector3 playerPos = PlayerManager.Instance.PlayerPosition;
             Vector3 targetHoverPos = new Vector3(playerPos.x, groundY + hoverHeight, startPos.z);
 
             float timeElapsed = 0f;
@@ -65,7 +65,7 @@ public class StompAttack : BossAttack
             timeElapsed = 0f;
             while (timeElapsed < hoverDuration)
             {
-                Vector3 curPlayerPos = PlayerStatsManager.Instance.PlayerPosition;
+                Vector3 curPlayerPos = PlayerManager.Instance.PlayerPosition;
                 // Move towards player on X-axis at hoverSpeed
                 float newX = Mathf.MoveTowards(transform.position.x, curPlayerPos.x, hoverSpeed * Time.deltaTime);
                 transform.position = new Vector3(newX, transform.position.y, transform.position.z);

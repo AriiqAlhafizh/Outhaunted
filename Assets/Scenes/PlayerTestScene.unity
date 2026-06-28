@@ -465,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427114333279408854, guid: 673da20452ed60148b6b650bafe1e999, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8554533067572591946, guid: 673da20452ed60148b6b650bafe1e999, type: 3}
       propertyPath: m_LocalPosition.x
@@ -564,77 +564,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kuntilanak
       objectReference: {fileID: 0}
-    - target: {fileID: 5243301706125800731, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-      propertyPath: attackCooldown
-      value: 0.1
+    - target: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1031785182}
-    - targetCorrespondingSourceObject: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1031785181}
-    - targetCorrespondingSourceObject: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1031785180}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
---- !u!1 &1031785167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
-  m_PrefabInstance: {fileID: 525625992}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1031785180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031785167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3374a64815a4a0542bdaf3c986e0bfcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GlideAbility
-  glideFallSpeed: 2
-  isGliding: 0
---- !u!114 &1031785181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031785167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522e6df8b7154354cb5c73502b6482fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicComboAbility
-  dmgMultiplier: 0.15
-  maxCombo: 10
-  curCombo: 0
---- !u!114 &1031785182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031785167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 818a87726b9423b4c816fa150bc25864, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PhaseAbility
-  pAnimation: {fileID: 0}
-  phaseCooldown: 1
-  phaseDuration: 1
-  enemyLayerName: Enemy
-  playerLayerName: Player
-  inPhaseMode: 0
-  lastPhaseTime: -Infinity
 --- !u!1 &1207220637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,18 +1649,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3420053407924562260, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
-      propertyPath: InGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420053407924562260, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
-      propertyPath: iFrame
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420053407924562260, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
-      propertyPath: CurrentCharacter
-      value: 
-      objectReference: {fileID: 11400000, guid: f0ad8dde92e9d324696fcf4016eb201d, type: 2}
     - target: {fileID: 7746218554508293162, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
       propertyPath: m_Name
       value: GameManager

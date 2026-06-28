@@ -31,7 +31,7 @@ public class SpinAttack : BossAttack
         animator.Play("Attack");
         col.enabled = true;
         Vector3 startPos = transform.position;
-        Vector3 playerPos = PlayerStatsManager.Instance.PlayerPosition;
+        Vector3 playerPos = PlayerManager.Instance.PlayerPosition;
 
         // Only calculate direction on the X axis
         Vector3 direction = new Vector3(playerPos.x - startPos.x, 0f, 0f).normalized;

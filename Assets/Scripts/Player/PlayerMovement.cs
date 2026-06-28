@@ -51,8 +51,8 @@ public class PlayerMovement : MonoBehaviour
 
         canMove = true;
 
-        moveSpeed = PlayerStatsManager.Instance.CurrentCharacter.moveSpeed;
-        jumpForce = PlayerStatsManager.Instance.CurrentCharacter.jumpForce;
+        moveSpeed = PlayerManager.Instance.CurrentCharacter.moveSpeed;
+        jumpForce = PlayerManager.Instance.CurrentCharacter.jumpForce;
     }
 
     private void OnDisable()
@@ -279,7 +279,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator KnockbackCoroutine(Vector2 sourcePos)
     {
-        PlayerStatsManager.Instance.inIFrame = true;
+        PlayerManager.Instance.inIFrame = true;
         canMove = false;
         if (sourcePos.x < transform.position.x)
         {
@@ -291,9 +291,9 @@ public class PlayerMovement : MonoBehaviour
         }
         pAnimation.StartHurt();
 
-        yield return new WaitForSeconds(PlayerStatsManager.Instance.iFrame);
+        yield return new WaitForSeconds(PlayerManager.Instance.iFrame);
 
-        PlayerStatsManager.Instance.inIFrame = false;
+        PlayerManager.Instance.inIFrame = false;
         canMove = true;
     }
 }

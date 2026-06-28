@@ -13,11 +13,13 @@ public class KuntilanakSideAttack : SideAttack
         {
             animator.SetTrigger(Attack1Hash);
             attackIndex = 1;
+            StartCoroutine(ToggleCollider(sideAttackCol, context.Attack.attackCooldown));
         }
         else
         {
             animator.SetTrigger(Attack2Hash);
             attackIndex = 0;
+            StartCoroutine(ToggleCollider(sideAttackCol, context.Attack.attackCooldown));
         }
     }
 }

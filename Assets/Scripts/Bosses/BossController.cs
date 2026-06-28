@@ -27,19 +27,19 @@ public class BossController : MonoBehaviour
     public float delayBetweenAttacks = 1f;
     private void Start()
     {   
-        BossStatsManager.Instance.OnDamaged += OnDamaged;
-        BossStatsManager.Instance.OnDeath += Die;
+        BossManager.Instance.OnDamaged += OnDamaged;
+        BossManager.Instance.OnDeath += Die;
         StartCoroutine(AttackCycleCoroutine());
     }
     private void OnDisable()
     {
-        BossStatsManager.Instance.OnDamaged -= OnDamaged;
-        BossStatsManager.Instance.OnDeath -= Die;
+        BossManager.Instance.OnDamaged -= OnDamaged;
+        BossManager.Instance.OnDeath -= Die;
     }
 
     private void Update()
     {
-        if (PlayerStatsManager.Instance.PlayerPosition.x > transform.position.x)
+        if (PlayerManager.Instance.PlayerPosition.x > transform.position.x)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }

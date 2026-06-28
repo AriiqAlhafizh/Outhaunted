@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Pocong
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
   playerType: 1
-  characterPrefab: {fileID: 2913607416162824942, guid: 37b9e1669900c944a9998ae3090207a3, type: 3}
-  maxHealth: 150
+  characterPrefab: {fileID: 5330264819161359538, guid: 3f2ff5878327c7346a6b1bd9a35aaa32, type: 3}
+  maxHealth: 5
   moveSpeed: 6.25
-  jumpForce: 15
+  jumpForce: 10
   attackDamage: 20
-  attackCooldown: 1.5
+  attackCooldown: 1
+  iFrameDuration: 0.5
   startingAbilities:
   - {fileID: 5411230724254401547, guid: a0f13cfb697f1464093f4a146419cf6f, type: 3}
   - {fileID: 2600124804228424460, guid: b2df2e4985dd64b47939be9b50c3f82f, type: 3}
   - {fileID: 918700347685051487, guid: 46f14b63880abf74cb69435fefa76be8, type: 3}
   - {fileID: 5606399900284264182, guid: e79faeeb2a6069248a4140efa7c319bb, type: 3}
-  attackAnimator: {fileID: 9100000, guid: f16d63f465dc16e4eb70b29c804b5fe5, type: 2}

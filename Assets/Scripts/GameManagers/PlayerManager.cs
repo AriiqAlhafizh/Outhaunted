@@ -1,11 +1,10 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static PlayerMovement;
 
-public class PlayerStatsManager : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
-    public static PlayerStatsManager Instance;
+    public static PlayerManager Instance;
 
     [Header("Player Settings")]
     public CharacterData CurrentCharacter;
@@ -63,6 +62,7 @@ public class PlayerStatsManager : MonoBehaviour
     {
         MaxHealth = CurrentCharacter.maxHealth;
         CurrentHealth = MaxHealth;
+        iFrame = CurrentCharacter.iFrameDuration;
     }
 
     public void SetCharacterData(CharacterData characterData)

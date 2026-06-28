@@ -18,6 +18,7 @@ public class CharacterData : ScriptableObject
     public float jumpForce;
     public float attackDamage;
     public float attackCooldown;
+    public float iFrameDuration;
 
     [Header("Abilities")]
     public List<Ability> startingAbilities;

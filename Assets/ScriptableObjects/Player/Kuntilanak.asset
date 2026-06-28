@@ -18,9 +18,9 @@ MonoBehaviour:
   moveSpeed: 6.25
   jumpForce: 12.5
   attackDamage: 6
-  attackCooldown: 1
+  attackCooldown: 0.2
+  iFrameDuration: 0.5
   startingAbilities:
   - {fileID: 249245270695397205, guid: fd9adecce9a6fe64a94a085be13e4004, type: 3}
   - {fileID: 2125162794311747655, guid: 1500edecc5a48604baa2c9735bf1b87d, type: 3}
   - {fileID: 5772861351953528068, guid: ca0745e7b82ebaa4cb7a97615ecc80cf, type: 3}
-  attackAnimator: {fileID: 9100000, guid: f16d63f465dc16e4eb70b29c804b5fe5, type: 2}
