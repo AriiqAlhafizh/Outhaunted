@@ -351,7 +351,7 @@ MonoBehaviour:
   - {fileID: 6591555496833814390}
   - {fileID: 8141715038187808577}
   - {fileID: 6703679754971644880}
-  currentPhase: 2
+  currentPhase: 0
   startingAttacks: 2
   delayBetweenAttacks: 2
 --- !u!114 &3322393341083336798

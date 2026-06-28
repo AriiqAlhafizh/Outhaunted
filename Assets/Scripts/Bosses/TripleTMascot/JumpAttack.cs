@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class JumpAttack : BossAttack
 {
-    Vector3 playerPos;
+    Vector2 playerPos;
 
     public string AnimationOnAir = "OnAir";
     public string AnimationLanding = "Landing";
@@ -26,22 +26,22 @@ public class JumpAttack : BossAttack
 
     private void ExecuteAttack()
     {
+        float startY = transform.position.y;
         playerPos = PlayerStatsManager.Instance.PlayerPosition;
-        Vector2 playerVelocity = PlayerStatsManager.Instance.CurrentPlayerContext.Rigidbody.linearVelocity;
+        float playerVelocity = PlayerStatsManager.Instance.CurrentPlayerContext.Rigidbody.linearVelocity.x;
 
         Vector2 mapBounds = new(18f, 10f); // Example map bounds, adjust as needed
 
         // Predict where the player will be at the end of the jump duration
-        Vector3 predictedPos = playerPos + (Vector3)playerVelocity * jumpDuration;
+        float predictedPos = playerPos.x + playerVelocity * jumpDuration;
 
         // Clamp the predicted position to the map bounds
-        predictedPos.x = Mathf.Clamp(predictedPos.x, -mapBounds.x / 2, mapBounds.x / 2);
-        predictedPos.y = Mathf.Clamp(predictedPos.y, -mapBounds.y / 2, mapBounds.y / 2);
+        predictedPos = Mathf.Clamp(predictedPos, -mapBounds.x / 2, mapBounds.x / 2);
 
-        StartCoroutine(JumpCoroutine(transform.position, predictedPos));
+        StartCoroutine(JumpCoroutine(transform.position, new Vector2(predictedPos, startY)));
     }
 
-    private IEnumerator JumpCoroutine(Vector3 startPos, Vector3 targetPos)
+    private IEnumerator JumpCoroutine(Vector2 startPos, Vector2 targetPos)
     {
         float timeElapsed = 0f;
         animator.Play(AnimationOnAir);
@@ -51,7 +51,7 @@ public class JumpAttack : BossAttack
             float t = timeElapsed / jumpDuration;
 
             // Linear interpolation for X and base Y
-            Vector3 currentPos = Vector3.Lerp(startPos, targetPos, t);
+            Vector2 currentPos = Vector2.Lerp(startPos, targetPos, t);
 
             // Add the parabolic arc height
             // Formula: 4 * h * t * (1 - t) gives a peak of h at t = 0.5
