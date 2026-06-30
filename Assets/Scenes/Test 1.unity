@@ -1339,6 +1339,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 857263398527298383, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857263398527298383, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857263398527298383, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
+    - target: {fileID: 857263398527298383, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1635932395583805681, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1370,6 +1386,14 @@ PrefabInstance:
     - target: {fileID: 2180389016449034160, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688397021626043952, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 190.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688397021626043952, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 189.2748
       objectReference: {fileID: 0}
     - target: {fileID: 5293995567591500575, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1483,6 +1507,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6827112292424746524, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_Value
+      value: 0.384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827112292424746524, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827112292424746524, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7076508324637066712, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1502,6 +1538,14 @@ PrefabInstance:
     - target: {fileID: 7387970554382377296, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533960962631490023, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: HealthBarText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533960962631490023, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
+      propertyPath: HealthBarSlider
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7587908922786010883, guid: cbe4588a48136dc47b8ff4eeeb384e20, type: 3}
       propertyPath: m_AnchorMax.x
