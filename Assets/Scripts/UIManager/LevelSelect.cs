@@ -12,4 +12,8 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("BossTestScene");
     }
+    public void back()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
