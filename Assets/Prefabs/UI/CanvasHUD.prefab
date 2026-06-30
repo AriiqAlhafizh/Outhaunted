@@ -1677,7 +1677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407364613154422237}
   - component: {fileID: 284482561679380125}
-  - component: {fileID: 6750848241652888072}
+  - component: {fileID: 6610288255092621042}
   m_Layer: 0
   m_Name: Health
   m_TagString: Untagged
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &6750848241652888072
+--- !u!114 &6610288255092621042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1744,7 +1744,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9023065629723705554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7953d922d1ba20e49b098fb2d3a9f97e, type: 3}
+  m_Script: {fileID: 11500000, guid: 653d90e356198ce498ae6239c94df805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthDisplay
   emptyHealth: {fileID: -3481150820195624593, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}

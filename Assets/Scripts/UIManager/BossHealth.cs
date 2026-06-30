@@ -11,17 +11,17 @@ public class BossHealth : MonoBehaviour
 
     void Start()
     {
-        BossStatsManager.Instance.OnDamaged += GetCurrentFill;
+        BossManager.Instance.OnDamaged += GetCurrentFill;
     }
 
     private void OnDisable()
     {
-        BossStatsManager.Instance.OnDamaged -= GetCurrentFill;
+        BossManager.Instance.OnDamaged -= GetCurrentFill;
     }
 
     void GetCurrentFill()
     {
-        int currHealth = BossStatsManager.Instance.CurrentHealth;
+        int currHealth = BossManager.Instance.CurrentHealth;
         float fillAmount = (float)currHealth / maximum;
         mask.fillAmount = fillAmount;
     }   
