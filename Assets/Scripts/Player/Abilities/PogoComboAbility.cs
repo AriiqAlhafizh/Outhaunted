@@ -12,9 +12,12 @@ public class PogoComboAbility : Ability
 
     public GameObject pogoHB;
 
+    private SkillBarUI sbUI;
+
     private void Start()
     {
         pocongSideAttack = GetComponentInChildren<PocongSideAttack>();
+        sbUI = GameObject.FindGameObjectWithTag("SkillBarUI").GetComponent<SkillBarUI>();
 
         context.Attack.OnPogo += Combo;
         context.Movement.OnLand += ResetCombo;
@@ -29,6 +32,7 @@ public class PogoComboAbility : Ability
         if (curCombo < maxCombo)
         {
             curCombo++;
+            sbUI.AddProgress(maxCombo / 100f);
         }
 
         if (curCombo == maxCombo)

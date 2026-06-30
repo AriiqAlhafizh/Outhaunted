@@ -14,6 +14,7 @@ public class BasicComboAbility : Ability
 
     GameObject spriteObj;
     GameObject sideHB;
+    private SkillBarUI sbUI;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class BasicComboAbility : Ability
 
         animator = GetComponentInChildren<SideAttack>().gameObject.GetComponent<Animator>();
         normalMode = animator.runtimeAnimatorController;
+
+        sbUI = GameObject.FindGameObjectWithTag("SkillBarUI").GetComponent<SkillBarUI>();
 
         context.Attack.OnAttackHit += Combo;
         PlayerManager.Instance.OnDamaged += ResetCombo;
@@ -36,6 +39,7 @@ public class BasicComboAbility : Ability
         if (curCombo < maxCombo)
         {
             curCombo++;
+            sbUI.AddProgress(maxCombo / 100f);
         }
 
         if (curCombo == maxCombo)
