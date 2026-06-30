@@ -18,7 +18,7 @@ public class SpikeProjectile : MonoBehaviour
 
     public void Start()
     {
-        spikeSpriteSizeX = GetComponent<SpriteRenderer>().bounds.size.x;
+        spikeSpriteSizeX = spikePrefab.GetComponentInChildren<SpriteRenderer>().bounds.size.x;
         if (transform.position.x > 0)
         {
             direction = Vector3.left;
@@ -42,7 +42,7 @@ public class SpikeProjectile : MonoBehaviour
         if (distanceTraveled > spikeSpriteSizeX)
         {
             distanceTraveled -= spikeSpriteSizeX;
-            Vector3 spikePosition = transform.position + (Vector3)spikeOffset;
+            Vector3 spikePosition = gameObject.transform.position + (Vector3)spikeOffset;
             Instantiate(spikePrefab, spikePosition, Quaternion.identity);
         }
     }

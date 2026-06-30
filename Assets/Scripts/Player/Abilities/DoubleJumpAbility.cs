@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DoubleJumpAbility : Ability
 {
+    private static readonly int DoubleJumpHash = Animator.StringToHash("DoubleJump");
     public int extraJumps = 1;
     public int jumps = 0;
 
@@ -17,6 +18,7 @@ public class DoubleJumpAbility : Ability
     {
         context.Input.JumpPressed -= Jump;
         context.Movement.OnLand -= ResetJumps;
+        context.Attack.OnPogo -= ResetJumps;
         context.Movement.OnJump -= IncreaseJumps;
     }
 
@@ -37,6 +39,8 @@ public class DoubleJumpAbility : Ability
         {
             context.Movement.ResetCoyoteTime();
             context.Movement.JumpPressed();
+
+            context.Attack.pAnimation.animator.Play(DoubleJumpHash);
         }
     }
 }

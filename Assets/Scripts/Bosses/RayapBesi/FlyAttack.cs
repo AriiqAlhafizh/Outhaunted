@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FlyAttack : BossAttack
 {
-    [Header("Attack Settings")]
-    public List<Platform> platforms;
-
     [Header("Fly Settings")]
     public float leftPost;
     public float rightPost;
@@ -17,6 +14,7 @@ public class FlyAttack : BossAttack
     public override void Start()
     {
         base.Start();
+        Duration = Mathf.Abs(leftPost - rightPost) / flySpeed;
         ActionEvent += ExecuteAttack;
     }
 
@@ -27,23 +25,7 @@ public class FlyAttack : BossAttack
 
     private void ExecuteAttack()
     {
-        FlipRandomPlatform();
         Fly();
-    }
-
-    private void FlipRandomPlatform()
-    {
-        int randomIndex = Random.Range(0, platforms.Count);
-
-        platforms[randomIndex].StartAnimation();
-    }
-
-    private void FlipAllPlatform()
-    {
-        foreach (Platform platform in platforms)
-        {
-            platform.StartAnimation();
-        }
     }
 
     private void Fly()

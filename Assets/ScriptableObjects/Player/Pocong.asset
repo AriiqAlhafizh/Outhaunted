@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b912a6b303b1ad45af24c7e439c238f, type: 3}
+  m_Name: Pocong
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  playerType: 1
+  characterPrefab: {fileID: 5330264819161359538, guid: 3f2ff5878327c7346a6b1bd9a35aaa32, type: 3}
+  maxHealth: 5
+  moveSpeed: 6.25
+  jumpForce: 10
+  attackDamage: 8
+  attackCooldown: 1
+  iFrameDuration: 0.5
+  startingAbilities:
+  - {fileID: 5411230724254401547, guid: a0f13cfb697f1464093f4a146419cf6f, type: 3}
+  - {fileID: 2600124804228424460, guid: b2df2e4985dd64b47939be9b50c3f82f, type: 3}
+  - {fileID: 918700347685051487, guid: 46f14b63880abf74cb69435fefa76be8, type: 3}
+  - {fileID: 5606399900284264182, guid: e79faeeb2a6069248a4140efa7c319bb, type: 3}

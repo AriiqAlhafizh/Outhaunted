@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SideAttack : Ability
@@ -7,7 +8,7 @@ public class SideAttack : Ability
 
     public Animator animator;
     public AttackDirection direction;
-    Collider2D col;
+    public Collider2D sideAttackCol;
 
     protected override void Awake()
     {
@@ -27,12 +28,12 @@ public class SideAttack : Ability
         context.Attack.AttackDirectionChanged -= ChangeAttackDirection;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             context.Attack.RegisterHit(collision.gameObject);
-            BossStatsManager.Instance.TakeDamage((int)context.Attack.attackDamage);
+            BossManager.Instance.TakeDamage((int)context.Attack.attackDamage);
             Debug.Log("Hit " + collision.gameObject.name);
         }
     }
@@ -40,23 +41,37 @@ public class SideAttack : Ability
     public virtual void TriggerAttack()
     {
         if (direction == AttackDirection.Left || direction == AttackDirection.Right)
+        {
             animator.SetTrigger("Attack1");
+            StartCoroutine(ToggleCollider(sideAttackCol, 0.2f));
+        }
     }
 
-    public void ChangeAttackDirection(AttackDirection dir)
+    public virtual void ChangeAttackDirection(AttackDirection dir)
     {
         direction = dir;
         if (dir == AttackDirection.Right)
         {
             transform.localPosition = new Vector2(1, 1) * spriteOffset;
             transform.rotation = new Quaternion(0, 0, 0, 0);
+            sideAttackCol.gameObject.transform.localPosition = new Vector2(1, 1) * spriteOffset;
+            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
         else if (dir == AttackDirection.Left)
         {
             transform.localPosition = new Vector2(-1, 1) * spriteOffset;
             transform.rotation = new Quaternion(0, 180, 0, 0);
+            sideAttackCol.gameObject.transform.localPosition = new Vector2(-1, 1) * spriteOffset;
+            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
         }
 
         //Debug.Log("Attack direction changed to: " + dir);
+    }
+
+    public IEnumerator ToggleCollider(Collider2D col, float s)
+    {
+        col.enabled = true;
+        yield return new WaitForSeconds(s);
+        col.enabled = false;
     }
 }

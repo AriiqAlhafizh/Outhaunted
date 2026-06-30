@@ -11,6 +11,7 @@ public class ProjectilePrimalAspidAttack : BossAttack
     public override void Start()
     {
         base.Start();
+        Duration = projectileDelay * 3;
         ActionEvent += ExecuteAttack;
     }
     private void OnDisable()

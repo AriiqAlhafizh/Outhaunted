@@ -14,10 +14,6 @@ public class BossController : MonoBehaviour
      *  StompAttack
      */
 
-    [Header("Boss Stats")]
-    public int MaxHealth;
-    public int currentHealth;
-
     [Header("Boss MoveSet")]
     public List<BossAttack> Attacks = new();
 
@@ -25,21 +21,21 @@ public class BossController : MonoBehaviour
     public int currentPhase = 0;
     public int startingAttacks = 3;
     public float delayBetweenAttacks = 1f;
-    private void Start()
+    protected virtual void Start()
     {   
-        BossStatsManager.Instance.OnDamaged += OnDamaged;
-        BossStatsManager.Instance.OnDeath += Die;
+        BossManager.Instance.OnDamaged += OnDamaged;
+        BossManager.Instance.OnDeath += Die;
         StartCoroutine(AttackCycleCoroutine());
     }
     private void OnDisable()
     {
-        BossStatsManager.Instance.OnDamaged -= OnDamaged;
-        BossStatsManager.Instance.OnDeath -= Die;
+        BossManager.Instance.OnDamaged -= OnDamaged;
+        BossManager.Instance.OnDeath -= Die;
     }
 
     private void Update()
     {
-        if (PlayerStatsManager.Instance.PlayerPosition.x > transform.position.x)
+        if (PlayerManager.Instance.PlayerPosition.x > transform.position.x)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
@@ -48,7 +44,7 @@ public class BossController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
     }
-    private IEnumerator AttackCycleCoroutine()
+    public virtual IEnumerator AttackCycleCoroutine()
     {
         while (true)
         {
@@ -68,18 +64,16 @@ public class BossController : MonoBehaviour
 
     public void InitializeStats(BossData bossData)
     {
-        MaxHealth = bossData.maxHealth;
-        currentHealth = MaxHealth;
         startingAttacks = bossData.startingAttacks;
     }
 
-    public void OnDamaged()
+    public virtual void OnDamaged()
     {
-        if (currentPhase == 0 && currentHealth <= MaxHealth * 0.67f)
+        if (currentPhase == 0 && BossManager.Instance.CurrentHealth <= BossManager.Instance.MaxHealth * 0.67f)
         {
             IncreasePhase();
         } 
-        else if (currentPhase == 1 && currentHealth <= MaxHealth * 0.33f)
+        else if (currentPhase == 1 && BossManager.Instance.CurrentHealth <= BossManager.Instance.MaxHealth * 0.33f)
         {
             IncreasePhase();
         }

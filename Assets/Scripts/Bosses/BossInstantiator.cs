@@ -8,11 +8,11 @@ public class BossInstantiator : MonoBehaviour
     }
     public void SpawnBoss()
     {
-        GameObject Boss = Instantiate(BossStatsManager.Instance.CurrentBoss.bossPrefab, BossStatsManager.Instance.CurrentBoss.spawnPos, Quaternion.identity);
+        GameObject Boss = Instantiate(BossManager.Instance.CurrentBoss.bossPrefab, BossManager.Instance.CurrentBoss.spawnPos, Quaternion.identity);
         
-        BossStatsManager.Instance.ResetBossStats();
+        BossManager.Instance.ResetBossStats();
 
-        Boss.GetComponent<BossController>().InitializeStats(BossStatsManager.Instance.CurrentBoss);
+        Boss.GetComponent<BossController>().InitializeStats(BossManager.Instance.CurrentBoss);
 
         Destroy(gameObject);
     }

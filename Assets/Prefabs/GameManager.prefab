@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854069684077131156}
   - component: {fileID: 3420053407924562260}
+  - component: {fileID: 8941902471040064922}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,5 +45,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0fa6cf938a9a84593a5cedeb258fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsManager
-  maxHealth: 100
-  maxJumps: 2
+  CurrentCharacter: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
+  CurrentPlayerContext: {fileID: 0}
+  MaxHealth: 0
+  CurrentHealth: 0
+  PlayerPosition: {x: 0, y: 0, z: 0}
+  iFrame: 0.5
+  inIFrame: 0
+  IsGamePaused: 0
+  InGame: 1
+--- !u!114 &8941902471040064922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746218554508293162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0fa7f69c439f64398f0daeb91bd094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossStatsManager
+  CurrentBoss: {fileID: 0}
+  MaxHealth: 0
+  CurrentHealth: 0

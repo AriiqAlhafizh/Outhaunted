@@ -10,6 +10,7 @@ public class ProjectileSpikeAttack : BossAttack
     public override void Start()
     {
         base.Start();
+        Duration = .2f;
         ActionEvent += ExecuteAttack;
     }
 

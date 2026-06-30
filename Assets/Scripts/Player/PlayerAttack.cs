@@ -58,8 +58,8 @@ public class PlayerAttack : MonoBehaviour
         input = GetComponent<PlayerInputHandler>();
         pAnimation = GetComponent<PlayerAnimations>();
         
-        attackCooldown = PlayerStatsManager.Instance.CurrentCharacter.attackCooldown;
-        attackDamage = PlayerStatsManager.Instance.CurrentCharacter.attackDamage;
+        attackCooldown = PlayerManager.Instance.CurrentCharacter.attackCooldown;
+        attackDamage = PlayerManager.Instance.CurrentCharacter.attackDamage;
 
         input.AttackPressed += Attack;
     }
@@ -102,7 +102,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Time.time >= lastAttackTime + attackCooldown 
             && canAttack 
-            && !PlayerStatsManager.Instance.inIFrame)
+            && !PlayerManager.Instance.inIFrame)
         {
             StartAttack();
             lastAttackTime = Time.time;
@@ -113,7 +113,6 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(AttackCooldown());
         pAnimation.StartAttack();
         OnAttack?.Invoke();
-        // add animation on other child scripts here
     }
 
     protected IEnumerator AttackCooldown()
@@ -137,12 +136,16 @@ public class PlayerAttack : MonoBehaviour
     {
         attackDamage += amount;
     }
-    public void DecreaseDamage(float amount)
+    public void IncreaseSize( GameObject obj, float amount)
     {
-        attackDamage -= amount;
+        obj.transform.localScale = Vector3.one * (1 + amount);
     }
     public void ResetDamage()
     {
-        attackDamage = PlayerStatsManager.Instance.CurrentCharacter.attackDamage;
+        attackDamage = PlayerManager.Instance.CurrentCharacter.attackDamage;
+    }
+    public void ResetSize(GameObject obj, float amount)
+    {
+        obj.transform.localScale = Vector3.one * (1 / (1 + amount));
     }
 }

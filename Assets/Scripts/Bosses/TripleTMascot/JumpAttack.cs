@@ -27,8 +27,8 @@ public class JumpAttack : BossAttack
     private void ExecuteAttack()
     {
         float startY = transform.position.y;
-        playerPos = PlayerStatsManager.Instance.PlayerPosition;
-        float playerVelocity = PlayerStatsManager.Instance.CurrentPlayerContext.Rigidbody.linearVelocity.x;
+        playerPos = PlayerManager.Instance.PlayerPosition;
+        float playerVelocity = PlayerManager.Instance.CurrentPlayerContext.Rigidbody.linearVelocity.x;
 
         Vector2 mapBounds = new(18f, 10f); // Example map bounds, adjust as needed
 

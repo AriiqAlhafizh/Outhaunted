@@ -19,9 +19,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (!PlayerStatsManager.Instance.inIFrame)
+            if (!PlayerManager.Instance.inIFrame)
             { 
-                PlayerStatsManager.Instance.TakeDamage();
+                PlayerManager.Instance.TakeDamage();
                 movement.OnHitKnockback(collision.transform.position);
             }
         }

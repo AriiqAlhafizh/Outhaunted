@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SuperJumpAbility : Ability
 {
+    private static readonly int JumpPreparationHash = Animator.StringToHash("Jump_Preparation");
     [Header("Super Jump Settings")]
     public float maxJumpMultiplier = 1.5f;
     public float jumpMultiplier = .1f;
@@ -16,7 +17,7 @@ public class SuperJumpAbility : Ability
 
     private void Start()
     {
-        defaultJumpForce = PlayerStatsManager.Instance.CurrentCharacter.jumpForce;
+        defaultJumpForce = PlayerManager.Instance.CurrentCharacter.jumpForce;
         context.Input.DownPressed += ChargeJump;
     }
 
@@ -42,7 +43,13 @@ public class SuperJumpAbility : Ability
     {
         while (isCharging)
         {
+            context.Movement.canMove = false;
+            context.Rigidbody.linearVelocityX = 0f;
+
+            context.Attack.pAnimation.animator.Play(JumpPreparationHash);
+
             HandleCharge();
+            
             yield return null;
         }
     }
@@ -70,6 +77,7 @@ public class SuperJumpAbility : Ability
             // Release charge and perform super jump
             SuperJump();    
             isCharging = false;
+            context.Movement.canMove = true;
             chargeTimer = 0f;
             jumpMultiplier = 1f;
         }

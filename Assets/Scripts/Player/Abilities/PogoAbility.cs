@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PogoAbility : Ability
 {
-    
+    //public float pogoCooldown = 1f;
+    //public bool canPogo = true;
     private void Start()
     {
         context.Attack.OnPogo += Jump;

@@ -22,7 +22,7 @@ public class SpikeGroundAttackFollow : BossAttack
 
     private void ExecuteAttack()
     {
-        float playerX = PlayerStatsManager.Instance.PlayerPosition.x;
+        float playerX = PlayerManager.Instance.PlayerPosition.x;
         Instantiate(spikePrefab, new Vector3(playerX, startPosY, 0f), Quaternion.identity);
     }
 }

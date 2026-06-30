@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicComboAbility
   dmgMultiplier: 0.15
+  sizeMultiplier: 0.5
   maxCombo: 10
   curCombo: 0
+  redMode: {fileID: 22100000, guid: c7563addef058084d92869be11955eb8, type: 2}

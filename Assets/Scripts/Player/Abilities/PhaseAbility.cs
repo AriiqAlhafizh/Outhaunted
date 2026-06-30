@@ -3,18 +3,23 @@ using UnityEngine;
 
 public class PhaseAbility : Ability
 {
+    private static readonly int PhaseHash = Animator.StringToHash("Phase");
     private static readonly int PhaseThroughHash = Animator.StringToHash("PhaseThrough");
-    [SerializeField] PlayerAnimations pAnimation;
+    PlayerAnimations pAnimation;
+    Animator animator;
 
     [Header("Phase Settings")]
     [SerializeField] private float phaseCooldown = 1f;
     [SerializeField] private float phaseDuration = 1f;
     [SerializeField] private string enemyLayerName = "Enemy";
     [SerializeField] private string playerLayerName = "Player";
+    public float phaseMoveSpeedMultiplier = 1.4f;
 
     [Header("Debug")]
     [SerializeField] private bool inPhaseMode = false;
     [SerializeField] private float lastPhaseTime = -Mathf.Infinity;
+    public float defaultMoveSpeed;
+    public float defaultGravity;
 
     private int enemyLayer;
     private int playerLayer;
@@ -22,9 +27,14 @@ public class PhaseAbility : Ability
     {
         pAnimation = GetComponent<PlayerAnimations>();
 
+        animator = GameObject.FindGameObjectWithTag("VFX").GetComponent<Animator>();
+
         context.Input.DashPressed += StartPhase;
         enemyLayer = LayerMask.NameToLayer(enemyLayerName);
         playerLayer = LayerMask.NameToLayer(playerLayerName);
+
+        defaultMoveSpeed = PlayerManager.Instance.CurrentCharacter.moveSpeed;
+        defaultGravity = context.Rigidbody.gravityScale;
     }
 
     private IEnumerator PhaseCoroutine()
@@ -36,6 +46,11 @@ public class PhaseAbility : Ability
         context.Attack.canAttack = false;
         pAnimation.SetInAbility(true);
         pAnimation.animator.Play(PhaseThroughHash);
+        animator.SetTrigger(PhaseHash);
+        context.Movement.moveSpeed = defaultMoveSpeed * phaseMoveSpeedMultiplier; // Increase move speed during phase
+        context.Movement.canJump = false;
+        context.Rigidbody.linearVelocityY = 0f;
+        context.Rigidbody.gravityScale = 0f; // Disable gravity during phase
 
         // Ignore collisions between player and enemy layers
         Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
@@ -47,6 +62,9 @@ public class PhaseAbility : Ability
         inPhaseMode = false;
         context.Attack.canAttack = true;
         pAnimation.SetInAbility(false);
+        context.Movement.moveSpeed = defaultMoveSpeed; // Reset move speed after phase
+        context.Movement.canJump = true;
+        context.Rigidbody.gravityScale = defaultGravity; // Reset gravity after phase
     }
 
     private void StartPhase()
