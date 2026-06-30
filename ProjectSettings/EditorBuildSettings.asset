@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelect.unity
     guid: 24faa25ef4b599449b3dd79d42453f3e
   - enabled: 1
-    path: Assets/Scenes/BossTestScene1.unity
-    guid: 7e87e3b430365f04f92f9f5c11a0c20c
+    path: Assets/Scenes/BossTestScene.unity
+    guid: dc30ea0b18af57f45a9273eaf2548c2d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2208b3022de21554880cb4063f5b3fbc, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
