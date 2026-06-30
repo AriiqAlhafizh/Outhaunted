@@ -13,18 +13,17 @@ public class HealthDisplay : MonoBehaviour
     void Start()
     {
         OnHealthChange();
-        PlayerStatsManager.Instance.OnDamaged += OnHealthChange;
-
+        PlayerManager.Instance.OnDamaged += OnHealthChange;
     }
 
     void OnDestroy()
     {
-        PlayerStatsManager.Instance.OnDamaged -= OnHealthChange;
+        PlayerManager.Instance.OnDamaged -= OnHealthChange;
     }
 
     void OnHealthChange()
     {
-        int currentHealth = PlayerStatsManager.Instance.CurrentHealth;
+        int currentHealth = PlayerManager.Instance.CurrentHealth;
         Debug.Log("Health changed: " + currentHealth);
         for (int i = 0; i < health.Length; i++)
         {
@@ -38,12 +37,4 @@ public class HealthDisplay : MonoBehaviour
             }
         }
     }
-    public void ResetHealthDisplay()
-    {
-        for (int i = 0; i < health.Length; i++)
-        {
-            health[i].sprite = fullHealth;
-        }
-    }
-
 }
