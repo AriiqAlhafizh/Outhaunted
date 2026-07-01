@@ -238,11 +238,13 @@ MonoBehaviour:
   pAnimation: {fileID: 0}
   playerPogo: {fileID: 0}
   attackCooldown: 0.1
+  pogoCooldown: 0.5
   attackDamage: 0
   canAttack: 1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
+  lastPogoAttackTime: -Infinity
   attackIndex: 0
 --- !u!114 &44857554293668000
 MonoBehaviour:
@@ -265,6 +267,7 @@ MonoBehaviour:
   dir: 1
   moveX: 0
   canMove: 0
+  ownAttackKnockbackForce: 1
   jumpForce: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 5
@@ -939,6 +942,7 @@ GameObject:
   - component: {fileID: 4591012629509064504}
   - component: {fileID: 8951491324485000296}
   - component: {fileID: 3943840153796466129}
+  - component: {fileID: 6396660012319799656}
   m_Layer: 0
   m_Name: Kuntilanak
   m_TagString: Untagged
@@ -1042,3 +1046,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6396660012319799656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8696794209239629511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42fd9e27ac3fef4799ec07f26df3904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMaskController
+  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  damageFlashDuration: 0.2

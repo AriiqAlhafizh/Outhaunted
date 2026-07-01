@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 5902464644487614422}
   - component: {fileID: 6573118297511654707}
   - component: {fileID: 1880792209359262758}
+  - component: {fileID: 5288856597049938146}
   m_Layer: 7
   m_Name: TripleT
   m_TagString: Untagged
@@ -228,6 +229,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5288856597049938146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752555076096284077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff6bd54baf68841985779968246664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMaskController
+  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  damageFlashDuration: 0.2
 --- !u!1 &4020715901736647912
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +368,7 @@ MonoBehaviour:
   currentPhase: 0
   startingAttacks: 2
   delayBetweenAttacks: 2
+  knockbackForce: 3
 --- !u!114 &3322393341083336798
 MonoBehaviour:
   m_ObjectHideFlags: 0

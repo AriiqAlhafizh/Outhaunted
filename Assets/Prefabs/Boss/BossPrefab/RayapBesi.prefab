@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 3311063969908172637}
   - component: {fileID: 4727196052851084076}
   - component: {fileID: 2165368776873308605}
+  - component: {fileID: 4320466265334925627}
   m_Layer: 7
   m_Name: RayapBesi
   m_TagString: Enemy
@@ -363,3 +364,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4320466265334925627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902900080546457443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff6bd54baf68841985779968246664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMaskController
+  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  damageFlashDuration: 0.2

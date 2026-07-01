@@ -20,4 +20,4 @@ MonoBehaviour:
   attackDamage: 8
   pogoCooldown: 0.25
   attackCooldown: 1
-  iFrameDuration: 0.5
+  iFrameDuration: 1.3
