@@ -19,9 +19,9 @@ public class MainMenu : MonoBehaviour
         //SceneManager.LoadSceneAsync();
     }
 
-    public void back()
+    public void GotoScene(string sceneName)
     {
-        //SceneManager.LoadSceneAsync(0);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName); 
     }
 
     public void LevelSelect()
