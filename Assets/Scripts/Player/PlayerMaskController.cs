@@ -3,18 +3,21 @@ using UnityEngine;
 
 public class PlayerMaskController : MonoBehaviour
 {
-    public Material maskMaterial;
+    public Material whiteMaterial;
+    public Material flashMaterial;
 
-    public float flashSpeed = 1.0f;
-    public float damageFlashDuration = 1.3f; // Duration of the flash effect in seconds
+    float whiteDuration;
+    float flashDuration;
 
     SpriteRenderer sr;
-    Material defaultMask;
 
     private void Start()
     {
+        whiteDuration = PlayerManager.Instance.InputDisabledDuration;
+        flashDuration = PlayerManager.Instance.iFrameDuration - PlayerManager.Instance.InputDisabledDuration;
+
         sr = GetComponent<SpriteRenderer>();
-        defaultMask = sr.material;
+        sr.enabled = false;
         PlayerManager.Instance.OnDamaged += StartDamageFlash;
     }
 
@@ -30,18 +33,14 @@ public class PlayerMaskController : MonoBehaviour
 
     private IEnumerator StartDamageFlashCoroutine()
     {
-        sr.material = maskMaterial;
-        float elapsedTime = 0f;
-        float opacity = 1f;
+        sr.enabled = true;
 
-        while (elapsedTime < damageFlashDuration)
-        {
-            opacity = Mathf.PingPong(elapsedTime * flashSpeed, 1f);
-            sr.material.color = new Color(255f, 255f, 255f, opacity);
-            yield return null;
-            elapsedTime += Time.deltaTime;
-        }
+        sr.material = whiteMaterial;
+        yield return new WaitForSeconds(whiteDuration);
 
-        sr.material = defaultMask;
+        sr.material = flashMaterial;
+        yield return new WaitForSeconds(flashDuration);
+
+        sr.enabled = false;
     }
 }

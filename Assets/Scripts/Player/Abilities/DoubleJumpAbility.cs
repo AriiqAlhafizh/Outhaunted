@@ -47,7 +47,11 @@ public class DoubleJumpAbility : Ability
             context.Movement.ResetCoyoteTime();
             context.Movement.JumpPressed();
 
-            context.Attack.pAnimation.animator.Play(DoubleJumpHash);
+            
+            foreach (var item in context.Attack.pAnimation.animators)
+            {
+                item.Play(DoubleJumpHash);
+            }
         }
     }
 }

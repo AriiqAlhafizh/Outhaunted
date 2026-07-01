@@ -60,6 +60,8 @@ public class BasicComboAbility : Ability
         curCombo = 0;
         context.Attack.ResetDamage();
 
+        sbUI.ResetProgress();
+
         context.Attack.pAnimation.ResetAnimation();
         animator.runtimeAnimatorController = normalMode;
         

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -18,7 +19,15 @@ public class PlayerHealth : MonoBehaviour
             { 
                 PlayerManager.Instance.TakeDamage();
                 movement.OnHitKnockback(collision.transform.position);
+                StartCoroutine(PauseAfterHit(0.15f));
             }
         }
+    }
+
+    public IEnumerator PauseAfterHit(float duration)
+    {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1;
     }
 }

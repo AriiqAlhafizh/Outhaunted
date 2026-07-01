@@ -89,12 +89,12 @@ public class PlayerMovement : MonoBehaviour
             if (input.MovementVector.x < 0)
             {
                 dir = AttackDirection.Left;
-                sr.flipX = true;
+                transform.rotation = new Quaternion(0, 180, 0, 0);
             }
             else if (input.MovementVector.x > 0)
             {
                 dir = AttackDirection.Right;
-                sr.flipX = false;
+                transform.rotation = new Quaternion(0, 0, 0, 0);
             }
 
             // CHECK WALL
