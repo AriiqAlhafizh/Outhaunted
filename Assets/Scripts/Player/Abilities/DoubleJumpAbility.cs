@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DoubleJumpAbility : Ability
@@ -24,7 +25,13 @@ public class DoubleJumpAbility : Ability
 
     private void ResetJumps()
     {
-        jumps = 0;
+        StartCoroutine(ResetJumpsCoroutine());
+    }
+
+    private IEnumerator ResetJumpsCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        jumps = 0;  
     }
 
     private void IncreaseJumps()

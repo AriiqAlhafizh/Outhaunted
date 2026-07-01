@@ -11,6 +11,7 @@ public class SpinAttack : BossAttack
 
     public override void Start()
     {
+        animator = GetComponentInChildren<Animator>();
         Duration = spinDuration;
         ActionEvent += ExecuteAttack;
     }

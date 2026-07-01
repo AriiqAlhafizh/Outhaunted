@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 5902464644487614422}
   - component: {fileID: 6573118297511654707}
   - component: {fileID: 1880792209359262758}
+  - component: {fileID: 5288856597049938146}
   m_Layer: 7
   m_Name: TripleT
   m_TagString: Untagged
@@ -228,6 +229,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5288856597049938146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752555076096284077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff6bd54baf68841985779968246664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMaskController
+  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  damageFlashDuration: 0.2
 --- !u!1 &4020715901736647912
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +322,7 @@ GameObject:
   - component: {fileID: 8141715038187808577}
   - component: {fileID: 6703679754971644880}
   - component: {fileID: 3062768447471374418}
+  - component: {fileID: 2686052752478982282}
   m_Layer: 7
   m_Name: TripleT
   m_TagString: Enemy
@@ -344,8 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4844d3d15a84f4a88d3ff15afd793d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TripleTController
-  MaxHealth: 0
-  currentHealth: 0
   Attacks:
   - {fileID: 3322393341083336798}
   - {fileID: 6591555496833814390}
@@ -354,6 +368,7 @@ MonoBehaviour:
   currentPhase: 0
   startingAttacks: 2
   delayBetweenAttacks: 2
+  knockbackForce: 3
 --- !u!114 &3322393341083336798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +534,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -535,6 +550,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6584263, y: 1.5800893}
   m_EdgeRadius: 0
+--- !u!50 &2686052752478982282
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7299662685798199576}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8145344412632751109
 GameObject:
   m_ObjectHideFlags: 0

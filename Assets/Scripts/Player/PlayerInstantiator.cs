@@ -14,6 +14,7 @@ public class PlayerInstantiator : MonoBehaviour
         
         PlayerManager.Instance.ResetStats();
         PlayerManager.Instance.InGame = true;
+        PlayerManager.Instance.inIFrame = false;
 
         Destroy(gameObject);
     }

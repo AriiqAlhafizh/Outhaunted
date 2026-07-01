@@ -42,6 +42,9 @@ public class BossManager : MonoBehaviour
         OnDamaged?.Invoke();
         if (CurrentHealth <= 0)
         {
+            PlayerManager.Instance.InGame = false;
+            PlayerManager.Instance.RemovePlayerContext();
+
             CurrentHealth = 0;
             OnDeath?.Invoke();
         }
