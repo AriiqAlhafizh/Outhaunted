@@ -37,4 +37,12 @@ public class HealthDisplay : MonoBehaviour
             }
         }
     }
+    public void ResetHealthDisplay()
+    {
+        for (int i = 0; i < health.Length; i++)
+        {
+            health[i].sprite = fullHealth;
+        }
+    }
+
 }

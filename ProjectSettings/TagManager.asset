@@ -9,6 +9,7 @@ TagManager:
   - ObjToSpawn
   - ObjToDespawn
   - Platform
+  - SkilbarUI
   layers:
   - Default
   - TransparentFX
