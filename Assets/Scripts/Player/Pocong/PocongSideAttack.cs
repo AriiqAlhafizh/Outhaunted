@@ -20,7 +20,10 @@ public class PocongSideAttack : SideAttack
         if (direction == AttackDirection.Down)
         {
             animator.SetTrigger(PogoHash);
-            context.Attack.pAnimation.animator.Play(AttackPogoHash);
+            foreach (var item in context.Attack.pAnimation.animators)
+            {
+                item.Play(AttackPogoHash);
+            }
             StartCoroutine(ToggleCollider(pogoCol, 0.2f));
         }
     }
@@ -28,20 +31,21 @@ public class PocongSideAttack : SideAttack
     public override void ChangeAttackDirection(AttackDirection dir)
     {
         direction = dir;
-        if (dir == AttackDirection.Right)
-        {
-            transform.localPosition = new Vector2(1, 1) * spriteOffset;
-            transform.rotation = new Quaternion(0, 0, 0, 0);
-            sideAttackCol.gameObject.transform.localPosition = new Vector2(1, 1) * spriteOffset;
-            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (dir == AttackDirection.Left)
-        {
-            transform.localPosition = new Vector2(-1, 1) * spriteOffset;
-            transform.rotation = new Quaternion(0, 180, 0, 0);
-            sideAttackCol.gameObject.transform.localPosition = new Vector2(-1, 1) * spriteOffset;
-            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
-        } else if (dir == AttackDirection.Down)
+        transform.localPosition = new Vector2(1, 1) * spriteOffset;
+        sideAttackCol.gameObject.transform.localPosition = new Vector2(1, 1) * spriteOffset;
+        //if (dir == AttackDirection.Right)
+        //{
+        //    transform.rotation = new Quaternion(0, 0, 0, 0);
+        //    sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        //}
+        //else if (dir == AttackDirection.Left)
+        //{
+        //    transform.localPosition = new Vector2(-1, 1) * spriteOffset;
+        //    transform.rotation = new Quaternion(0, 180, 0, 0);
+        //    sideAttackCol.gameObject.transform.localPosition = new Vector2(-1, 1) * spriteOffset;
+        //    sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+        //} else
+        if (dir == AttackDirection.Down)
         {
             transform.localPosition = new Vector2(0, 0);
             transform.rotation = new Quaternion(0, 0, 0, 0);

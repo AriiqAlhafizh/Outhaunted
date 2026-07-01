@@ -48,6 +48,7 @@ public class PogoComboAbility : Ability
     {
         pocongSideAttack.animator.SetBool(PogoUpgradeHash, false);
         curCombo = 0;
+        sbUI.ResetProgress();
         context.Attack.ResetDamage();
         context.Attack.ResetSize(pogoHB, sizeMultiplier);
     }

@@ -50,20 +50,20 @@ public class SideAttack : Ability
     public virtual void ChangeAttackDirection(AttackDirection dir)
     {
         direction = dir;
-        if (dir == AttackDirection.Right)
-        {
-            transform.localPosition = new Vector2(1, 1) * spriteOffset;
-            transform.rotation = new Quaternion(0, 0, 0, 0);
-            sideAttackCol.gameObject.transform.localPosition = new Vector2(1, 1) * spriteOffset;
-            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (dir == AttackDirection.Left)
-        {
-            transform.localPosition = new Vector2(-1, 1) * spriteOffset;
-            transform.rotation = new Quaternion(0, 180, 0, 0);
-            sideAttackCol.gameObject.transform.localPosition = new Vector2(-1, 1) * spriteOffset;
-            sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
-        }
+        transform.localPosition = new Vector2(1, 1) * spriteOffset;
+        sideAttackCol.gameObject.transform.localPosition = new Vector2(1, 1) * spriteOffset;
+        //if (dir == AttackDirection.Right)
+        //{
+        //    transform.rotation = new Quaternion(0, 0, 0, 0);
+        //    sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        //}
+        //else if (dir == AttackDirection.Left)
+        //{
+        //    transform.localPosition = new Vector2(-1, 1) * spriteOffset;
+        //    transform.rotation = new Quaternion(0, 180, 0, 0);
+        //    sideAttackCol.gameObject.transform.localPosition = new Vector2(-1, 1) * spriteOffset;
+        //    sideAttackCol.gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+        //}
 
         //Debug.Log("Attack direction changed to: " + dir);
     }

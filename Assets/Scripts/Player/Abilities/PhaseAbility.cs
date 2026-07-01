@@ -45,7 +45,13 @@ public class PhaseAbility : Ability
         inPhaseMode = true;
         context.Attack.canAttack = false;
         pAnimation.SetInAbility(true);
-        pAnimation.animator.Play(PhaseThroughHash);
+
+        foreach (var item in pAnimation.animators)
+        {
+            item.Play(PhaseThroughHash);
+        }
+        
+        
         animator.SetTrigger(PhaseHash);
         context.Movement.moveSpeed = defaultMoveSpeed * phaseMoveSpeedMultiplier; // Increase move speed during phase
         context.Movement.canJump = false;
