@@ -91,7 +91,6 @@ public class BossController : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene("MainMenu");
         Debug.Log("Boss has been defeated!");
     }
 

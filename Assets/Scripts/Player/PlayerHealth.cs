@@ -17,9 +17,9 @@ public class PlayerHealth : MonoBehaviour
         {
             if (!PlayerManager.Instance.inIFrame)
             { 
-                PlayerManager.Instance.TakeDamage();
                 movement.OnHitKnockback(collision.transform.position);
                 StartCoroutine(PauseAfterHit(0.15f));
+                PlayerManager.Instance.TakeDamage();
             }
         }
     }

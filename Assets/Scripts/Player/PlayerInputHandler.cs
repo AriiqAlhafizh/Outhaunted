@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public event Action DashPressed;
     public event Action AttackPressed;
+
+    public event Action PausePressed;
 
     private void Start()
     {
@@ -84,7 +87,7 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.performed)
             AttackPressed?.Invoke();
     }
-
+    
     // ANIMATION
     //public void StartAttackAnimation()
     //{

@@ -47,6 +47,8 @@ public class BossManager : MonoBehaviour
 
             CurrentHealth = 0;
             OnDeath?.Invoke();
+
+            StartCoroutine(PlayerManager.Instance.DieCoroutine());
         }
     }
 }
