@@ -18,6 +18,7 @@ public class CharacterData : ScriptableObject
     public float moveSpeed;
     public float jumpForce;
     public float attackDamage;
+    public float pogoCooldown;
     public float attackCooldown;
     public float iFrameDuration;
 }

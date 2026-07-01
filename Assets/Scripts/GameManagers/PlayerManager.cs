@@ -59,6 +59,11 @@ public class PlayerManager : MonoBehaviour
         CurrentPlayerContext = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerContext>();
     }
 
+    public void RemovePlayerContext()
+    {
+        CurrentPlayerContext = null;
+    }
+
     public void ResetStats()
     {
         MaxHealth = CurrentCharacter.maxHealth;
@@ -88,7 +93,7 @@ public class PlayerManager : MonoBehaviour
 
             // TEMP
             InGame = false;
-            CurrentPlayerContext = null;
+            RemovePlayerContext();
             SceneManager.LoadScene("MainMenu");
         }
 

@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerContext : MonoBehaviour
 {
     public PlayerInputHandler Input { get; private set; }
-    public PlayerHealth Health { get; private set; }
     public PlayerMovement Movement { get; private set; }
     public PlayerAttack Attack { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
@@ -13,7 +12,6 @@ public class PlayerContext : MonoBehaviour
     void Awake()
     {
         Input = GetComponent<PlayerInputHandler>();
-        Health = GetComponent<PlayerHealth>();
         Movement = GetComponent<PlayerMovement>();
         Attack = GetComponent<PlayerAttack>();
         Rigidbody = GetComponent<Rigidbody2D>();
