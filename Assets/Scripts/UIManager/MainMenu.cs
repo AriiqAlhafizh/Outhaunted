@@ -28,4 +28,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync("LevelSelect");
     }
+
+    public void InsertCharacterData(CharacterData characterData)
+    {
+        PlayerManager.Instance.CurrentCharacter = characterData;
+        PlayerManager.Instance.ResetStats();
+    }
 }

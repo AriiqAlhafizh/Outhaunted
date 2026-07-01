@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveX;
     public bool canMove;
 
+    public float ownAttackKnockbackForce = 1f;
+
     [Header("Jump Settings")]
     public float jumpForce;
     public float fallMultiplier = 2.5f; // Increases gravity when falling
@@ -304,5 +306,22 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(PlayerManager.Instance.iFrameDuration - PlayerManager.Instance.InputDisabledDuration);
         PlayerManager.Instance.inIFrame = false; 
+    }
+
+    public void OwnAttackKnockback(GameObject enemy)
+    {
+        StartCoroutine(OwnAttackKnockbackCoroutine(enemy));
+    }
+
+    public IEnumerator OwnAttackKnockbackCoroutine(GameObject enemy)
+    {
+        canMove = false;
+        canJump = false;
+        rb.linearVelocityX = enemy.transform.position.x < transform.position.x
+            ? ownAttackKnockbackForce
+            : -ownAttackKnockbackForce;
+        yield return new WaitForSeconds(.1f);
+        canMove = true;
+        canJump = true;
     }
 }

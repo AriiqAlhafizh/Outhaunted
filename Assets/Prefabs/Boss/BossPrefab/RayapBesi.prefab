@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 359116190565770604}
   - component: {fileID: 2539891828434982531}
   - component: {fileID: 7643934080808454787}
+  - component: {fileID: 8644364787454788819}
   m_Layer: 7
   m_Name: RayapBesi
   m_TagString: Enemy
@@ -106,6 +107,7 @@ MonoBehaviour:
   currentPhase: 0
   startingAttacks: 2
   delayBetweenAttacks: 1
+  knockbackForce: 0
   ChangingPhase: 0
   objToSpawn: []
   objToDespawn: []
@@ -220,6 +222,33 @@ MonoBehaviour:
   AnimationStart: 
   AnimationAttack: 
   platforms: []
+--- !u!50 &8644364787454788819
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121358753901337333}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5902900080546457443
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +260,7 @@ GameObject:
   - component: {fileID: 3311063969908172637}
   - component: {fileID: 4727196052851084076}
   - component: {fileID: 2165368776873308605}
+  - component: {fileID: 4320466265334925627}
   m_Layer: 7
   m_Name: RayapBesi
   m_TagString: Enemy
@@ -334,3 +364,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4320466265334925627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902900080546457443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ff6bd54baf68841985779968246664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossMaskController
+  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  damageFlashDuration: 0.2

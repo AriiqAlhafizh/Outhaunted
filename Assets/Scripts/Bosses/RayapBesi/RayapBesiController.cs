@@ -66,6 +66,7 @@ public class RayapBesiController : BossController
         else if (currentPhase == 2 && BossManager.Instance.CurrentHealth <= BossManager.Instance.MaxHealth * 0.40f)
         {
             IncreasePhase();
+            StopCoroutine(Attacks[3].Execute());
             StartCoroutine(ChangePhaseCoroutine());
         }
     }
