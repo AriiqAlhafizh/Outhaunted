@@ -21,11 +21,18 @@ public class BossController : MonoBehaviour
     public int currentPhase = 0;
     public int startingAttacks = 3;
     public float delayBetweenAttacks = 1f;
+
+    [Header("Boss Settings")]
+    public float knockbackForce = 3f;
+
+    Rigidbody2D rb;
     protected virtual void Start()
     {   
         BossManager.Instance.OnDamaged += OnDamaged;
         BossManager.Instance.OnDeath += Die;
         StartCoroutine(AttackCycleCoroutine());
+
+        rb = GetComponent<Rigidbody2D>();
     }
     private void OnDisable()
     {
@@ -77,6 +84,8 @@ public class BossController : MonoBehaviour
         {
             IncreasePhase();
         }
+
+        KnockBack(PlayerManager.Instance.PlayerPosition, knockbackForce, .2f);
     }
 
     public void Die()
@@ -84,5 +93,24 @@ public class BossController : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene("MainMenu");
         Debug.Log("Boss has been defeated!");
+    }
+
+    public void KnockBack(Vector3 sourcePos, float force, float duration)
+    {
+        StartCoroutine(KnockBackCoroutine(sourcePos, force, duration));
+    }
+
+    private IEnumerator KnockBackCoroutine(Vector3 sourcePos, float force, float duration)
+    {
+        float elapsedTime = 0f;
+        float direction = Vector2.Normalize(transform.position - sourcePos).x;
+        rb.linearVelocityX = direction * force;
+        while (elapsedTime < duration)
+        {
+            rb.linearVelocityX = direction * force * (duration - elapsedTime);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        rb.linearVelocityX = 0f;
     }
 }

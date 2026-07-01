@@ -1355,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 8941902471040064922, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
       propertyPath: CurrentBoss
       value: 
-      objectReference: {fileID: 11400000, guid: 6449b9155dedb0a49bcb8a34c0cc8b44, type: 2}
+      objectReference: {fileID: 11400000, guid: c778b2cb5c8d1a24bb46b53cc7b0ee56, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -107,6 +107,7 @@ MonoBehaviour:
   currentPhase: 0
   startingAttacks: 2
   delayBetweenAttacks: 1
+  knockbackForce: 0
   ChangingPhase: 0
   objToSpawn: []
   objToDespawn: []

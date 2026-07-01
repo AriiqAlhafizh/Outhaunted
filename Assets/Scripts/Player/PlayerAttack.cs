@@ -25,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
     public PlayerInputHandler input;
     public PlayerAnimations pAnimation;
     public PogoAbility playerPogo;
+    Rigidbody2D rb;
 
     [Header("Settings")]
     public float attackCooldown = 0.5f; // Normal attack cooldown in seconds
@@ -63,6 +64,8 @@ public class PlayerAttack : MonoBehaviour
         attackCooldown = PlayerManager.Instance.CurrentCharacter.attackCooldown;
         pogoCooldown = PlayerManager.Instance.CurrentCharacter.pogoCooldown;
         attackDamage = PlayerManager.Instance.CurrentCharacter.attackDamage;
+
+        rb = GetComponent<Rigidbody2D>();
 
         input.AttackPressed += Attack;
     }
