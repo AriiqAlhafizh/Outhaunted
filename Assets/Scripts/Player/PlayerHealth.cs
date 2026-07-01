@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
-using static Unity.VisualScripting.Member;
+﻿using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("References")]
     public PlayerMovement movement;
 
-    //[Header("Health Settings")]
-
     private void Start()
     {
-        movement = GetComponent<PlayerMovement>();
+        movement = GetComponentInParent<PlayerMovement>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

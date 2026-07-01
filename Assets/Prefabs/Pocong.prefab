@@ -277,8 +277,101 @@ Transform:
   m_Children:
   - {fileID: 3490551030328463233}
   - {fileID: 1060959815436085521}
+  - {fileID: 3638176680811008803}
   m_Father: {fileID: 5112428724570416965}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4346294635985845892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3638176680811008803}
+  - component: {fileID: 7251494973033121100}
+  - component: {fileID: 6862639026745195930}
+  m_Layer: 6
+  m_Name: BodyHurtbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3638176680811008803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346294635985845892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5141517310799888259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7251494973033121100
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346294635985845892}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.013338648, y: 0.30086026}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.11179568, y: 0.5972124}
+  m_EdgeRadius: 0
+--- !u!114 &6862639026745195930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346294635985845892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab13e845fc61d64cae8b7a0bf8a98f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  movement: {fileID: 0}
 --- !u!1 &5330264819161359538
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +384,6 @@ GameObject:
   - component: {fileID: 6100000339978473835}
   - component: {fileID: 3412258214019661628}
   - component: {fileID: 2318328742152663122}
-  - component: {fileID: 4973097564583333729}
   - component: {fileID: 2948327700260024771}
   - component: {fileID: 9027311671143812716}
   - component: {fileID: 2870566030554816200}
@@ -299,8 +391,8 @@ GameObject:
   - component: {fileID: 2123435777019943790}
   - component: {fileID: 2486442423111625133}
   - component: {fileID: 542617035554062137}
-  - component: {fileID: 2993803275808120179}
   - component: {fileID: 8107533693306888251}
+  - component: {fileID: 2993803275808120179}
   m_Layer: 6
   m_Name: Pocong
   m_TagString: Player
@@ -371,24 +463,13 @@ MonoBehaviour:
   pAnimation: {fileID: 0}
   playerPogo: {fileID: 0}
   attackCooldown: 0.5
+  pogoCooldown: 0.5
   attackDamage: 0
   canAttack: 1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
---- !u!114 &4973097564583333729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330264819161359538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bab13e845fc61d64cae8b7a0bf8a98f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  movement: {fileID: 0}
+  lastPogoAttackTime: -Infinity
 --- !u!114 &2948327700260024771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +638,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 72044974-3a39-4ee7-9d9c-841cfd958520
+    m_ActionName: 'Player/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -610,7 +695,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0052189827, y: 0.37640122}
+  m_Offset: {x: -0.013338648, y: 0.30086026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -620,7 +705,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.22501022, y: 0.7752456}
+  m_Size: {x: 0.11179568, y: 0.5972124}
   m_EdgeRadius: 0
 --- !u!50 &2123435777019943790
 Rigidbody2D:
@@ -682,18 +767,6 @@ MonoBehaviour:
   isCharging: 0
   previousYVector: 0
   chargeTimer: 0
---- !u!114 &2993803275808120179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5330264819161359538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de154bb838db4a44be145a0608abb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PogoAbility
 --- !u!114 &8107533693306888251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +785,18 @@ MonoBehaviour:
   maxCombo: 6
   curCombo: 0
   pogoHB: {fileID: 7854154802582824441}
+--- !u!114 &2993803275808120179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330264819161359538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de154bb838db4a44be145a0608abb00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PogoAbility
 --- !u!1 &7447538106580959649
 GameObject:
   m_ObjectHideFlags: 0

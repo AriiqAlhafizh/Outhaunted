@@ -17,7 +17,7 @@ public class PogoComboAbility : Ability
     private void Start()
     {
         pocongSideAttack = GetComponentInChildren<PocongSideAttack>();
-        sbUI = GameObject.FindGameObjectWithTag("SkillBarUI").GetComponent<SkillBarUI>();
+        sbUI = GameObject.FindGameObjectWithTag("SkilbarUI").GetComponent<SkillBarUI>(); // Ada typo dari ananas, jgn lupa ganti SkilbarUI jadi SkillBarUI
 
         context.Attack.OnPogo += Combo;
         context.Movement.OnLand += ResetCombo;
@@ -29,10 +29,11 @@ public class PogoComboAbility : Ability
     }
     private void Combo()
     {
+        Debug.Log("Pogo Combo Called");
         if (curCombo < maxCombo)
         {
             curCombo++;
-            sbUI.AddProgress(maxCombo / 100f);
+            sbUI.AddProgress(100f / maxCombo);
         }
 
         if (curCombo == maxCombo)

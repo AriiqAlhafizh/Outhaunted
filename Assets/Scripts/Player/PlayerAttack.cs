@@ -27,7 +27,8 @@ public class PlayerAttack : MonoBehaviour
     public PogoAbility playerPogo;
 
     [Header("Settings")]
-    public float attackCooldown = 0.5f; // Cooldown in seconds
+    public float attackCooldown = 0.5f; // Normal attack cooldown in seconds
+    public float pogoCooldown = 0.5f; // Pogo attack cooldown in seconds
     public float attackDamage;
     public bool canAttack = true;
 
@@ -35,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
     public AttackDirection atkDir = AttackDirection.Right;
     [SerializeField] protected AttackDirection lastXDir = AttackDirection.Right;
     [SerializeField] protected float lastAttackTime = -Mathf.Infinity;
+    [SerializeField] protected float lastPogoAttackTime = -Mathf.Infinity;
 
     // Events
     public event Action OnPogo;
@@ -59,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
         pAnimation = GetComponent<PlayerAnimations>();
         
         attackCooldown = PlayerManager.Instance.CurrentCharacter.attackCooldown;
+        pogoCooldown = PlayerManager.Instance.CurrentCharacter.pogoCooldown;
         attackDamage = PlayerManager.Instance.CurrentCharacter.attackDamage;
 
         input.AttackPressed += Attack;
@@ -100,12 +103,20 @@ public class PlayerAttack : MonoBehaviour
     }
     public void Attack()
     {
-        if (Time.time >= lastAttackTime + attackCooldown 
+        bool isPogo = atkDir == AttackDirection.Down && playerPogo != null;
+        float currentCooldown = isPogo ? pogoCooldown : attackCooldown;
+        float lastTime = isPogo ? lastPogoAttackTime : lastAttackTime;
+
+        if (Time.time >= lastTime + currentCooldown 
             && canAttack 
             && !PlayerManager.Instance.inIFrame)
         {
+            if (isPogo)
+                lastPogoAttackTime = Time.time;
+            else
+                lastAttackTime = Time.time;
+
             StartAttack();
-            lastAttackTime = Time.time;
         }
     }
     protected virtual void StartAttack()
