@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animators: []
+  animator: {fileID: 0}
   defaultController: {fileID: 0}
   overrideController: {fileID: 22100000, guid: c5a93adc9a200f042834fddfacd8c76f, type: 2}
   isAttacking: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b098197593b2148a6e897c51ee2734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KuntilanakAttack
+  pMovement: {fileID: 0}
   input: {fileID: 0}
   pAnimation: {fileID: 0}
   playerPogo: {fileID: 0}
@@ -452,7 +453,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -460,7 +461,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -476,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522e6df8b7154354cb5c73502b6482fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicComboAbility
-  dmgMultiplier: 0.15
+  dmgMultiplier: 0.5
   sizeMultiplier: 0.5
   maxCombo: 6
   curCombo: 0
@@ -550,7 +551,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.042579174, y: 0.3269327}
+  m_Offset: {x: 0.03055191, y: 0.28913265}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -560,7 +561,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.38344955, y: 0.88467914}
+  m_Size: {x: 0.2563033, y: 0.80907905}
   m_EdgeRadius: 0
 --- !u!1 &4770386535822498965
 GameObject:
@@ -720,7 +721,7 @@ GameObject:
   - component: {fileID: 8250332023593423519}
   - component: {fileID: 7081613820095027528}
   - component: {fileID: 6754625291229252328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BodyHurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +790,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.042579174, y: 0.3269327}
+  m_Offset: {x: 0.03055191, y: 0.28913265}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -799,7 +800,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.38344955, y: 0.88467914}
+  m_Size: {x: 0.2563033, y: 0.80907905}
   m_EdgeRadius: 0
 --- !u!1 &7881092840438203881
 GameObject:
@@ -950,7 +951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3277008195624756142
 Transform:
   m_ObjectHideFlags: 0

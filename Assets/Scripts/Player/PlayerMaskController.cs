@@ -5,6 +5,7 @@ public class PlayerMaskController : MonoBehaviour
 {
     public Material whiteMaterial;
     public Material flashMaterial;
+    Material originalMaterial;
 
     float whiteDuration;
     float flashDuration;
@@ -17,7 +18,7 @@ public class PlayerMaskController : MonoBehaviour
         flashDuration = PlayerManager.Instance.iFrameDuration - PlayerManager.Instance.InputDisabledDuration;
 
         sr = GetComponent<SpriteRenderer>();
-        sr.enabled = false;
+        originalMaterial = sr.material;
         PlayerManager.Instance.OnDamaged += StartDamageFlash;
     }
 
@@ -33,14 +34,12 @@ public class PlayerMaskController : MonoBehaviour
 
     private IEnumerator StartDamageFlashCoroutine()
     {
-        sr.enabled = true;
-
         sr.material = whiteMaterial;
         yield return new WaitForSeconds(whiteDuration);
 
         sr.material = flashMaterial;
         yield return new WaitForSeconds(flashDuration);
 
-        sr.enabled = false;
+        sr.material = originalMaterial;
     }
 }

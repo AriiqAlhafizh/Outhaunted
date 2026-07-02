@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
   playerType: 1
   characterPrefab: {fileID: 5330264819161359538, guid: 3f2ff5878327c7346a6b1bd9a35aaa32, type: 3}
+  healthIcon: {fileID: 0}
   maxHealth: 5
-  moveSpeed: 6.25
-  jumpForce: 10
+  moveSpeed: 4
+  jumpForce: 5
   attackDamage: 8
   pogoCooldown: 0.25
   attackCooldown: 1

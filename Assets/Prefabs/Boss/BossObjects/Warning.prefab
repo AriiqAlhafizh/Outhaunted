@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dea5347c2badf441b63f76fd5af7c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpikeObject
+  lifetime: 0.5
 --- !u!95 &4529757741624956831
 Animator:
   serializedVersion: 7

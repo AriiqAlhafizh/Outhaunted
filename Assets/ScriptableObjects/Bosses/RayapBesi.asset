@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossData
   bossType: 1
   bossPrefab: {fileID: 3121358753901337333, guid: 8630aea9b6d04004d8d277ca6b98bdf4, type: 3}
-  spawnPos: {x: 8, y: -1.25}
+  spawnPos: {x: 3.5, y: -0.8}
   maxHealth: 100
   startingAttacks: 2

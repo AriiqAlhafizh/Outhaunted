@@ -49,7 +49,7 @@ public class TestInput : MonoBehaviour
             {
                 playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 Debug.LogWarning("PlayerInput not found. Retrying...");
             }

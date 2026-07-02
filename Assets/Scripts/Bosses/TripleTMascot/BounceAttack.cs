@@ -6,7 +6,8 @@ public class BounceAttack : BossAttack
     [Header("Bounce Attack Settings")]
     public Vector2 MapBoundTL;
     public Vector2 MapBoundBR;
-    public int bounceCount;
+    public int bounceCountMin;
+    public int bounceCountMax;
 
     [Header("Jump Settings")]
     public float jumpDuration;
@@ -17,7 +18,6 @@ public class BounceAttack : BossAttack
     public override void Start()
     {
         base.Start();
-        Duration = jumpDuration * bounceCount;
         ActionEvent += ExecuteAttack;
     }
 
@@ -33,6 +33,8 @@ public class BounceAttack : BossAttack
 
     private IEnumerator BounceCoroutine()
     {
+        int bounceCount = Random.Range(bounceCountMin, bounceCountMax + 1);
+        Duration = jumpDuration * bounceCount;
         for (int i = 0; i < bounceCount; i++)
         {
             Vector2 targetPos = transform.position + new Vector3(jumpDistance * jumpDirection.x, 0);
