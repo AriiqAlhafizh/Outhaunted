@@ -16,4 +16,12 @@ public class LevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void SelectT3()
+    {
+         AudioManager.Instance.PlayMusic(AudioManager.Instance.T3);
+    }
+    public void SelectRayap()
+    {
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.Rayap);
+    }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3059725194212634045}
   - component: {fileID: 7660267575684804568}
   m_Layer: 0
-  m_Name: Music
+  m_Name: BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,11 +41,11 @@ AudioSource:
   m_GameObject: {fileID: 2914860758646455674}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8166060325189697903, guid: 5405119e27d2bb544b83e6f49eba41be, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -170,11 +170,11 @@ AudioSource:
   m_GameObject: {fileID: 3301914943827244199}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3611254030412637354, guid: 5405119e27d2bb544b83e6f49eba41be, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.068
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -305,9 +305,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 7660267575684804568}
-  SFXSource: {fileID: 3302083791312181223}
-  BGM: {fileID: 8300000, guid: 324c7b24223405d46b8e1f6763ebf102, type: 3}
-  Attack: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
-  parry: {fileID: 0}
-  Jump: {fileID: 0}
-  Walk: {fileID: 0}
+  sfxSource: {fileID: 3302083791312181223}
+  MainMenu: {fileID: 8300000, guid: 324c7b24223405d46b8e1f6763ebf102, type: 3}
+  T3: {fileID: 8300000, guid: da7a44f8fefbb184391c542502518403, type: 3}
+  Rayap: {fileID: 8300000, guid: e0ee70866c1c9c644ada03532d24bdd1, type: 3}
+  AttackPocong: {fileID: 8300000, guid: cc51334b019ca944a81f9b717f72192c, type: 3}
+  AttackKuntilanak: {fileID: 8300000, guid: dd57b5fd17a5cf74b8069e5a7832d6b7, type: 3}
+  Jump: {fileID: 8300000, guid: 5125a9f02a8a756498f8e730182ae584, type: 3}
+  Invisible: {fileID: 8300000, guid: d1efc6655d523a54db3073ceecc08d1f, type: 3}
