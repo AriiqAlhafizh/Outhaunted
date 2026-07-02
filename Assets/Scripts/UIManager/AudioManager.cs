@@ -3,25 +3,59 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [Header("Audio Sources")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource sfxSource;
 
-    [Header("Audio Clips")]
-    public AudioClip BGM;
-    public AudioClip Attack;
-    public AudioClip parry;
+    [Header("BGM")]
+    public AudioClip MainMenu;
+    public AudioClip T3;
+    public AudioClip Rayap;
+
+    [Header("SFX")]
+    public AudioClip AttackPocong;
+    public AudioClip AttackKuntilanak;
     public AudioClip Jump;
-    public AudioClip Walk;
+    public AudioClip Invisible;
 
+    public static AudioManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
-        musicSource.clip = BGM;
+        PlayMusic(MainMenu);
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (clip == null)
+            return;
+
+        if (musicSource.clip == clip && musicSource.isPlaying)
+            return;
+
+        musicSource.Stop();
+        musicSource.clip = clip;
+        musicSource.loop = true;
         musicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)
     {
-        SFXSource.PlayOneShot(clip);
-    }   
+        if (clip == null)
+            return;
+
+        sfxSource.PlayOneShot(clip);
+    }
 }
