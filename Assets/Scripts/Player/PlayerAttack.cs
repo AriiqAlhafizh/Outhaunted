@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [Header("References")]
     //public SideAttack attackAnim;
+    public PlayerMovement pMovement;
     public PlayerInputHandler input;
     public PlayerAnimations pAnimation;
     public PogoAbility playerPogo;
@@ -58,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
             Debug.Log("Player doesn't have PogoAbility component");
         }
         //attackAnim = GetComponentInChildren<SideAttack>();
+        pMovement = GetComponent<PlayerMovement>();
         input = GetComponent<PlayerInputHandler>();
         pAnimation = GetComponent<PlayerAnimations>();
         
@@ -95,7 +97,7 @@ public class PlayerAttack : MonoBehaviour
             atkDir = lastXDir;
         }
 
-        if (playerPogo != null)
+        if (playerPogo != null && !pMovement.IsGrounded())
         {
             AttackDirectionChanged?.Invoke(atkDir);
         }
@@ -106,7 +108,7 @@ public class PlayerAttack : MonoBehaviour
     }
     public void Attack()
     {
-        bool isPogo = atkDir == AttackDirection.Down && playerPogo != null;
+        bool isPogo = atkDir == AttackDirection.Down && playerPogo != null && !pMovement.IsGrounded();
         float currentCooldown = isPogo ? pogoCooldown : attackCooldown;
         float lastTime = isPogo ? lastPogoAttackTime : lastAttackTime;
 

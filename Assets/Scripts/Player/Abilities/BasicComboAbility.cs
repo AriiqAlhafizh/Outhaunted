@@ -37,9 +37,9 @@ public class BasicComboAbility : Ability
     }
     private void Combo(GameObject enemy)
     {
+        curCombo++;
         if (curCombo < maxCombo)
         {
-            curCombo++;
             sbUI.AddProgress(100f / maxCombo);
         }
 

@@ -46,10 +46,7 @@ public class SuperJumpAbility : Ability
             context.Movement.canMove = false;
             context.Rigidbody.linearVelocityX = 0f;
 
-            foreach (var item in context.Attack.pAnimation.animators)
-            {
-                item.Play(JumpPreparationHash);
-            }
+            context.Attack.pAnimation.animator.Play(JumpPreparationHash);
 
             HandleCharge();
             

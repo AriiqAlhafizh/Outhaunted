@@ -69,10 +69,10 @@ Shader "Custom/SpriteWhiteFade"
 
                 // LOGIKA LOOP TRANSPARANSI:
                 // sin(_Time.y) menghasilkan nilai berosilasi antara -1 dan 1.
-                // Kita manipulasi rumusnya agar menghasilkan nilai antara 0.25 dan 0.50.
-                // Nilai -1 menjadi: (-1 * 0.25) + 0.25 = 0.25
-                // Nilai  1 menjadi: (1 * 0.25) + 0.25 = 0.50
-                float alphaLoop = sin(_Time.y * _Speed) * 0.25 + 0.25;
+                // Kita manipulasi rumusnya agar menghasilkan nilai antara 0.50 dan 1.00.
+                // Nilai -1 menjadi: (-1 * 0.25) + 0.75 = 0.50
+                // Nilai  1 menjadi: (1 * 0.25) + 0.75 = 1.00   
+                float alphaLoop = sin(_Time.y * _Speed) * 0.25 + 0.75;
 
                 // Gabungkan alpha hasil loop dengan alpha asli sprite
                 c.a = originalAlpha * alphaLoop;

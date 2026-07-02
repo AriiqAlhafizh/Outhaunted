@@ -29,10 +29,9 @@ public class PogoComboAbility : Ability
     }
     private void Combo()
     {
-        Debug.Log("Pogo Combo Called");
+        curCombo++;
         if (curCombo < maxCombo)
         {
-            curCombo++;
             sbUI.AddProgress(100f / maxCombo);
         }
 

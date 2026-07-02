@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,8 +11,8 @@ public class RayapBesiController : BossController
     public bool ChangingPhase = false;
 
     [Header("Phase 3 Settings")]
-    public List<GameObject> objToSpawn;
-    public List<GameObject> objToDespawn;
+    public GameObject platforms;
+    public GameObject spikes;
 
     protected override void Start()
     {
@@ -21,18 +20,11 @@ public class RayapBesiController : BossController
         sr = GetComponentInChildren<SpriteRenderer>();
         col = GetComponent<Collider2D>();
 
-        List<GameObject> Obj2Spawn = GameObject.FindGameObjectsWithTag("ObjToSpawn").ToList();
-        foreach (GameObject obj in Obj2Spawn)
-        {
-            objToSpawn.Add(obj);
-            obj.SetActive(false);
-        }
+        platforms = GameObject.FindGameObjectWithTag("PlatformParent");
+        platforms.SetActive(false);
 
-        List<GameObject> Obj2Despawn = GameObject.FindGameObjectsWithTag("ObjToDespawn").ToList();
-        foreach (GameObject obj in Obj2Despawn)
-        {
-            objToDespawn.Add(obj);
-        }
+        spikes = GameObject.FindGameObjectWithTag("Spike");
+        spikes.SetActive(false);
     }
     public override IEnumerator AttackCycleCoroutine()
     {
@@ -82,21 +74,15 @@ public class RayapBesiController : BossController
         sr.enabled = false;
         col.enabled = false;
 
-        foreach (var item in objToSpawn)
-        {
-            item.SetActive(true);
-        }
+        platforms.SetActive(true);
 
         // masukin animasi indikator obj akan hilang disini
 
         transform.position += new Vector3(0, 2.25f, 0);
-        yield return MoveCamera(Vector3.up, 2.25f, 3f);
+        yield return MoveCamera(Vector3.up, 1f, 3f);
 
-
-        foreach (var item in objToDespawn)
-        {
-            item.SetActive(false);
-        }
+        spikes.SetActive(true);
+        spikes.GetComponent<PhaseThreeSpikes>().ActivateSpikes();
 
         yield return new WaitForSeconds(3f);
 

@@ -20,10 +20,7 @@ public class PocongSideAttack : SideAttack
         if (direction == AttackDirection.Down)
         {
             animator.SetTrigger(PogoHash);
-            foreach (var item in context.Attack.pAnimation.animators)
-            {
-                item.Play(AttackPogoHash);
-            }
+            context.Attack.pAnimation.animator.Play(AttackPogoHash);
             StartCoroutine(ToggleCollider(pogoCol, 0.2f));
         }
     }

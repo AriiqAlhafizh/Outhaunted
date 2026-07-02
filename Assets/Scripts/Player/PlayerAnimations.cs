@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    public List<Animator> animators;
+    public Animator animator;
     public RuntimeAnimatorController defaultController;
     public AnimatorOverrideController overrideController;
 
@@ -25,19 +25,18 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Start()
     {
-        animators = GetComponentsInChildren<Animator>().ToList();
-        animators.Remove(animators[2]);
-        defaultController = animators[0].runtimeAnimatorController;
+        animator = GetComponentInChildren<Animator>();
+        defaultController = animator.runtimeAnimatorController;
     }
 
     public void OverrideAnimation()
     {
-        animators[0].runtimeAnimatorController = overrideController;
+        animator.runtimeAnimatorController = overrideController;
     }
 
     public void ResetAnimation()
     {
-        animators[0].runtimeAnimatorController = defaultController;
+        animator.runtimeAnimatorController = defaultController;
     }
     public void ChangeAnimationState(int newStateHash)
     {
@@ -45,29 +44,20 @@ public class PlayerAnimations : MonoBehaviour
         if (currentStateHash == newStateHash) return;
 
         // Play the animation instantly without transitions
-        foreach (var item in animators)
-        {
-            item.Play(newStateHash);
-        }
+        animator.Play(newStateHash);
         currentStateHash = newStateHash;
     }
 
     public void SetTrigger(int triggerHash)
     {
         if (!isAttacking && !isInAbility)
-            foreach (var item in animators)
-            {
-                item.SetTrigger(triggerHash);
-            }
+            animator.SetTrigger(triggerHash);
     }
 
     public void SetBool(int boolHash, bool value)
     {
         if (!isAttacking && !isInAbility)
-            foreach (var item in animators)
-            {
-                item.SetBool(boolHash, value);
-            }
+            animator.SetBool(boolHash, value);
     }
     
     public void StartHurt()
@@ -126,7 +116,7 @@ public class PlayerAnimations : MonoBehaviour
     public float GetAnimationLength(string name)
     {
         // Get all clips assigned to the Animator Controller
-        AnimationClip[] clips = animators[0].runtimeAnimatorController.animationClips;
+        AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
 
         foreach (AnimationClip clip in clips)
         {

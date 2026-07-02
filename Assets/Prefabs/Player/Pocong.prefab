@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 229678112414927849}
   - component: {fileID: 6571350971464625376}
   - component: {fileID: 2313191869983666070}
+  - component: {fileID: 4480182798485980429}
   m_Layer: 0
   m_Name: Pocong
   m_TagString: Untagged
@@ -114,6 +115,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4480182798485980429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111966874751904705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a42fd9e27ac3fef4799ec07f26df3904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMaskController
+  whiteMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
+  flashMaterial: {fileID: 2100000, guid: 0e37b0a12733a014bad0b7e569227590, type: 2}
 --- !u!1 &2864709156096870788
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1600954615399306093
 Transform:
   m_ObjectHideFlags: 0
@@ -572,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animators: []
+  animator: {fileID: 0}
   defaultController: {fileID: 0}
   overrideController: {fileID: 0}
   isAttacking: 0
@@ -589,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5dd0feca5c2dd744abc338347869e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  pMovement: {fileID: 0}
   input: {fileID: 0}
   pAnimation: {fileID: 0}
   playerPogo: {fileID: 0}
@@ -853,7 +869,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -861,7 +877,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
