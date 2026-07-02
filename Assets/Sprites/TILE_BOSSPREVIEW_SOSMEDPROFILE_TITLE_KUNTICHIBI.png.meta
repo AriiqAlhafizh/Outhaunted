@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 74737ac98d4c1b8458ab53ca4e98ce35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4746452146017836186
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_0
+  - first:
+      213: -5851415654018359953
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_1
+  - first:
+      213: 2662076510773720964
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_2
+  - first:
+      213: -3775328512928264689
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_3
+  - first:
+      213: -8883300422039977164
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_4
+  - first:
+      213: 9320832922302023
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_5
+  - first:
+      213: -8684151215383994286
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_6
+  - first:
+      213: 1484684780717553000
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_7
+  - first:
+      213: 3482472802047584181
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_8
+  - first:
+      213: 6204112628153359483
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_9
+  - first:
+      213: 411149326807445819
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_10
+  - first:
+      213: -8151771481614839222
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_11
+  - first:
+      213: -3872584361290463589
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_12
+  - first:
+      213: -978171728042497322
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_13
+  - first:
+      213: -5642477497490807851
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_14
+  - first:
+      213: -1786249035920062543
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_15
+  - first:
+      213: -6654118654759408200
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_16
+  - first:
+      213: -2417398840386880428
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_17
+  - first:
+      213: 3983703263964676752
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_18
+  - first:
+      213: 6758992056840929964
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_19
+  - first:
+      213: 7476377598521616113
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_20
+  - first:
+      213: -2753984700712510708
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_21
+  - first:
+      213: 6716160231255051176
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_22
+  - first:
+      213: 5464214599187109626
+    second: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1387
+        width: 770
+        height: 773
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 256, z: 256, w: 256}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c98ca3419ced140800000000000000
+      internalID: 4746452146017836186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_1
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1386
+        width: 780
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 256, z: 256, w: 256}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d531df6789bcea0800000000000000
+      internalID: -5851415654018359953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 368
+        width: 1280
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48734957b7891f420800000000000000
+      internalID: 2662076510773720964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_3
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1392
+        width: 768
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ec18458b65b9bc0800000000000000
+      internalID: -3775328512928264689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 512
+        height: 506
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250a24fea72bb7780800000000000000
+      internalID: -8684151215383994286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 880
+        width: 512
+        height: 506
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865391e11f8aa9410800000000000000
+      internalID: 1484684780717553000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847e117b266539b4aabc13163f2025f9
+      internalID: -1660428485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e92421826add140bf7c75f771e7e2e
+      internalID: 508278345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1526d9155396a45a4a2037b96321aa
+      internalID: -132697687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0871f17cfe5e61d42ab08670c74cdb2f
+      internalID: 1923515249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_31
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8bcb2b6da828741a6f0ed00952ae6a
+      internalID: -693462959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_32
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000fbd345c4935e4ab270978ffcf16b3
+      internalID: 511941248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043614e83ab6c764db5aa08e8a58d6c4
+      internalID: -772157990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_34
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609e61552610d704daefd209aa16a834
+      internalID: 979489911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b68ffcb28bb37341bdef74ee2439698
+      internalID: -226912626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_41
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfeebfd458f7494d88ecd6b7b0b9b90
+      internalID: -1838484469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e485d02288ce04796fa9bece75c50e
+      internalID: 1839270166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_43
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c93d61d78046b45827c59747e91b0d
+      internalID: -1832407929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_44
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4915c9dff5018af419757e478cea9731
+      internalID: 243620222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_45
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e0b73695755c542a1063a866d9b005
+      internalID: 336538106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_46
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beaf252c14e0576458d3f61e1f219e73
+      internalID: -1956676666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_47
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 368
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bfbcbf246e60b4082062dfcc0ded7c
+      internalID: -1427578879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 949a4c908d7db6741b3bbbca6167df94
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1280.0,"y":512.0},"gridSpriteOffset":{"x":768.0,"y":256.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_0: 4746452146017836186
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_1: -5851415654018359953
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_10: 411149326807445819
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_11: -8151771481614839222
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_12: -3872584361290463589
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_13: -978171728042497322
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_14: -5642477497490807851
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_15: -1786249035920062543
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_16: -6654118654759408200
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_17: 1975568863
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_18: -811153200
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_19: -147839787
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_2: 2662076510773720964
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_20: 1448943242
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_21: -377368577
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_22: 505780809
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_23: -1038687617
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_24: 288607174
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_25: 36640882
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_26: 1095787967
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_27: -1660428485
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_28: 508278345
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_29: -132697687
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_3: -3775328512928264689
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_30: 1923515249
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_31: -693462959
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_32: 511941248
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_33: -772157990
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_34: 979489911
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_35: 1268476672
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_36: -287578493
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_37: -967016140
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_38: -904347285
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_39: 2123218266
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_4: -8883300422039977164
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_40: -226912626
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_41: -1838484469
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_42: 1839270166
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_43: -1832407929
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_44: 243620222
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_45: 336538106
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_46: -1956676666
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_47: -1427578879
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_48: -760093609
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_49: -411107281
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_5: 9320832922302023
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_50: -1432815170
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_51: -1934242434
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_52: -1726565632
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_6: -8684151215383994286
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_7: 1484684780717553000
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_8: 3482472802047584181
+      TILE_BOSSPREVIEW_SOSMEDPROFILE_TITLE_KUNTICHIBI_9: 6204112628153359483
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
