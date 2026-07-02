@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -91,12 +92,17 @@ public class PlayerManager : MonoBehaviour
             CurrentHealth = 0;
             OnDeath?.Invoke();
 
-            // TEMP
-            InGame = false;
-            RemovePlayerContext();
-            SceneManager.LoadScene("MainMenu");
+            StartCoroutine(DieCoroutine());
         }
 
         Debug.Log($"Player took {1}. Current health: {CurrentHealth}");
+    }
+
+    public IEnumerator DieCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        InGame = false;
+        RemovePlayerContext();
+        SceneManager.LoadScene("MainMenu");
     }
 }

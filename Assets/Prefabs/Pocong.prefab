@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 1731939133188293536}
   - component: {fileID: 6525662004070769039}
   m_Layer: 0
-  m_Name: PocongFlashMask
+  m_Name: PocongOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animator: {fileID: 0}
+  animators: []
   defaultController: {fileID: 0}
   overrideController: {fileID: 0}
   isAttacking: 0
