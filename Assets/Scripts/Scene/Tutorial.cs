@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KuntilanakTutorial : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     private Camera mainCam;
 
