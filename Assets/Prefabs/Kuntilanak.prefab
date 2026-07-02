@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animator: {fileID: 0}
+  animators: []
   defaultController: {fileID: 0}
   overrideController: {fileID: 22100000, guid: c5a93adc9a200f042834fddfacd8c76f, type: 2}
   isAttacking: 0
@@ -428,7 +428,19 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 72044974-3a39-4ee7-9d9c-841cfd958520
     m_ActionName: 'Player/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -1058,5 +1070,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42fd9e27ac3fef4799ec07f26df3904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMaskController
-  maskMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
-  damageFlashDuration: 0.2
+  whiteMaterial: {fileID: 0}
+  flashMaterial: {fileID: 0}

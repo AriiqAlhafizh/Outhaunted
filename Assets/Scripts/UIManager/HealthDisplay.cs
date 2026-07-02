@@ -12,7 +12,7 @@ public class HealthDisplay : MonoBehaviour
 
     void Start()
     {
-        OnHealthChange();
+        ResetHealthDisplay();
         PlayerManager.Instance.OnDamaged += OnHealthChange;
     }
 

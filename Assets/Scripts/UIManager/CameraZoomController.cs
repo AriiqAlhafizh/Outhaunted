@@ -14,7 +14,7 @@ public class CameraZoomController : MonoBehaviour
     private Transform currentTarget;
     private Coroutine currentRoutine;
 
-    private void Start()
+    private void OnEnable()
     {
         originalPosition = transform.position;
         originalSize = cam.orthographicSize;
