@@ -5,12 +5,16 @@ public class BasicComboAbility : Ability
 {
     public float dmgMultiplier = .15f;
     public float sizeMultiplier = .15f;
+    public float normalSize = 1f;
+
     public int maxCombo = 10;
     public int curCombo = 0;
 
     private Animator animator;
     public AnimatorOverrideController redMode;
     private RuntimeAnimatorController normalMode;
+
+    PlayerSFX playerSFX;
 
     GameObject spriteObj;
     GameObject sideHB;
@@ -25,7 +29,9 @@ public class BasicComboAbility : Ability
         normalMode = animator.runtimeAnimatorController;
 
         sbUI = GameObject.FindGameObjectWithTag("SkilbarUI").GetComponent<SkillBarUI>(); // Ada typo dari ananas, jgn lupa ganti SkilbarUI jadi SkillBarUI
+        playerSFX = GetComponentInChildren<PlayerSFX>();
 
+        normalSize = transform.localScale.x;
 
         context.Attack.OnAttackHit += Combo;
         PlayerManager.Instance.OnDamaged += ResetCombo;
@@ -53,6 +59,8 @@ public class BasicComboAbility : Ability
             context.Attack.IncreaseSize(sideHB, sizeMultiplier);
             
             context.Attack.pAnimation.OverrideAnimation();
+
+            playerSFX.PlayAudio(playerSFX.combo);
         }
     }
     private void ResetCombo()
@@ -65,7 +73,7 @@ public class BasicComboAbility : Ability
         context.Attack.pAnimation.ResetAnimation();
         animator.runtimeAnimatorController = normalMode;
         
-        context.Attack.ResetSize(spriteObj, sizeMultiplier);
-        context.Attack.ResetSize(sideHB, sizeMultiplier);
+        context.Attack.ResetSize(spriteObj, normalSize);
+        context.Attack.ResetSize(sideHB, normalSize);
     }
 }
