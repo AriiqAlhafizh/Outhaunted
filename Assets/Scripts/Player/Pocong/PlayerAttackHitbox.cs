@@ -15,7 +15,7 @@ public class PlayerAttackHitbox : MonoBehaviour
         {
             context.Attack.RegisterHit(collision.gameObject);
             context.Movement.OwnAttackKnockback(collision.gameObject);
-            if (collision.gameObject.GetComponent<BossController>() != null) 
+            if (collision.gameObject.GetComponentInParent<BossController>() != null) 
             {
                 BossManager.Instance.TakeDamage((int)context.Attack.attackDamage);
             }

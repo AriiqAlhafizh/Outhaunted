@@ -30,7 +30,7 @@ public class JumpAttack : BossAttack
         playerPos = PlayerManager.Instance.PlayerPosition;
         float playerVelocity = PlayerManager.Instance.CurrentPlayerContext.Rigidbody.linearVelocity.x;
 
-        Vector2 mapBounds = new(18f, 10f); // Example map bounds, adjust as needed
+        Vector2 mapBounds = new(8f, 8f); // Example map bounds, adjust as needed
 
         // Predict where the player will be at the end of the jump duration
         float predictedPos = playerPos.x + playerVelocity * jumpDuration;

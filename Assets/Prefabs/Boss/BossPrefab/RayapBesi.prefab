@@ -109,8 +109,8 @@ MonoBehaviour:
   delayBetweenAttacks: 1
   knockbackForce: 0
   ChangingPhase: 0
-  objToSpawn: []
-  objToDespawn: []
+  platforms: {fileID: 0}
+  spikes: {fileID: 0}
 --- !u!114 &7159428188012369859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,15 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b6fe967217be824d9c5459e81e5c5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlyAttack
-  DelayBeforeAttack: 0.5
+  DelayBeforeAttack: 1
   Duration: 0
   Cooldown: 10
   IsReady: 1
   animator: {fileID: 0}
   AnimationStart: Ram_Preparation
   AnimationAttack: Ram
-  leftPost: -8
-  rightPost: 8
+  leftPost: -3.5
+  rightPost: 3.5
   flySpeed: 5
   direction: 0
   isFlying: 0
@@ -196,11 +196,13 @@ MonoBehaviour:
   AnimationStart: Attack_ThrowProjectile_Preparation
   AnimationAttack: 
   startPosY: -1.5
-  warningDelay: 0.5
-  attackDelay: 2
+  warningDelay: 1
+  attackDelay: 2.5
   numberOfAttacks: 5
   spikePrefab: {fileID: 4717300695869405509, guid: 4a3e043a4f05b304eb872fe46d733688, type: 3}
+  spikeOffsetY: -1.5
   warningPrefab: {fileID: 3240370177005617103, guid: 7cf96c82a0ac4844fa5586d5ec2f6f59, type: 3}
+  warningOffsetY: -0.2
   distanceBetweenSpikes: 2
 --- !u!114 &7643934080808454787
 MonoBehaviour:
@@ -214,9 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154ae594a26ac92429349e425ccf8203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlatformAttack
-  DelayBeforeAttack: 1
+  DelayBeforeAttack: 0.5
   Duration: 0
-  Cooldown: 10
+  Cooldown: 4
   IsReady: 1
   animator: {fileID: 0}
   AnimationStart: 

@@ -53,6 +53,7 @@ public class BossController : MonoBehaviour
     }
     public virtual IEnumerator AttackCycleCoroutine()
     {
+        yield return new WaitForSeconds(delayBetweenAttacks);
         while (true)
         {
             int randomAttack = UnityEngine.Random.Range(0, startingAttacks + currentPhase);

@@ -26,7 +26,7 @@ public class PlayerInputHandler : MonoBehaviour
     public event Action DashPressed;
     public event Action AttackPressed;
 
-    public event Action PausePressed;
+    //public event Action PausePressed;
 
     private void Start()
     {

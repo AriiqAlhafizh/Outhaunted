@@ -22,17 +22,22 @@ public class TestInput : MonoBehaviour
     {
         if (context.performed)
         {
-            isSettingsActive = !isSettingsActive;
-            settingPrefab.SetActive(isSettingsActive);
+            ToggleSettings();
+        }
+    }
 
-            if (isSettingsActive)
-            {
-                Time.timeScale = 0f; // Uncomment to pause the game
-            }
-            else
-            {
-                Time.timeScale = 1f; // Uncomment to unpause the game
-            }
+    public void ToggleSettings()
+    {
+        isSettingsActive = !isSettingsActive;
+        settingPrefab.SetActive(isSettingsActive);
+
+        if (isSettingsActive)
+        {
+            Time.timeScale = 0f; // Uncomment to pause the game
+        }
+        else
+        {
+            Time.timeScale = 1f; // Uncomment to unpause the game
         }
     }
 
@@ -44,7 +49,7 @@ public class TestInput : MonoBehaviour
             {
                 playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
             }
-            catch (System.Exception e)
+            catch (System.Exception)
             {
                 Debug.LogWarning("PlayerInput not found. Retrying...");
             }

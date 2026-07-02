@@ -5,7 +5,7 @@ public class SpikeProjectile : MonoBehaviour
 { 
     [Header("Spike Settings")]
     public GameObject spikePrefab;
-    public Vector2 spikeOffset;
+    public Vector3 spikeOffset = new(0, -2.5f);
 
     private float spikeSpriteSizeX;
 
@@ -27,7 +27,7 @@ public class SpikeProjectile : MonoBehaviour
         {
             direction = Vector3.right;
         }
-        spikeOffset *= direction;
+        spikeOffset.x = spikeOffset.x * direction.x;
     }
     public void Update()
     {
@@ -42,7 +42,8 @@ public class SpikeProjectile : MonoBehaviour
         if (distanceTraveled > spikeSpriteSizeX)
         {
             distanceTraveled -= spikeSpriteSizeX;
-            Vector3 spikePosition = gameObject.transform.position + (Vector3)spikeOffset;
+            Vector3 spikePosition = transform.position + spikeOffset;
+            Debug.Log("Spawning spike at: " + spikePosition + ", spike offset: " + spikeOffset);
             Instantiate(spikePrefab, spikePosition, Quaternion.identity);
         }
     }
