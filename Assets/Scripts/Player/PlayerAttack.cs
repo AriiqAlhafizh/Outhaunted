@@ -154,14 +154,14 @@ public class PlayerAttack : MonoBehaviour
     }
     public void IncreaseSize( GameObject obj, float amount)
     {
-        obj.transform.localScale = Vector3.one * (1 + amount);
+        obj.transform.localScale = obj.transform.localScale * (1 + amount);
     }
     public void ResetDamage()
     {
         attackDamage = PlayerManager.Instance.CurrentCharacter.attackDamage;
     }
-    public void ResetSize(GameObject obj, float amount)
+    public void ResetSize(GameObject obj, float originalSize)
     {
-        obj.transform.localScale = Vector3.one * (1 / (1 + amount));
+        obj.transform.localScale = Vector3.one * originalSize;
     }
 }

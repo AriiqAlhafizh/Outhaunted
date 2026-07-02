@@ -7,9 +7,11 @@ public class PogoComboAbility : Ability
 
     public float dmgMultiplier = .15f;
     public float sizeMultiplier = .5f;
+    public float normalSize = 1.35f;
     public int maxCombo = 10;
     public int curCombo = 0;
 
+    public GameObject pogoSprite;
     public GameObject pogoHB;
 
     private SkillBarUI sbUI;
@@ -18,6 +20,8 @@ public class PogoComboAbility : Ability
     {
         pocongSideAttack = GetComponentInChildren<PocongSideAttack>();
         sbUI = GameObject.FindGameObjectWithTag("SkilbarUI").GetComponent<SkillBarUI>(); // Ada typo dari ananas, jgn lupa ganti SkilbarUI jadi SkillBarUI
+
+        normalSize = pogoSprite.transform.localScale.x;
 
         context.Attack.OnPogo += Combo;
         context.Movement.OnLand += ResetCombo;
@@ -38,6 +42,7 @@ public class PogoComboAbility : Ability
         if (curCombo == maxCombo)
         {
             context.Attack.IncreaseDamage(dmgMultiplier * context.Attack.attackDamage);
+            context.Attack.IncreaseSize(pogoSprite, sizeMultiplier);
             context.Attack.IncreaseSize(pogoHB, sizeMultiplier);
             pocongSideAttack.animator.SetBool(PogoUpgradeHash, true);
         }
@@ -49,6 +54,7 @@ public class PogoComboAbility : Ability
         curCombo = 0;
         sbUI.ResetProgress();
         context.Attack.ResetDamage();
-        context.Attack.ResetSize(pogoHB, sizeMultiplier);
+        context.Attack.ResetSize(pogoSprite, normalSize);
+        context.Attack.ResetSize(pogoHB, normalSize);
     }
 }
