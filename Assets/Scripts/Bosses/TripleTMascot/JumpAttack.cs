@@ -11,6 +11,7 @@ public class JumpAttack : BossAttack
     [Header("Jump Attack Settings")]
     public float jumpHeight = 2f;
     public float jumpDuration = 1f;
+    public AudioClip landingClip;
 
     public override void Start()
     {
@@ -65,6 +66,7 @@ public class JumpAttack : BossAttack
         }
 
         transform.position = targetPos;
+        bossSFX.Play(landingClip);
         animator.Play(AnimationLanding);
     }
 }

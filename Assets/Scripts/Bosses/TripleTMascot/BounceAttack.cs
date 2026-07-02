@@ -14,6 +14,7 @@ public class BounceAttack : BossAttack
     public int jumpHeight;
     public int jumpDistance;
     public Vector3 jumpDirection; // 1 for right, -1 for left
+    public AudioClip landingClip;
 
     public override void Start()
     {
@@ -94,6 +95,7 @@ public class BounceAttack : BossAttack
             jumpDirection = new Vector3(-1, 0, 0);
         }
 
+        bossSFX.Play(landingClip);
         transform.position = new Vector3(finalX, targetPos.y, transform.position.z);
     }
 }

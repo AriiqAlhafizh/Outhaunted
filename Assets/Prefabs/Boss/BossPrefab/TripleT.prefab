@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e96723caac89f408dce1be2fcc7885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossSFX
-  audioSource: {fileID: 0}
 --- !u!82 &5637970266731368765
 AudioSource:
   m_ObjectHideFlags: 0
@@ -609,6 +608,7 @@ MonoBehaviour:
   IsReady: 1
   attackPrepSound: {fileID: 0}
   attackSound: {fileID: 0}
+  bossSFX: {fileID: 0}
   animator: {fileID: 0}
   AnimationPrep: 
   AnimationAttack: Jump
@@ -616,6 +616,7 @@ MonoBehaviour:
   AnimationLanding: Landing
   jumpHeight: 2
   jumpDuration: 1
+  landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
 --- !u!114 &6591555496833814390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +634,8 @@ MonoBehaviour:
   Cooldown: 2
   IsReady: 1
   attackPrepSound: {fileID: 0}
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 5fdeb0629bb1df04da5156c937bd6a57, type: 3}
+  bossSFX: {fileID: 0}
   animator: {fileID: 8079375552457843250}
   AnimationPrep: 
   AnimationAttack: Attack
@@ -691,6 +693,7 @@ MonoBehaviour:
   IsReady: 1
   attackPrepSound: {fileID: 0}
   attackSound: {fileID: 0}
+  bossSFX: {fileID: 0}
   animator: {fileID: 0}
   AnimationPrep: 
   AnimationAttack: Roundabout
@@ -702,6 +705,7 @@ MonoBehaviour:
   jumpHeight: 5
   jumpDistance: 5
   jumpDirection: {x: -1, y: 0, z: 0}
+  landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
 --- !u!114 &6703679754971644880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,6 +724,7 @@ MonoBehaviour:
   IsReady: 1
   attackPrepSound: {fileID: 0}
   attackSound: {fileID: 0}
+  bossSFX: {fileID: 0}
   animator: {fileID: 0}
   AnimationPrep: 
   AnimationAttack: 
@@ -733,6 +738,7 @@ MonoBehaviour:
   hoverHeight: 5
   hoverSpeed: 5
   delayBetweenStomps: 0.5
+  landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
   jumpUpDuration: 0.5
   stompDownDuration: 0.25
 --- !u!50 &2686052752478982282

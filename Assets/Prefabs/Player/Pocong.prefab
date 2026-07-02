@@ -143,13 +143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
   walk: {fileID: 0}
-  jump: {fileID: 0}
-  land: {fileID: 0}
-  combo: {fileID: 0}
-  hurt: {fileID: 0}
+  jump: {fileID: 8300000, guid: b7a0fe4e955880541a42b41b667e0f0b, type: 3}
+  land: {fileID: 8300000, guid: 90f04a8f456b211439ea2513589a6882, type: 3}
+  combo: {fileID: 8300000, guid: 34772bb8a5c25f84da665558fe07a824, type: 3}
+  hurt: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
   die: {fileID: 0}
-  attack: {fileID: 0}
-  attackHit: {fileID: 0}
+  attack: {fileID: 8300000, guid: cc51334b019ca944a81f9b717f72192c, type: 3}
+  attackHit: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
 --- !u!1 &2111966874751904705
 GameObject:
   m_ObjectHideFlags: 0

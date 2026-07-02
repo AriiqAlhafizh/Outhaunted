@@ -15,6 +15,7 @@ public class StompAttack : BossAttack
     public float hoverHeight;
     public float hoverSpeed;
     public float delayBetweenStomps; // Delay between each stomp
+    public AudioClip landingClip;
 
     [Header("Durations")]
     public float jumpUpDuration = 0.25f;
@@ -88,7 +89,7 @@ public class StompAttack : BossAttack
             }
             animator.Play(AnimationStomp);
             transform.position = groundPos;
-
+            bossSFX.Play(landingClip);
             yield return new WaitForSeconds(delayBetweenStomps);
         }
     }

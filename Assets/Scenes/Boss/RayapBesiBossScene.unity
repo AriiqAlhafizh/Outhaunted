@@ -2772,7 +2772,7 @@ PrefabInstance:
     - target: {fileID: 3420053407924562260, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
       propertyPath: CurrentCharacter
       value: 
-      objectReference: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
+      objectReference: {fileID: 11400000, guid: f0ad8dde92e9d324696fcf4016eb201d, type: 2}
     - target: {fileID: 3420053407924562260, guid: a1f5561a8a3323143bbfad5a3578e801, type: 3}
       propertyPath: CurrentPlayerContext
       value: 
