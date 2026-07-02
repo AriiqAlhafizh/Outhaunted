@@ -3,7 +3,8 @@ using UnityEngine;
 public class PogoComboAbility : Ability
 {
     private static readonly int PogoUpgradeHash = Animator.StringToHash("PogoUpgrade");
-    public PocongSideAttack pocongSideAttack;
+    PocongSideAttack pocongSideAttack;
+    PlayerSFX playerSFX;
 
     public float dmgMultiplier = .15f;
     public float sizeMultiplier = .5f;
@@ -19,6 +20,7 @@ public class PogoComboAbility : Ability
     private void Start()
     {
         pocongSideAttack = GetComponentInChildren<PocongSideAttack>();
+        playerSFX = GetComponentInChildren<PlayerSFX>();
         sbUI = GameObject.FindGameObjectWithTag("SkilbarUI").GetComponent<SkillBarUI>(); // Ada typo dari ananas, jgn lupa ganti SkilbarUI jadi SkillBarUI
 
         normalSize = pogoSprite.transform.localScale.x;
@@ -45,6 +47,8 @@ public class PogoComboAbility : Ability
             context.Attack.IncreaseSize(pogoSprite, sizeMultiplier);
             context.Attack.IncreaseSize(pogoHB, sizeMultiplier);
             pocongSideAttack.animator.SetBool(PogoUpgradeHash, true);
+
+            playerSFX.PlayAudio(playerSFX.combo);
         }
     }
 

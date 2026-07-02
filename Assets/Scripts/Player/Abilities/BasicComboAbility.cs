@@ -14,6 +14,8 @@ public class BasicComboAbility : Ability
     public AnimatorOverrideController redMode;
     private RuntimeAnimatorController normalMode;
 
+    PlayerSFX playerSFX;
+
     GameObject spriteObj;
     GameObject sideHB;
     private SkillBarUI sbUI;
@@ -27,6 +29,7 @@ public class BasicComboAbility : Ability
         normalMode = animator.runtimeAnimatorController;
 
         sbUI = GameObject.FindGameObjectWithTag("SkilbarUI").GetComponent<SkillBarUI>(); // Ada typo dari ananas, jgn lupa ganti SkilbarUI jadi SkillBarUI
+        playerSFX = GetComponentInChildren<PlayerSFX>();
 
         normalSize = transform.localScale.x;
 
@@ -56,6 +59,8 @@ public class BasicComboAbility : Ability
             context.Attack.IncreaseSize(sideHB, sizeMultiplier);
             
             context.Attack.pAnimation.OverrideAnimation();
+
+            playerSFX.PlayAudio(playerSFX.combo);
         }
     }
     private void ResetCombo()
