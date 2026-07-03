@@ -804,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8514466214802780656, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8592897770337388089, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_text
@@ -1611,7 +1611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -1675,7 +1675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 
+      value: RayapBesiBossScene
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3925,7 +3925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2794369062791479178, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_text
-      value: '@kunti_loh'
+      value: '@kunti_loh (you)'
       objectReference: {fileID: 0}
     - target: {fileID: 2794369062791479178, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_fontSize
@@ -3974,7 +3974,7 @@ PrefabInstance:
     - target: {fileID: 3573576554948858928, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3836195555759386229, guid: acb4a943aea696046ae9bc90ddc83d67, type: 3}
+      objectReference: {fileID: 262113782, guid: acb4a943aea696046ae9bc90ddc83d67, type: 3}
     - target: {fileID: 3758599421709141434, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_text
       value: 0
@@ -4130,7 +4130,7 @@ PrefabInstance:
     - target: {fileID: 6561210842477449621, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3836195555759386229, guid: acb4a943aea696046ae9bc90ddc83d67, type: 3}
+      objectReference: {fileID: 262113782, guid: acb4a943aea696046ae9bc90ddc83d67, type: 3}
     - target: {fileID: 6751161997236803097, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_text
       value: 0
@@ -5800,7 +5800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -5864,7 +5864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: 
+      value: TripleTBossScene
       objectReference: {fileID: 0}
     - target: {fileID: 5308938028750222497, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

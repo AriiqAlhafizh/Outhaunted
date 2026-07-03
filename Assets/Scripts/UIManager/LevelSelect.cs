@@ -8,9 +8,9 @@ public class LevelSelect : MonoBehaviour
         BossManager.Instance.SetBossGameObject(bossData);
     }
 
-    public void GotoBossScene()
+    public void GotoBossScene(string bossSceneName)
     {
-        SceneManager.LoadScene("BossTestScene");
+        SceneManager.LoadScene(bossSceneName);
     }
     public void back()
     {
