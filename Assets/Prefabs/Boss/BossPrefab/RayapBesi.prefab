@@ -237,9 +237,10 @@ MonoBehaviour:
   - {fileID: 7643934080808454787}
   currentPhase: 0
   startingAttacks: 2
-  delayBetweenAttacks: 1
+  delayBetweenAttacks: 0.25
   knockbackForce: 0
   ChangingPhase: 0
+  inPhase3: 0
   platforms: {fileID: 0}
   spikes: {fileID: 0}
 --- !u!114 &7159428188012369859
@@ -262,7 +263,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Ram_Preparation
   AnimationAttack: Ram
   flyAttackSound: {fileID: 8300000, guid: e35a41c215bfdf64e874df1fdbb4dfa6, type: 3}
   leftPost: -3.5
@@ -284,13 +285,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectilePrimalAspidAttack
   DelayBeforeAttack: 0.5
   Duration: 0
-  Cooldown: 5
+  Cooldown: 3
   IsReady: 1
   attackPrepSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 5fdeb0629bb1df04da5156c937bd6a57, type: 3}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Attack_ThrowProjectile_Preparation
   AnimationAttack: Attack_ThrowProjectile
   projectilePrefab: {fileID: 7599129567625866015, guid: ca38b6f241110ed4db308ae1f06d8d76, type: 3}
   projectileDelay: 0.1
@@ -314,7 +315,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Attack_ThrowProjectile_Preparation
   AnimationAttack: Attack_ThrowProjectile
   projectilePrefab: {fileID: 2863745540204317213, guid: d5b745bf14d76344e9525bc0b68dca66, type: 3}
 --- !u!114 &2539891828434982531
@@ -331,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpikeGroundAttack
   DelayBeforeAttack: 0.5
   Duration: 0
-  Cooldown: 5
+  Cooldown: 10
   IsReady: 1
   attackPrepSound: {fileID: 0}
   attackSound: {fileID: 0}
@@ -341,8 +342,8 @@ MonoBehaviour:
   AnimationAttack: 
   startPosY: -1.5
   warningDelay: 1
-  attackDelay: 2.5
-  numberOfAttacks: 5
+  attackDelay: 1.5
+  numberOfAttacks: 3
   spikePrefab: {fileID: 4717300695869405509, guid: 4a3e043a4f05b304eb872fe46d733688, type: 3}
   spikeOffsetY: -1.5
   warningPrefab: {fileID: 3240370177005617103, guid: 7cf96c82a0ac4844fa5586d5ec2f6f59, type: 3}

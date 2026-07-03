@@ -98,6 +98,7 @@ public class RayapBesiController : BossController
         col.enabled = true;
 
         ChangingPhase = false;
+        inPhase3 = true;
     }
 
     IEnumerator MoveCamera(Vector3 direction, float distance, float duration)
