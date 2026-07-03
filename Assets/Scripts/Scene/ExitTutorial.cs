@@ -13,6 +13,6 @@ public class ExitTutorial : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(PlayerManager.Instance.DieCoroutine());
     }
 }
