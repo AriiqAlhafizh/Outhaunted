@@ -146,10 +146,10 @@ MonoBehaviour:
   jump: {fileID: 8300000, guid: b7a0fe4e955880541a42b41b667e0f0b, type: 3}
   land: {fileID: 8300000, guid: 90f04a8f456b211439ea2513589a6882, type: 3}
   combo: {fileID: 8300000, guid: 34772bb8a5c25f84da665558fe07a824, type: 3}
-  hurt: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
+  hurt: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
   die: {fileID: 0}
   attack: {fileID: 8300000, guid: cc51334b019ca944a81f9b717f72192c, type: 3}
-  attackHit: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
+  attackHit: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
 --- !u!1 &2111966874751904705
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,10 +161,9 @@ GameObject:
   - component: {fileID: 229678112414927849}
   - component: {fileID: 6571350971464625376}
   - component: {fileID: 2313191869983666070}
-  - component: {fileID: 4480182798485980429}
   m_Layer: 0
   m_Name: Pocong
-  m_TagString: Untagged
+  m_TagString: PlayerBodyAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,7 +233,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6062958812280367955, guid: e900cbfaf4f98474dab5d67bc52c09c9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.78867924, g: 0.78867924, b: 0.78867924, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -265,20 +264,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4480182798485980429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111966874751904705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a42fd9e27ac3fef4799ec07f26df3904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMaskController
-  whiteMaterial: {fileID: 2100000, guid: 68b7d5bc9c7551646ac54ce1bb98b3c2, type: 2}
-  flashMaterial: {fileID: 2100000, guid: 0e37b0a12733a014bad0b7e569227590, type: 2}
 --- !u!1 &2864709156096870788
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,11 +536,11 @@ GameObject:
   - component: {fileID: 6525662004070769039}
   m_Layer: 0
   m_Name: PocongOverlay
-  m_TagString: Untagged
+  m_TagString: PlayerBodyAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1600954615399306093
 Transform:
   m_ObjectHideFlags: 0
@@ -597,7 +582,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0e37b0a12733a014bad0b7e569227590, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -618,7 +603,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6062958812280367955, guid: e900cbfaf4f98474dab5d67bc52c09c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -738,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animator: {fileID: 0}
+  animator: []
   defaultController: {fileID: 0}
   overrideController: {fileID: 0}
   isAttacking: 0
