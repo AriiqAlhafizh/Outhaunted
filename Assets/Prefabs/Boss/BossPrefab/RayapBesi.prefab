@@ -205,7 +205,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03624195, y: -0.17077035}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -215,7 +215,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0724839, y: 1.4683875}
+  m_Size: {x: 1.0724839, y: 0.62}
   m_EdgeRadius: 0
 --- !u!114 &2072060479009518500
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603869a19cb8f2347a63efc38fe96fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectilePrimalAspidAttack
-  DelayBeforeAttack: 0.5
+  DelayBeforeAttack: 1
   Duration: 0
   Cooldown: 3
   IsReady: 1
@@ -294,7 +294,7 @@ MonoBehaviour:
   AnimationPrep: Attack_ThrowProjectile_Preparation
   AnimationAttack: Attack_ThrowProjectile
   projectilePrefab: {fileID: 7599129567625866015, guid: ca38b6f241110ed4db308ae1f06d8d76, type: 3}
-  projectileDelay: 0.1
+  projectileDelay: 0.25
 --- !u!114 &359116190565770604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae8d2f6147ccec4ca4cca32cbc27bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileSpikeAttack
-  DelayBeforeAttack: 0.5
+  DelayBeforeAttack: 1
   Duration: 0
   Cooldown: 5
   IsReady: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Ram
   AnimationAttack: 
   startPosY: -1.5
   warningDelay: 1

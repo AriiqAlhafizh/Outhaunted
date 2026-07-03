@@ -1064,7 +1064,7 @@ MonoBehaviour:
   dmgMultiplier: 0.15
   sizeMultiplier: 0.15
   normalSize: 1.35
-  maxCombo: 10
+  maxCombo: 5
   curCombo: 0
   pogoSprite: {fileID: 2864709156096870788}
   pogoHB: {fileID: 7854154802582824441}
