@@ -9,6 +9,7 @@ public class RayapBesiController : BossController
     private Collider2D col;
 
     public bool ChangingPhase = false;
+    public bool inPhase3 = false;
 
     [Header("Phase 3 Settings")]
     public GameObject platforms;
@@ -36,8 +37,14 @@ public class RayapBesiController : BossController
                 continue;
             }
 
-            int randomAttack = UnityEngine.Random.Range(0, startingAttacks + currentPhase);
-            Debug.Log("Trying Event No. " + randomAttack);
+            int randomAttack;
+            do
+            {
+                randomAttack = UnityEngine.Random.Range(0, startingAttacks + currentPhase);
+            }
+            while (inPhase3 && (randomAttack == 3 || randomAttack == 2));
+
+            //Debug.Log("Trying Event No. " + randomAttack);
 
             yield return StartCoroutine(Attacks[randomAttack].Execute());
 
