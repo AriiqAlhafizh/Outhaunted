@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PausePanel : MonoBehaviour
 {
     public PlayerInput playerInput;
-    public GameObject settingPrefab;
+    public GameObject pausePrefab;
 
     private bool isSettingsActive = false;
     private void Start()
@@ -29,7 +29,7 @@ public class PausePanel : MonoBehaviour
     public void ToggleSettings()
     {
         isSettingsActive = !isSettingsActive;
-        settingPrefab.SetActive(isSettingsActive);
+        pausePrefab.SetActive(isSettingsActive);
 
         if (isSettingsActive)
         {

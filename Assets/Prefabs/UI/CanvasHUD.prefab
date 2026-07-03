@@ -560,7 +560,6 @@ GameObject:
   - component: {fileID: 3573837325687322965}
   - component: {fileID: 1414355951436820938}
   - component: {fileID: 8081387442413158671}
-  - component: {fileID: 2460709640973752603}
   m_Layer: 0
   m_Name: PausePanel
   m_TagString: Untagged
@@ -626,20 +625,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2460709640973752603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2593318440344738627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35fdef0a1d42fc1489af437c4169cbb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestInput
-  playerInput: {fileID: 0}
-  settingPrefab: {fileID: 308898802557728274}
 --- !u!1 &3054936851815485543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2460709640973752603}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PausePanel, Assembly-CSharp
         m_MethodName: GotoScene
         m_Mode: 5
@@ -1550,7 +1535,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2460709640973752603}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TestInput, Assembly-CSharp
         m_MethodName: ToggleSettings
         m_Mode: 1
@@ -1574,6 +1559,7 @@ GameObject:
   - component: {fileID: 2123996830399159599}
   - component: {fileID: 683941927405945196}
   - component: {fileID: 8985517343484265718}
+  - component: {fileID: 3395901303640726920}
   m_Layer: 0
   m_Name: CanvasHUD
   m_TagString: Untagged
@@ -1665,6 +1651,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3395901303640726920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076508324637066712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fdef0a1d42fc1489af437c4169cbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PausePanel
+  playerInput: {fileID: 0}
+  pausePrefab: {fileID: 2593318440344738627}
 --- !u!1 &7108523465093352963
 GameObject:
   m_ObjectHideFlags: 0
