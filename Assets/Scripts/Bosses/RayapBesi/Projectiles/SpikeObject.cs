@@ -17,7 +17,12 @@ public class SpikeObject : MonoBehaviour
     {
         animator = GetComponentInChildren<Animator>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(clip);
+        
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+
         StartCoroutine(DestroyAfter(lifetime));
     }
 
