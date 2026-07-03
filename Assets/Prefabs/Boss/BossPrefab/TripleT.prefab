@@ -735,7 +735,7 @@ MonoBehaviour:
   AnimationStomp: Slam_Landing
   stompCount: 5
   hoverDuration: 1
-  hoverHeight: 5
+  hoverHeight: 2
   hoverSpeed: 5
   delayBetweenStomps: 0.5
   landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
