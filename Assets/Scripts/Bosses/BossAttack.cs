@@ -14,7 +14,7 @@ public class BossAttack : MonoBehaviour
     public AudioClip attackPrepSound;
     public AudioClip attackSound;
 
-    BossSFX bossSFX;
+    public BossSFX bossSFX;
 
     [Header("Animation Settings")]
     public Animator animator;
