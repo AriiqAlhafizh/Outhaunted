@@ -17,24 +17,23 @@ public class PlayerSFX : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         context = GetComponentInParent<PlayerContext>();
 
-        context.Movement.OnJump += () => PlayAudio(jump);
-        context.Movement.OnLand += () => PlayAudio(land);
+        context.Movement.OnJump += OnJump;
+        context.Movement.OnLand += OnLand;
 
-        PlayerManager.Instance.OnDamaged += () => PlayAudio(hurt);
+        PlayerManager.Instance.OnDamaged += OnDamaged;
 
-        context.Attack.OnAttack += () => PlayAudio(attack);
-        context.Attack.OnAttackHit += (GameObject) => PlayAudio(attackHit);
-
+        context.Attack.OnAttack += OnAttack;
+        context.Attack.OnAttackHit += OnAttackHit;
     }
     private void OnDisable()
     {
-        context.Movement.OnJump -= () => PlayAudio(jump);
-        context.Movement.OnLand -= () => PlayAudio(land);
+        context.Movement.OnJump -= OnJump;
+        context.Movement.OnLand -= OnLand;
 
-        PlayerManager.Instance.OnDamaged -= () => PlayAudio(hurt);
+        PlayerManager.Instance.OnDamaged -= OnDamaged;
 
-        context.Attack.OnAttack -= () => PlayAudio(attack);
-        context.Attack.OnAttackHit -= (GameObject) => PlayAudio(attackHit);
+        context.Attack.OnAttack -= OnAttack;
+        context.Attack.OnAttackHit -= OnAttackHit;
     }
 
     public void PlayAudio(AudioClip clip)
@@ -42,4 +41,26 @@ public class PlayerSFX : MonoBehaviour
         audioSource.PlayOneShot(clip);
     }
 
+    private void OnJump()
+    {
+        PlayAudio(jump);
+    }
+
+    private void OnLand()
+    {
+        PlayAudio(land);
+    }
+    private void OnAttack()
+    {
+        PlayAudio(attack);
+    }
+    private void OnAttackHit(GameObject obj)
+    {
+        PlayAudio(attackHit);
+    }
+
+    private void OnDamaged()
+    {
+        PlayAudio(hurt);
+    }
 }
