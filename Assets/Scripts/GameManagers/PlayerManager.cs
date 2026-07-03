@@ -104,6 +104,6 @@ public class PlayerManager : MonoBehaviour
         InGame = false;
         RemovePlayerContext();
         AudioManager.Instance.PlayMusic(AudioManager.Instance.MainMenu);
-        SceneManager.LoadScene("MainMenu");
+        SceneTransitionManager.Instance.TransitionToScene("MainMenu");
     }
 }

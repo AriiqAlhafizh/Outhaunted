@@ -24,7 +24,7 @@ public class StompAttack : BossAttack
     public override void Start()
     {
         base.Start();
-        Duration = stompCount * (jumpUpDuration + hoverDuration + stompDownDuration);
+        
         ActionEvent += ExecuteAttack;
     }
 
@@ -35,6 +35,7 @@ public class StompAttack : BossAttack
 
     private void ExecuteAttack()
     {
+        Duration = delayBetweenStomps + stompCount * (jumpUpDuration + hoverDuration + stompDownDuration + delayBetweenStomps);
         StartCoroutine(StompCoroutine());
     }
 

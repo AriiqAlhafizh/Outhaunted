@@ -19,7 +19,7 @@ MonoBehaviour:
   maxHealth: 5
   moveSpeed: 4
   jumpForce: 6.5
-  attackDamage: 2
+  attackDamage: 1
   pogoCooldown: 0
   attackCooldown: 0.2
   iFrameDuration: 1.3

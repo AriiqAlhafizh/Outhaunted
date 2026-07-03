@@ -588,8 +588,8 @@ MonoBehaviour:
   - {fileID: 6703679754971644880}
   currentPhase: 0
   startingAttacks: 2
-  delayBetweenAttacks: 1
-  knockbackForce: 3
+  delayBetweenAttacks: 0.5
+  knockbackForce: 2
 --- !u!114 &3322393341083336798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,14 +695,14 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: Roundabout_Preparation
+  AnimationPrep: Jump_Preparation
   AnimationAttack: Roundabout
-  MapBoundTL: {x: -5, y: 3}
-  MapBoundBR: {x: 5, y: -2}
+  MapBoundTL: {x: -4.5, y: 3}
+  MapBoundBR: {x: 4.5, y: -2}
   bounceCountMin: 3
   bounceCountMax: 8
   jumpDuration: 1
-  jumpHeight: 5
+  jumpHeight: 3
   jumpDistance: 5
   jumpDirection: {x: -1, y: 0, z: 0}
   landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
@@ -736,7 +736,7 @@ MonoBehaviour:
   stompCount: 5
   hoverDuration: 1
   hoverHeight: 2
-  hoverSpeed: 5
+  hoverSpeed: 3
   delayBetweenStomps: 0.5
   landingClip: {fileID: 8300000, guid: a01fb4881efc3ed4f9a7d97e66137191, type: 3}
   jumpUpDuration: 0.5

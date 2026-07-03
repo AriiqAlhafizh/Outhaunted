@@ -10,11 +10,11 @@ public class LevelSelect : MonoBehaviour
 
     public void GotoBossScene(string bossSceneName)
     {
-        SceneManager.LoadScene(bossSceneName);
+        SceneTransitionManager.Instance.TransitionToScene(bossSceneName);
     }
     public void back()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneTransitionManager.Instance.TransitionToScene("MainMenu");
     }
     public void SelectT3()
     {

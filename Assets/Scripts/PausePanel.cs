@@ -60,7 +60,7 @@ public class PausePanel : MonoBehaviour
     public void GotoScene(string sceneName)
     {
         AudioManager.Instance.PlayMusic(AudioManager.Instance.MainMenu);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        SceneTransitionManager.Instance.TransitionToScene(sceneName);
     }
 
 

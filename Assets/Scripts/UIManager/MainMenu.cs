@@ -21,12 +21,12 @@ public class MainMenu : MonoBehaviour
 
     public void GotoScene(string sceneName)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName); 
+        SceneTransitionManager.Instance.TransitionToScene(sceneName);
     }
 
     public void LevelSelect()
     {
-        SceneManager.LoadSceneAsync("LevelSelect");
+        SceneTransitionManager.Instance.TransitionToScene("LevelSelect");
     }
 
     public void InsertCharacterData(CharacterData characterData)
@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
             string tutorialSceneName = PlayerManager.Instance.CurrentCharacter.tutorialSceneName;
             if (!string.IsNullOrEmpty(tutorialSceneName))
             {
-                SceneManager.LoadScene(tutorialSceneName);
+                SceneTransitionManager.Instance.TransitionToScene(tutorialSceneName);
             }
             else
             {
