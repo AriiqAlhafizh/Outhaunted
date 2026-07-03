@@ -560,6 +560,8 @@ GameObject:
   - component: {fileID: 3573837325687322965}
   - component: {fileID: 1414355951436820938}
   - component: {fileID: 8081387442413158671}
+  - component: {fileID: 1038620483144266686}
+  - component: {fileID: 2460709640973752603}
   m_Layer: 0
   m_Name: PausePanel
   m_TagString: Untagged
@@ -625,6 +627,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1038620483144266686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593318440344738627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06de5acda05c8048ac80667aaa7c026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+--- !u!114 &2460709640973752603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593318440344738627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fdef0a1d42fc1489af437c4169cbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestInput
+  playerInput: {fileID: 0}
+  settingPrefab: {fileID: 308898802557728274}
 --- !u!1 &3054936851815485543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1075,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1038620483144266686}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: GotoScene
         m_Mode: 5
@@ -1541,6 +1569,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2460709640973752603}
+        m_TargetAssemblyTypeName: TestInput, Assembly-CSharp
+        m_MethodName: ToggleSettings
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2518,14 +2558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653d90e356198ce498ae6239c94df805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthDisplay
-  emptyHealth: {fileID: -3481150820195624593, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
-  fullHealth: {fileID: 998042072782958046, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
   health:
   - {fileID: 1827993689616073775}
   - {fileID: 2127091445737823207}
   - {fileID: 2539142420886669519}
   - {fileID: 6588247355764877212}
   - {fileID: 8544015600711089525}
+  fullColor: {r: 1, g: 1, b: 1, a: 1}
+  emptyColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
 --- !u!1 &9079125718056024439
 GameObject:
   m_ObjectHideFlags: 0
