@@ -176,13 +176,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
   walk: {fileID: 0}
-  jump: {fileID: 0}
-  land: {fileID: 0}
-  combo: {fileID: 0}
-  hurt: {fileID: 0}
+  jump: {fileID: 8300000, guid: b7a0fe4e955880541a42b41b667e0f0b, type: 3}
+  land: {fileID: 8300000, guid: 90f04a8f456b211439ea2513589a6882, type: 3}
+  combo: {fileID: 8300000, guid: 34772bb8a5c25f84da665558fe07a824, type: 3}
+  hurt: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
   die: {fileID: 0}
-  attack: {fileID: 0}
-  attackHit: {fileID: 0}
+  attack: {fileID: 8300000, guid: 7a483301955096d4f9d66a765c0dd1d1, type: 3}
+  attackHit: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
 --- !u!1 &4010382558878353055
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c9cdeb437fe13498bbd4f661541fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
-  animator: {fileID: 0}
+  animator: []
   defaultController: {fileID: 0}
   overrideController: {fileID: 22100000, guid: c5a93adc9a200f042834fddfacd8c76f, type: 2}
   isAttacking: 0
@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818a87726b9423b4c816fa150bc25864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhaseAbility
+  phaseSound: {fileID: 8300000, guid: 9286df91f70c8aa4fa37ee95aba2743b, type: 3}
   phaseCooldown: 1
   phaseDuration: 1
   enemyLayerName: Enemy
@@ -1099,11 +1100,11 @@ GameObject:
   - component: {fileID: 6758110868332432622}
   m_Layer: 0
   m_Name: KuntilanakOverlay
-  m_TagString: Untagged
+  m_TagString: PlayerBodyAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3277008195624756142
 Transform:
   m_ObjectHideFlags: 0
@@ -1166,7 +1167,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7885917561968698261, guid: f08e931767b379f4c9bb49d6443789c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1227,7 +1228,7 @@ GameObject:
   - component: {fileID: 3943840153796466129}
   m_Layer: 0
   m_Name: Kuntilanak
-  m_TagString: Untagged
+  m_TagString: PlayerBodyAnimator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1297,7 +1298,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7885917561968698261, guid: f08e931767b379f4c9bb49d6443789c4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7509433, g: 0.7509433, b: 0.7509433, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -7,6 +7,7 @@ public class PhaseAbility : Ability
     private static readonly int PhaseThroughHash = Animator.StringToHash("PhaseThrough");
     PlayerAnimations pAnimation;
     Animator animator;
+    public AudioClip phaseSound;
 
     [Header("Phase Settings")]
     [SerializeField] private float phaseCooldown = 1f;
@@ -23,9 +24,11 @@ public class PhaseAbility : Ability
 
     private int enemyLayer;
     private int playerLayer;
+    PlayerSFX playerSFX;
     private void Start()
     {
         pAnimation = GetComponent<PlayerAnimations>();
+        playerSFX = GetComponentInChildren<PlayerSFX>();
 
         animator = GameObject.FindGameObjectWithTag("VFX").GetComponent<Animator>();
 
@@ -46,8 +49,12 @@ public class PhaseAbility : Ability
         context.Attack.canAttack = false;
         pAnimation.SetInAbility(true);
 
-        pAnimation.animator.Play(PhaseThroughHash);
-        
+        foreach (var item in pAnimation.animator)
+        {
+            item.Play(PhaseThroughHash);
+        }
+
+        playerSFX.PlayAudio(phaseSound);
         animator.SetTrigger(PhaseHash);
         context.Movement.moveSpeed = defaultMoveSpeed * phaseMoveSpeedMultiplier; // Increase move speed during phase
         context.Movement.canJump = false;

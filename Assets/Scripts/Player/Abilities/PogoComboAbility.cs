@@ -35,6 +35,7 @@ public class PogoComboAbility : Ability
     }
     private void Combo()
     {
+        
         curCombo++;
         if (curCombo < maxCombo)
         {

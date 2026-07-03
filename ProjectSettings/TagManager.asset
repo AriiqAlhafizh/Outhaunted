@@ -10,6 +10,8 @@ TagManager:
   - SkilbarUI
   - PlatformParent
   - Spike
+  - ObjToDespawn
+  - PlayerBodyAnimator
   layers:
   - Default
   - TransparentFX
