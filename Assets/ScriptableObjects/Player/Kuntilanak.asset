@@ -15,6 +15,7 @@ MonoBehaviour:
   playerType: 0
   characterPrefab: {fileID: 4052693101160497168, guid: 3fa2de9f592f4eb478da6e3e2266faab, type: 3}
   healthIcon: {fileID: 998042072782958046, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
+  tutorialSceneName: KuntilanakTutorialScene
   maxHealth: 5
   moveSpeed: 4
   jumpForce: 6.5

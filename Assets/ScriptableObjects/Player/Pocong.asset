@@ -15,6 +15,7 @@ MonoBehaviour:
   playerType: 1
   characterPrefab: {fileID: 5330264819161359538, guid: 3f2ff5878327c7346a6b1bd9a35aaa32, type: 3}
   healthIcon: {fileID: -8833850033449305121, guid: 3d66b235e6580bf4da5fe5aaa5d9f786, type: 3}
+  tutorialSceneName: PocongTutorialScene
   maxHealth: 5
   moveSpeed: 4
   jumpForce: 5
