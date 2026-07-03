@@ -854,6 +854,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@OmNolep'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 28.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1325,6 +1333,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@UNDERWORLD_COUNCIL'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1519,7 +1535,7 @@ PrefabInstance:
       objectReference: {fileID: -2481907245960376220, guid: 0ce571da4f83130419496fd739c78f42, type: 3}
     - target: {fileID: 2974719962573215448, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_text
-      value: '@KuntilanakFemboy69'
+      value: '@Manofmedan69'
       objectReference: {fileID: 0}
     - target: {fileID: 2974719962573215448, guid: 603cc30f40edb6943b3717f239c4ca01, type: 3}
       propertyPath: m_fontSize
@@ -2750,6 +2766,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@banggrim'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 28.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3319,6 +3343,14 @@ PrefabInstance:
     - target: {fileID: 9007536423883588907, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@HauntMe'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 29.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4343,6 +4375,14 @@ PrefabInstance:
     - target: {fileID: 9007536423883588907, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@kunti_loh (you)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 18.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5404,6 +5444,14 @@ PrefabInstance:
     - target: {fileID: 8592897770337388089, guid: f91b012845cb94e4782783ecf550840e, type: 3}
       propertyPath: m_enableAutoSizing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_text
+      value: '@Natach639'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119343998668833544, guid: f91b012845cb94e4782783ecf550840e, type: 3}
+      propertyPath: m_fontSize
+      value: 24.55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
