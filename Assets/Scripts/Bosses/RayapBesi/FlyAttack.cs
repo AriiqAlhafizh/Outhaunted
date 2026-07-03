@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FlyAttack : BossAttack
 {
+    private AudioSource _AudioSource;
+    public AudioClip flyAttackSound;
+
     [Header("Fly Settings")]
     public float leftPost;
     public float rightPost;
@@ -14,6 +17,7 @@ public class FlyAttack : BossAttack
     public override void Start()
     {
         base.Start();
+        _AudioSource = GetComponentInChildren<AudioSource>();
         Duration = Mathf.Abs(leftPost - rightPost) / flySpeed;
         ActionEvent += ExecuteAttack;
     }
@@ -30,6 +34,7 @@ public class FlyAttack : BossAttack
 
     private void Fly()
     {
+        _AudioSource.PlayOneShot(flyAttackSound);
         isFlying = true;
         direction = transform.position.x > 0 ? -1 : 1;
     }
@@ -42,6 +47,7 @@ public class FlyAttack : BossAttack
 
             if (transform.position.x < leftPost || transform.position.x > rightPost)
             {
+                _AudioSource.Stop();
                 isFlying = false;
             }
         }

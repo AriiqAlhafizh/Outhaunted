@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class PogoAbility : Ability
 {
-    //public float pogoCooldown = 1f;
-    //public bool canPogo = true;
+    PlayerSFX playerSFX;
+    public AudioClip pogoSound;
     private void Start()
     {
+        playerSFX = GetComponentInChildren<PlayerSFX>();
         context.Attack.OnPogo += Jump;
         context.Movement.OnLand += Land;
     }
@@ -21,6 +22,7 @@ public class PogoAbility : Ability
     {
         if (!context.Movement.IsGrounded())
         {
+            playerSFX.PlayAudio(pogoSound);
             context.Movement.ResetCoyoteTime();
             context.Movement.JumpPressed();
         }

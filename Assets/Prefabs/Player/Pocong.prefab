@@ -148,7 +148,7 @@ MonoBehaviour:
   combo: {fileID: 8300000, guid: 34772bb8a5c25f84da665558fe07a824, type: 3}
   hurt: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
   die: {fileID: 0}
-  attack: {fileID: 8300000, guid: cc51334b019ca944a81f9b717f72192c, type: 3}
+  attack: {fileID: 8300000, guid: fa9ba86b086cd304e9cbe924df8ef32f, type: 3}
   attackHit: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
 --- !u!1 &2111966874751904705
 GameObject:
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PogoComboAbility
   dmgMultiplier: 0.15
-  sizeMultiplier: 0.5
+  sizeMultiplier: 0.15
   normalSize: 1.35
   maxCombo: 6
   curCombo: 0
@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de154bb838db4a44be145a0608abb00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PogoAbility
+  pogoSound: {fileID: 8300000, guid: d56801d57b381654c9d687473fdeca0b, type: 3}
 --- !u!1 &7447538106580959649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1154,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7854154802582824441}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
