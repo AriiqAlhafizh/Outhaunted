@@ -588,7 +588,7 @@ MonoBehaviour:
   - {fileID: 6703679754971644880}
   currentPhase: 0
   startingAttacks: 2
-  delayBetweenAttacks: 2
+  delayBetweenAttacks: 1
   knockbackForce: 3
 --- !u!114 &3322393341083336798
 MonoBehaviour:
@@ -610,7 +610,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Jump_Preparation
   AnimationAttack: Jump
   AnimationOnAir: OnAir
   AnimationLanding: Landing
@@ -637,7 +637,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 5fdeb0629bb1df04da5156c937bd6a57, type: 3}
   bossSFX: {fileID: 0}
   animator: {fileID: 8079375552457843250}
-  AnimationPrep: 
+  AnimationPrep: Attack_Preparation
   AnimationAttack: Attack
   spinDuration: 1
   spinDistance: 2
@@ -695,7 +695,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   bossSFX: {fileID: 0}
   animator: {fileID: 0}
-  AnimationPrep: 
+  AnimationPrep: Roundabout_Preparation
   AnimationAttack: Roundabout
   MapBoundTL: {x: -5, y: 3}
   MapBoundBR: {x: 5, y: -2}
