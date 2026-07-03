@@ -266,8 +266,8 @@ MonoBehaviour:
   AnimationPrep: Ram_Preparation
   AnimationAttack: Ram
   flyAttackSound: {fileID: 8300000, guid: e35a41c215bfdf64e874df1fdbb4dfa6, type: 3}
-  leftPost: -3.5
-  rightPost: 3.5
+  leftPost: -3.8
+  rightPost: 3.8
   flySpeed: 5
   direction: 0
   isFlying: 0

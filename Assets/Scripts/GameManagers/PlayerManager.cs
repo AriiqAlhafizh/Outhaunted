@@ -77,10 +77,6 @@ public class PlayerManager : MonoBehaviour
         CurrentCharacter = characterData;
         ResetStats();
     }
-    public void GotoScene(string sceneName)
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-    }
 
     public void TakeDamage()
     {
