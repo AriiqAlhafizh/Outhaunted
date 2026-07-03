@@ -103,6 +103,7 @@ public class PlayerManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         InGame = false;
         RemovePlayerContext();
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.MainMenu);
         SceneManager.LoadScene("MainMenu");
     }
 }
