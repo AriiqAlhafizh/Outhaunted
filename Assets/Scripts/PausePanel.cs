@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TestInput : MonoBehaviour
+public class PausePanel : MonoBehaviour
 {
     public PlayerInput playerInput;
     public GameObject settingPrefab;
@@ -57,4 +57,11 @@ public class TestInput : MonoBehaviour
         }
         playerInput.actions["Pause"].performed += ToggleSettings;
     }
+    public void GotoScene(string sceneName)
+    {
+        AudioManager.Instance.PlayMusic(AudioManager.Instance.MainMenu);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+
 }

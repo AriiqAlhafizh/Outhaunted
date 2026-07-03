@@ -9,7 +9,7 @@ public class PlayerSFX : MonoBehaviour
     public AudioClip attack;
     public AudioClip attackHit;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
     PlayerContext context;
 
     private void Start()
