@@ -1,0 +1,399 @@
+fileFormatVersion: 2
+guid: acb4a943aea696046ae9bc90ddc83d67
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -256755348070229310
+    second: MUKADEVELOPER_0
+  - first:
+      213: 1656308409099008918
+    second: MUKADEVELOPER_1
+  - first:
+      213: 1181478079468245294
+    second: MUKADEVELOPER_2
+  - first:
+      213: 4195327107798118461
+    second: MUKADEVELOPER_3
+  - first:
+      213: 4091276232442399929
+    second: MUKADEVELOPER_4
+  - first:
+      213: -2426687406632219145
+    second: MUKADEVELOPER_5
+  - first:
+      213: 6986662284428824146
+    second: MUKADEVELOPER_6
+  - first:
+      213: 2133211659301124475
+    second: MUKADEVELOPER_7
+  - first:
+      213: 3836195555759386229
+    second: MUKADEVELOPER_8
+  - first:
+      213: -163236401886225427
+    second: MUKADEVELOPER_9
+  - first:
+      213: 1637840607088802019
+    second: MUKADEVELOPER_10
+  - first:
+      213: -4235496790410614878
+    second: MUKADEVELOPER_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MUKADEVELOPER_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1377
+        width: 393
+        height: 530
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca971c0f52df6cf0800000000000000
+      internalID: -256755348070229310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1378
+        width: 393
+        height: 530
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bb6daf8b36cf610800000000000000
+      internalID: 1656308409099008918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_2
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1441
+        width: 705
+        height: 650
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e219d94bd04756010800000000000000
+      internalID: 1181478079468245294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_3
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 939
+        width: 394
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30bfd8d6cbc83a30800000000000000
+      internalID: 4195327107798118461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_5
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 634
+        width: 570
+        height: 746
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdc5ca29aca25ed0800000000000000
+      internalID: -2426687406632219145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_6
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 636
+        width: 611
+        height: 736
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ecffca45c95f060800000000000000
+      internalID: 6986662284428824146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_7
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 638
+        width: 716
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b797d5fa3b0ba9d10800000000000000
+      internalID: 2133211659301124475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 633
+        width: 234
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e68fd6887ec3530800000000000000
+      internalID: 3836195555759386229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_9
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 637
+        width: 234
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb982b7b511cbdf0800000000000000
+      internalID: -163236401886225427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_10
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 634
+        width: 270
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8fc30ca57cab610800000000000000
+      internalID: 1637840607088802019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 43a6cdf11096b684697328605590fdef
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MUKADEVELOPER_0: -256755348070229310
+      MUKADEVELOPER_1: 1656308409099008918
+      MUKADEVELOPER_10: 1637840607088802019
+      MUKADEVELOPER_11: -4235496790410614878
+      MUKADEVELOPER_12: 1644701381
+      MUKADEVELOPER_2: 1181478079468245294
+      MUKADEVELOPER_3: 4195327107798118461
+      MUKADEVELOPER_4: 4091276232442399929
+      MUKADEVELOPER_5: -2426687406632219145
+      MUKADEVELOPER_6: 6986662284428824146
+      MUKADEVELOPER_7: 2133211659301124475
+      MUKADEVELOPER_8: 3836195555759386229
+      MUKADEVELOPER_9: -163236401886225427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
