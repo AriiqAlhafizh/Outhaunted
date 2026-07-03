@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
 public enum PlayerType
 {
@@ -12,6 +13,7 @@ public class CharacterData : ScriptableObject
     public PlayerType playerType;
     public GameObject characterPrefab;
     public Sprite healthIcon;
+    public string tutorialSceneName;
 
     [Header("Stats")]
     public int maxHealth;

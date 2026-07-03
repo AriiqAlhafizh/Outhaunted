@@ -149,10 +149,10 @@ TextureImporter:
       name: MUKADEVELOPER_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1377
-        width: 393
-        height: 530
+        x: 0
+        y: 1392
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: MUKADEVELOPER_1
       rect:
         serializedVersion: 2
-        x: 570
-        y: 1378
-        width: 393
-        height: 530
+        x: 512
+        y: 1392
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,9 +194,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1085
-        y: 1441
-        width: 705
-        height: 650
+        y: 1896
+        width: 4
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: MUKADEVELOPER_3
       rect:
         serializedVersion: 2
-        x: 59
-        y: 939
-        width: 394
-        height: 393
+        x: 1145
+        y: 1440
+        width: 644
+        height: 652
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: MUKADEVELOPER_5
       rect:
         serializedVersion: 2
-        x: 1112
-        y: 634
-        width: 570
-        height: 746
+        x: 573
+        y: 1378
+        width: 6
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: MUKADEVELOPER_6
       rect:
         serializedVersion: 2
-        x: 1877
-        y: 636
-        width: 611
-        height: 736
+        x: 1113
+        y: 633
+        width: 570
+        height: 746
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: MUKADEVELOPER_7
       rect:
         serializedVersion: 2
-        x: 2608
-        y: 638
-        width: 716
-        height: 752
+        x: 2607
+        y: 637
+        width: 718
+        height: 753
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: MUKADEVELOPER_8
       rect:
         serializedVersion: 2
-        x: 10
-        y: 633
-        width: 234
-        height: 238
+        x: 59
+        y: 938
+        width: 394
+        height: 395
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: MUKADEVELOPER_9
       rect:
         serializedVersion: 2
-        x: 269
-        y: 637
-        width: 234
-        height: 235
+        x: 459
+        y: 1323
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,10 +347,10 @@ TextureImporter:
       name: MUKADEVELOPER_10
       rect:
         serializedVersion: 2
-        x: 522
-        y: 634
-        width: 270
-        height: 235
+        x: 1876
+        y: 635
+        width: 613
+        height: 738
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,6 +361,116 @@ TextureImporter:
       bones: []
       spriteID: 3e8fc30ca57cab610800000000000000
       internalID: 1637840607088802019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1376
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6146b0790c8cf04298b5e972f29cf6d
+      internalID: 4091276232442399929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_14
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 722
+        width: 4
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3240f5c31ad25a642a24cd115abab19b
+      internalID: -427687879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7583516d8dc4904db6a1d10dbb11f37
+      internalID: 262113782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f58f3dad3548c6489fc78254d803bc1
+      internalID: 1793501609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MUKADEVELOPER_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 624
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f619a279dab38a440ac37b87d0e44fd1
+      internalID: -1421691757
       vertices: []
       indices: 
       edges: []
@@ -377,14 +487,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":256.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       MUKADEVELOPER_0: -256755348070229310
       MUKADEVELOPER_1: 1656308409099008918
       MUKADEVELOPER_10: 1637840607088802019
       MUKADEVELOPER_11: -4235496790410614878
       MUKADEVELOPER_12: 1644701381
+      MUKADEVELOPER_13: 647875924
+      MUKADEVELOPER_14: -427687879
+      MUKADEVELOPER_15: 1231145712
+      MUKADEVELOPER_16: -198822303
+      MUKADEVELOPER_17: -2131346218
+      MUKADEVELOPER_18: -1038472136
+      MUKADEVELOPER_19: 247504059
       MUKADEVELOPER_2: 1181478079468245294
+      MUKADEVELOPER_20: 501855614
+      MUKADEVELOPER_21: -1904437921
+      MUKADEVELOPER_22: 468565057
+      MUKADEVELOPER_23: 1953061880
+      MUKADEVELOPER_24: 262113782
+      MUKADEVELOPER_25: 1793501609
+      MUKADEVELOPER_26: -1421691757
       MUKADEVELOPER_3: 4195327107798118461
       MUKADEVELOPER_4: 4091276232442399929
       MUKADEVELOPER_5: -2426687406632219145

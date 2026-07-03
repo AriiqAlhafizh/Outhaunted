@@ -34,4 +34,24 @@ public class MainMenu : MonoBehaviour
         PlayerManager.Instance.CurrentCharacter = characterData;
         PlayerManager.Instance.ResetStats();
     }
+
+    public void GotoTutorialScene()
+    {
+        if (PlayerManager.Instance.CurrentCharacter != null)
+        {
+            string tutorialSceneName = PlayerManager.Instance.CurrentCharacter.tutorialSceneName;
+            if (!string.IsNullOrEmpty(tutorialSceneName))
+            {
+                SceneManager.LoadScene(tutorialSceneName);
+            }
+            else
+            {
+                Debug.LogWarning("Tutorial scene name is not set for the current character.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No character selected. Please select a character before going to the tutorial.");
+        }
+    }
 }
