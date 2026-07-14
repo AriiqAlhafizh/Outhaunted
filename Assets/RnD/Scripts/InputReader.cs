@@ -17,6 +17,8 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
     public event Action DownPressed;
     public event Action LeftPressed;
 
+    public event Action<Vector2> MovementChanged;
+
     public event Action JumpPressed;
     public event Action JumpReleased;
 
@@ -59,12 +61,12 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
 
     public void OnCrouch(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -78,12 +80,14 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         MovementVector = context.ReadValue<Vector2>();
+
+        MovementChanged?.Invoke(MovementVector);
 
         if (context.performed)
         {
@@ -100,7 +104,7 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
 
     public void OnNext(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnPause(InputAction.CallbackContext context)
@@ -110,11 +114,11 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
 
     public void OnPrevious(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void OnSprint(InputAction.CallbackContext context)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

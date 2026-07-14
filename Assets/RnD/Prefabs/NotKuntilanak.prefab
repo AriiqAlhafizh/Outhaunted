@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: -2385422229947229193}
   - component: {fileID: 5017390796776019444}
   - component: {fileID: 6262963498595087357}
+  - component: {fileID: 2658592529001563507}
   m_Layer: 6
   m_Name: NotKuntilanak
   m_TagString: Player
@@ -335,21 +336,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewPlayerMovement
   inputReader: {fileID: 11400000, guid: afaac61e986289f43954a83511c28095, type: 2}
+  characterData: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
   moveSpeed: 0
-  dir: 1
-  moveX: 0
-  canMove: 0
-  ownAttackKnockbackForce: 1
   jumpForce: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 5
   coyoteTime: 0.1
   jumpBufferTime: 0.15
-  isJumping: 0
-  canJump: 0
-  coyoteTimeCounter: 0
-  wasGrounded: 0
-  jumpBufferCounter: 0
 --- !u!50 &5017390796776019444
 Rigidbody2D:
   serializedVersion: 5
@@ -423,6 +416,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.2563033, y: 0.80907905}
   m_EdgeRadius: 0
+--- !u!114 &2658592529001563507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052693101160497168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c428da5cc4edbc40a740c0ca3d72394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityHandler
+  inputReader: {fileID: 11400000, guid: afaac61e986289f43954a83511c28095, type: 2}
+  equippedAbilities:
+  - {fileID: 11400000, guid: 99fe13f8365a41e45bd5bc3e2bb8d811, type: 2}
 --- !u!1 &4770386535822498965
 GameObject:
   m_ObjectHideFlags: 0

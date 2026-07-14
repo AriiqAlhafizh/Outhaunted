@@ -8,28 +8,29 @@ public class NewPlayerMovement : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private InputReader inputReader;
+    [SerializeField] private CharacterData characterData; //subject to change
 
     private Rigidbody2D rb;
     private Collider2D col;
 
     [Header("Movement Settings")]
-    private float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
-    [SerializeField] private AttackDirection dir = AttackDirection.Right;
-    [SerializeField] private float moveX;
-    [SerializeField] private bool canMove;
-    [SerializeField] private float ownAttackKnockbackForce = 1f;
+    [SerializeField] private float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
+    private AttackDirection dir = AttackDirection.Right;
+    private float moveX;
+    private bool canMove;
+    private float ownAttackKnockbackForce = 1f;
 
     [Header("Jump Settings")]
-    private float jumpForce;
+    [SerializeField] private float jumpForce;
     [SerializeField] private float fallMultiplier = 2.5f; // Increases gravity when falling
     [SerializeField] private float lowJumpMultiplier = 5f; // Increases gravity when jump is released early
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private float jumpBufferTime = 0.15f;
-    [SerializeField] private bool isJumping;
-    [SerializeField] private bool canJump;
-    [SerializeField] private float coyoteTimeCounter;
-    [SerializeField] private bool wasGrounded;
-    [SerializeField] private float jumpBufferCounter;
+    private bool isJumping;
+    private bool canJump;
+    private float coyoteTimeCounter;
+    private bool wasGrounded;
+    private float jumpBufferCounter;
 
     public event Action OnMove;
     public event Action OnJump;
@@ -46,8 +47,8 @@ public class NewPlayerMovement : MonoBehaviour
         canMove = true;
         canJump = true;
 
-        moveSpeed = 4;
-        jumpForce = 6.5f;
+        moveSpeed = characterData.moveSpeed;
+        jumpForce = characterData.jumpForce;
     }
     private void OnDisable()
     {
