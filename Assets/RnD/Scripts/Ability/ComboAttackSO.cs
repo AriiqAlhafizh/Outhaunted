@@ -18,17 +18,18 @@ public class ComboAttackSO : AttackSO
     }
     protected override void StartAttack()
     {
-        Debug.Log($"Attacking in direction: {atkDir}");
         StartCooldown();
         OnAttack?.Invoke();
 
         if (attackIndex == 0)
         {
+            Debug.Log("Attack 1");
             TriggerAnimation(animationHash);
             attackIndex = 1;
         }
         else
         {
+            Debug.Log("Attack 2");
             TriggerAnimation(comboAnimationHash);
             attackIndex = 0;
         }

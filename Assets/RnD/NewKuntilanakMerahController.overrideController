@@ -7,5 +7,23 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NewKuntilanakMerahController
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 4b616949c54f1904f83619bdb3c537ef, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d259188f4e927b84395f988ce38b5a5e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 555a80c99b6a2d349915ed624851852b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7582df86c0d2e7c4a8c44f264211c243, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e89b229090f4cd74bb7f5fd8f9c65efb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7f651e505f438f04ebdb7a204a2c6194, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 62af36514fce75d4eb2c4b3b8bf529f6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d5111ac42873b27418879fb17a4d9480, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e6349f43af3f481449442530f12449f4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8a76dd488f2c688498824d9469358c40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2105d4dfa5d87964296692191552718b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0c9112c477820f247832696d318bbb92, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b7ce09887ed4df34eae28afae06289f3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f42c4cf4d2390d74e94c19d1daba85d2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 62a4f4f88638e1042bcad6c68c4e6a5a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0e36e2c392f0d1d4c91975fbe9fe8134, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7af8fbad4bbfd1e4fbba869f5ffcb415, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 377b62bd470fef443a805a034307993c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 377b62bd470fef443a805a034307993c, type: 2}

@@ -10,6 +10,7 @@ public class AttackSO : AbilitySO
     private NewPlayerMovement pMovement;
     private InputReader input;
     private Rigidbody2D rb;
+    private EnvironmentSensor2D envSensor;
 
     [Header("Settings")]
     private float attackDamage;
@@ -27,7 +28,9 @@ public class AttackSO : AbilitySO
 
     public override void Initialize(GameObject player, InputReader _input)
     {
+        base.Initialize(player, _input);
         pMovement = player.GetComponent<NewPlayerMovement>();
+        envSensor = player.GetComponent<EnvironmentSensor2D>();
         input = _input;
 
         cooldownDuration = characterData.attackCooldown;
@@ -58,15 +61,10 @@ public class AttackSO : AbilitySO
     }
     protected virtual void StartAttack()
     {
-        Debug.Log($"Attacking in direction: {atkDir}");
+        Debug.Log("Attack");
         StartCooldown();
         OnAttack?.Invoke();
-    }
-
-    protected IEnumerator AttackCooldown() //fix later
-    {
-        //Animation
-        yield return null;
+        TriggerAnimation(animationHash);
     }
 
     public void RegisterHit(GameObject enemy)
@@ -94,7 +92,7 @@ public class AttackSO : AbilitySO
             atkDir = lastXDir;
         }
 
-        if (atkDir == AttackDirection.Down && !pMovement.IsGrounded())
+        if (atkDir == AttackDirection.Down && !envSensor.isGrounded)
         {
             return;
         }

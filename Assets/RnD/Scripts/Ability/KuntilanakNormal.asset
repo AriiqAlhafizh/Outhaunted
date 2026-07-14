@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackSO
   abilityName: KuntilanakNormal
   cooldownDuration: 0
-  characterData: {fileID: 0}
+  animationStateName: Attack_1
+  characterData: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity

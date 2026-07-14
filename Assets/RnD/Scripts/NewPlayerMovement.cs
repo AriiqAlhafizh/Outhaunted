@@ -11,7 +11,7 @@ public class NewPlayerMovement : MonoBehaviour
     [SerializeField] private CharacterData characterData; //subject to change
 
     private Rigidbody2D rb;
-    private Collider2D col;
+    private EnvironmentSensor2D environmentSensor;
 
     [Header("Movement Settings")]
     private Vector2 movementVector;
@@ -41,7 +41,7 @@ public class NewPlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<BoxCollider2D>();
+        environmentSensor = GetComponent<EnvironmentSensor2D>();
 
         inputReader.MovementChanged += Move;
         inputReader.JumpPressed += JumpPressed;
@@ -75,7 +75,7 @@ public class NewPlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
-            if (IsGrounded())
+            if (environmentSensor.isGrounded)
             {
                 OnMove?.Invoke(movementVector);
             }
@@ -93,16 +93,16 @@ public class NewPlayerMovement : MonoBehaviour
             }
 
             // CHECK WALL
-            if ((movementVector.x > 0 && IsTouchingWall(Vector2.right)))
+            if ((movementVector.x > 0 && environmentSensor.isTouchingRightWall))
                 moveX = Mathf.Min(0f, movementVector.x); // allow left, block right
-            else if ((movementVector.x < 0 && IsTouchingWall(Vector2.left)))
+            else if ((movementVector.x < 0 && environmentSensor.isTouchingLeftWall))
                 moveX = Mathf.Max(0f, movementVector.x); // allow right, block left
             else
                 moveX = movementVector.x;
 
 
             // CHECK ROOF
-            if (!IsGrounded() && IsTouchingRoof())
+            if (!environmentSensor.isGrounded && environmentSensor.isTouchingRoof)
             {
                 JumpReleased();
                 if (rb.linearVelocity.y > 0)
@@ -124,7 +124,7 @@ public class NewPlayerMovement : MonoBehaviour
         jumpBufferCounter -= Time.deltaTime;
 
         // Update coyote time
-        if (IsGrounded())
+        if (environmentSensor.isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
         }
@@ -190,10 +190,9 @@ public class NewPlayerMovement : MonoBehaviour
 
     private void PerformJump(float jumpForce)
     {
-        //Animation
+        OnJump?.Invoke();
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isJumping = true;
-        OnJump?.Invoke();
     }
 
     public void JumpReleased()
@@ -208,69 +207,18 @@ public class NewPlayerMovement : MonoBehaviour
     public void CheckGround()
     {
         // GROUND CHECK 
-        bool grounded = IsGrounded();
+        bool grounded = environmentSensor.isGrounded;
 
         // Detect landing (transition from not grounded to grounded)
         if (grounded && !wasGrounded && rb.linearVelocity.y < 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 
-            //Animation
-
             OnLand?.Invoke();
         }
 
         // Update wasGrounded for next frame
         wasGrounded = grounded;
-    }
-
-    public bool IsGrounded()
-    {
-        float extraHeight = 0.1f;
-        float rayLength = .0f + extraHeight;
-
-        // Cast from left and right bottom corners
-        Vector2 leftOrigin = new(col.bounds.min.x + 0.01f, col.bounds.min.y);
-        Vector2 rightOrigin = new(col.bounds.max.x - 0.01f, col.bounds.min.y);
-
-        RaycastHit2D hitLeft = Physics2D.Raycast(leftOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
-        RaycastHit2D hitRight = Physics2D.Raycast(rightOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
-
-        Debug.DrawRay(leftOrigin, Vector2.down * rayLength, hitLeft.collider ? Color.red : Color.green);
-        Debug.DrawRay(rightOrigin, Vector2.down * rayLength, hitRight.collider ? Color.red : Color.green);
-
-        return hitLeft.collider != null || hitRight.collider != null;
-    }
-
-    private bool IsTouchingWall(Vector2 direction)
-    {
-        float extraDistance = 0.1f;
-        float rayLength = .3f + extraDistance;
-        Vector2 top = new(rb.position.x, col.bounds.max.y - 0.01f);
-        Vector2 bottom = new(rb.position.x, col.bounds.min.y + 0.01f);
-
-        RaycastHit2D hitTop = Physics2D.Raycast(top, direction, rayLength, LayerMask.GetMask("Ground"));
-        RaycastHit2D hitBottom = Physics2D.Raycast(bottom, direction, rayLength, LayerMask.GetMask("Ground"));
-
-        Debug.DrawRay(top, direction * (rayLength), hitTop.collider ? Color.red : Color.green);
-        Debug.DrawRay(bottom, direction * (rayLength), hitBottom.collider ? Color.red : Color.green);
-
-        return hitTop.collider != null || hitBottom.collider != null;
-    }
-    private bool IsTouchingRoof()
-    {
-        float extraDistance = 0.1f;
-        float rayLength = .2f + extraDistance;
-        Vector2 left = new(rb.position.x - col.bounds.extents.x + 0.01f, col.bounds.max.y);
-        Vector2 right = new(rb.position.x + col.bounds.extents.x - 0.01f, col.bounds.max.y);
-
-        RaycastHit2D hitLeft = Physics2D.Raycast(left, Vector2.up, rayLength, LayerMask.GetMask("Ground"));
-        RaycastHit2D hitRight = Physics2D.Raycast(right, Vector2.up, rayLength, LayerMask.GetMask("Ground"));
-
-        Debug.DrawRay(left, Vector2.up * (rayLength), hitLeft.collider ? Color.red : Color.green);
-        Debug.DrawRay(right, Vector2.up * (rayLength), hitRight.collider ? Color.red : Color.green);
-
-        return hitLeft.collider != null || hitRight.collider != null;
     }
 
     private void OnHitKnockback(Vector2 sourcePos)
