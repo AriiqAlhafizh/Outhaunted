@@ -14,7 +14,8 @@ public class NewPlayerMovement : MonoBehaviour
     private Collider2D col;
 
     [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
+    private Vector2 movementVector;
+    private float moveSpeed; // units per second (m/s kalau meter jadi satuan di game)
     private AttackDirection dir = AttackDirection.Right;
     private float moveX;
     private bool canMove;
@@ -32,8 +33,9 @@ public class NewPlayerMovement : MonoBehaviour
     private bool wasGrounded;
     private float jumpBufferCounter;
 
-    public event Action OnMove;
+    public event Action<Vector2> OnMove;
     public event Action OnJump;
+    public event Action OnOnAir;
     public event Action OnLand;
 
     private void Start()
@@ -41,6 +43,7 @@ public class NewPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
 
+        inputReader.MovementChanged += Move;
         inputReader.JumpPressed += JumpPressed;
         inputReader.JumpReleased += JumpReleased;
 
@@ -52,6 +55,7 @@ public class NewPlayerMovement : MonoBehaviour
     }
     private void OnDisable()
     {
+        inputReader.MovementChanged -= Move;
         inputReader.JumpPressed -= JumpPressed;
         inputReader.JumpReleased -= JumpReleased;
     }
@@ -59,41 +63,42 @@ public class NewPlayerMovement : MonoBehaviour
     {
         CheckGround();
         JumpHandler();
-        Move();
+        MoveHandler();
     }
 
-    public void Move()
+    private void Move(Vector2 _movementVector)
+    {
+        movementVector = _movementVector;
+    }
+
+    private void MoveHandler()
     {
         if (canMove)
         {
-            if (inputReader.IsMoving && IsGrounded())
+            if (IsGrounded())
             {
-                //Animation
-            }
-            else if (IsGrounded())
-            {
-                //Animation
+                OnMove?.Invoke(movementVector);
             }
 
             // HORIZONTAL MOVEMENT LOGIC
-            if (inputReader.MovementVector.x < 0)
+            if (movementVector.x < 0)
             {
                 dir = AttackDirection.Left;
                 transform.rotation = new Quaternion(0, 180, 0, 0);
             }
-            else if (inputReader.MovementVector.x > 0)
+            else if (movementVector.x > 0)
             {
                 dir = AttackDirection.Right;
                 transform.rotation = new Quaternion(0, 0, 0, 0);
             }
 
             // CHECK WALL
-            if ((inputReader.MovementVector.x > 0 && IsTouchingWall(Vector2.right)))
-                moveX = Mathf.Min(0f, inputReader.MovementVector.x); // allow left, block right
-            else if ((inputReader.MovementVector.x < 0 && IsTouchingWall(Vector2.left)))
-                moveX = Mathf.Max(0f, inputReader.MovementVector.x); // allow right, block left
+            if ((movementVector.x > 0 && IsTouchingWall(Vector2.right)))
+                moveX = Mathf.Min(0f, movementVector.x); // allow left, block right
+            else if ((movementVector.x < 0 && IsTouchingWall(Vector2.left)))
+                moveX = Mathf.Max(0f, movementVector.x); // allow right, block left
             else
-                moveX = inputReader.MovementVector.x;
+                moveX = movementVector.x;
 
 
             // CHECK ROOF
@@ -104,13 +109,11 @@ public class NewPlayerMovement : MonoBehaviour
                     rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             }
 
-            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
-
-            OnMove?.Invoke();
+            rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y); 
         }
     }
 
-    public void JumpHandler()
+    private void JumpHandler()
     {
         // Handle jump buffer: if buffer is active and coyote time is available, jump
         if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
@@ -138,6 +141,7 @@ public class NewPlayerMovement : MonoBehaviour
             if (rb.linearVelocity.y < -1f)
             {
                 //Animation
+                OnOnAir?.Invoke();
             }
         }
         else if (rb.linearVelocity.y > 0 && !isJumping)
@@ -153,7 +157,7 @@ public class NewPlayerMovement : MonoBehaviour
         //    pAnimation.StartOnAir();
         //}
     }
-    public void JumpPressed()
+    private void JumpPressed()
     {
         if (!canJump)
             return;
@@ -169,7 +173,7 @@ public class NewPlayerMovement : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         }
     }
-    public void ForceJump(float extJumpForce)
+    private void ForceJump(float extJumpForce)
     {
         // Only allow jump if within coyote time (recently grounded)
         if (coyoteTimeCounter > 0f)
@@ -269,12 +273,12 @@ public class NewPlayerMovement : MonoBehaviour
         return hitLeft.collider != null || hitRight.collider != null;
     }
 
-    public void OnHitKnockback(Vector2 sourcePos)
+    private void OnHitKnockback(Vector2 sourcePos)
     {
         StartCoroutine(KnockbackCoroutine(sourcePos));
     }
 
-    public IEnumerator KnockbackCoroutine(Vector2 sourcePos)
+    private IEnumerator KnockbackCoroutine(Vector2 sourcePos)
     {
         PlayerManager.Instance.inIFrame = true;
         canMove = false;
@@ -299,12 +303,12 @@ public class NewPlayerMovement : MonoBehaviour
         PlayerManager.Instance.inIFrame = false;
     }
 
-    public void OwnAttackKnockback(GameObject enemy)
+    private void OwnAttackKnockback(GameObject enemy)
     {
         StartCoroutine(OwnAttackKnockbackCoroutine(enemy));
     }
 
-    public IEnumerator OwnAttackKnockbackCoroutine(GameObject enemy)
+    private IEnumerator OwnAttackKnockbackCoroutine(GameObject enemy)
     {
         canMove = false;
         canJump = false;

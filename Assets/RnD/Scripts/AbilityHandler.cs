@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class AbilityHandler : MonoBehaviour
     [SerializeField] private List<AbilitySO> equippedAbilities;
 
     private List<AbilitySO> _runtimeAbilities = new List<AbilitySO>();
+    public event Action<int> OnPlayAbilityAnimation;
 
     private void Start()
     {
@@ -16,6 +18,7 @@ public class AbilityHandler : MonoBehaviour
             {
                 AbilitySO instance = Instantiate(ability);
                 instance.Initialize(gameObject, inputReader);
+                instance.OnAbilityExecuted += PlayAbilityAnimation;
                 _runtimeAbilities.Add(instance);
             }
         }
@@ -28,5 +31,22 @@ public class AbilityHandler : MonoBehaviour
         {
             ability.Tick(Time.deltaTime);
         }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var ability in _runtimeAbilities)
+        {
+            if (ability != null)
+            {
+                ability.OnAbilityExecuted -= PlayAbilityAnimation;
+                ability.OnDestroyAbility();
+            }
+        }
+    }
+
+    private void PlayAbilityAnimation(int animationHash)
+    {
+        OnPlayAbilityAnimation?.Invoke(animationHash);
     }
 }
