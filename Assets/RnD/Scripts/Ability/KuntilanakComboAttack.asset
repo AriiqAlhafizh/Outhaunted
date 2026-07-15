@@ -16,9 +16,16 @@ MonoBehaviour:
   cooldownDuration: 0
   animationStateName: Attack_1
   characterData: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
+  hitboxSize: {x: 2, y: 1.5}
+  hitboxOffset: {x: 1, y: 0}
+  activeDuration: 0.15
+  vfxOffset: {x: 1, y: 0, z: 0}
+  vfxAnimationName: Attack_1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
   lastPogoAttackTime: -Infinity
   attackIndex: 0
   ComboAnimationName: Attack_2
+  ComboVFXOffset: {x: 1, y: 0, z: 0}
+  ComboVFXAnimationName: Attack_2

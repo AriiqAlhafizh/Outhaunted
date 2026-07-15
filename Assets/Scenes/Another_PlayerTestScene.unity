@@ -1382,6 +1382,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 328128077524227466, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 328128077524227466, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.9857244
@@ -1422,43 +1430,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2658592529001563507, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      propertyPath: 'equippedAbilities.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: cc857321c626e6d4cb292d7593660154, type: 2}
+    - target: {fileID: 3144782927419099345, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4052693101160497168, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_Name
       value: NotKuntilanak
       objectReference: {fileID: 0}
-    - target: {fileID: 7936451522306780996, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4052693101160497168, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1703668862}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
---- !u!1 &1703668856 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4052693101160497168, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-  m_PrefabInstance: {fileID: 1617939371}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1703668862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703668856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca28670a5e67d644d950c90f31cfe9be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewPlayerAnimation
 --- !u!1 &2095497519
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,14 +7,22 @@ public class AttackSO : AbilitySO
 {
     [Header("References")]
     [SerializeField] private CharacterData characterData;
-    private NewPlayerMovement pMovement;
     private InputReader input;
-    private Rigidbody2D rb;
     private EnvironmentSensor2D envSensor;
 
     [Header("Settings")]
-    private float attackDamage;
     private bool canAttack = true;
+
+    [Header("Hitbox Configuration")]
+    [SerializeField] protected Vector2 hitboxSize = new Vector2(2f, 1.5f); //nanti diganti
+    [SerializeField] protected Vector2 hitboxOffset = new Vector2(1f, 0f); //nanti diganti
+    protected float damage;
+    [SerializeField] protected float activeDuration = 0.15f; // Berapa lama hitbox aktif
+
+    [Header("VFX Configuration")]
+    [SerializeField] protected Vector3 vfxOffset = new Vector3(1f, 0f, 0f); //nanti diganti
+    [SerializeField] protected string vfxAnimationName;
+    protected int _vfxAnimHash;
 
     [Header("Debug")]
     [SerializeField] protected AttackDirection atkDir = AttackDirection.Right;
@@ -29,14 +37,14 @@ public class AttackSO : AbilitySO
     public override void Initialize(GameObject player, InputReader _input)
     {
         base.Initialize(player, _input);
-        pMovement = player.GetComponent<NewPlayerMovement>();
         envSensor = player.GetComponent<EnvironmentSensor2D>();
+
+        _vfxAnimHash = Animator.StringToHash(vfxAnimationName);
+
         input = _input;
 
         cooldownDuration = characterData.attackCooldown;
-        attackDamage = characterData.attackDamage;
-
-        rb = player.GetComponent<Rigidbody2D>();
+        damage = characterData.attackDamage;
 
         input.AttackPressed += Attack;
         input.MovementChanged += GetAttackDirection;
@@ -63,15 +71,21 @@ public class AttackSO : AbilitySO
     {
         Debug.Log("Attack");
         StartCooldown();
-        OnAttack?.Invoke();
+
+        if (effectsHandler != null) {
+            effectsHandler.TriggerHitbox(hitboxSize, hitboxOffset, damage, activeDuration, atkDir);
+            effectsHandler.PlaySpriteVFX(_vfxAnimHash, vfxOffset);
+        }
         TriggerAnimation(animationHash);
+
+        OnAttack?.Invoke();
     }
 
     public void RegisterHit(GameObject enemy)
     {
         OnAttackHit?.Invoke(enemy);
 
-        Debug.Log($"Hit {enemy.name} for {attackDamage} damage with a {atkDir} attack!");
+        Debug.Log($"Hit {enemy.name} for {damage} damage with a {atkDir} attack!");
     }
 
     public void GetAttackDirection(Vector2 movementVector)
@@ -84,21 +98,12 @@ public class AttackSO : AbilitySO
 
         // Set atkDir based on Y input.MovementVector, otherwise use lastXDir
         if (movementVector.y > 0)
-            atkDir = AttackDirection.Up;
+            atkDir = lastXDir;
         else if (movementVector.y < 0)
-            atkDir = AttackDirection.Down;
+            atkDir = lastXDir;
         else
         {
             atkDir = lastXDir;
-        }
-
-        if (atkDir == AttackDirection.Down && !envSensor.isGrounded)
-        {
-            return;
-        }
-        else
-        {
-            AttackDirectionChanged?.Invoke(lastXDir);
         }
     }
 }

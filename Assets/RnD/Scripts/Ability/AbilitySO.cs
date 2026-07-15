@@ -4,18 +4,23 @@ public abstract class AbilitySO : ScriptableObject
 {
     public string abilityName;
 
+    [Header("Cooldown")]
     public float cooldownDuration;
     private float _cooldownTimer;
     public bool IsOnCooldown => _cooldownTimer > 0f;
 
+    [Header("Player Animation")]
     [SerializeField] private string animationStateName;
     protected int animationHash;
 
     public event Action<int> OnAbilityExecuted;
 
+    protected EffectsHandler effectsHandler;
+
     public virtual void Initialize(GameObject player, InputReader input)
     {
         animationHash = Animator.StringToHash(animationStateName);
+        effectsHandler = player.GetComponent<EffectsHandler>();
     }
 
     public abstract void OnDestroyAbility();

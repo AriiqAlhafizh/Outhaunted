@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: NewVFX_KuntilanakMerah
+  m_Controller: {fileID: 9100000, guid: 696200b099fc55e4dbdc0b25d357f0b1, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 65516f9aa189e0f468b4b43af0409b80, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e3a1260adfbdffd45b1a88384fbd4db2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8e48bc94d36aed14c9aa374476a4837b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6a54eb1fb341cad43aebbf59cf3b9295, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c3332f159fbac7748abf98737481fcb6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6ad392c9df5a0894da4904f9f032a49e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3fa6a469b26b2a04dbc83031ac502bce, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3fa6a469b26b2a04dbc83031ac502bce, type: 2}
