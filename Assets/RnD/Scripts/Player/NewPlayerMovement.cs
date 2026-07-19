@@ -27,6 +27,7 @@ public class NewPlayerMovement : MonoBehaviour
     [SerializeField] private float lowJumpMultiplier = 5f; // Increases gravity when jump is released early
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private float jumpBufferTime = 0.15f;
+
     private bool isJumping;
     private bool canJump;
     private float coyoteTimeCounter;

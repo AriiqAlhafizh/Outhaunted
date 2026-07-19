@@ -9,19 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bdaa5ca063a7f45a4e543b94e44d81, type: 3}
-  m_Name: KuntilanakNormal
-  m_EditorClassIdentifier: Assembly-CSharp::AttackSO
-  abilityName: KuntilanakNormal
+  m_Script: {fileID: 11500000, guid: 46ee9a2742a7ded42ab3ad2a09f44509, type: 3}
+  m_Name: KuntilanakComboAttack
+  m_EditorClassIdentifier: Assembly-CSharp::ComboAttackSO
+  abilityName: Combo
   cooldownDuration: 0
   animationStateName: Attack_1
+  abilitySound: {fileID: 8300000, guid: 7a483301955096d4f9d66a765c0dd1d1, type: 3}
   characterData: {fileID: 11400000, guid: e5d792ac892682b4cbc32bd0a6795505, type: 2}
   hitboxSize: {x: 2, y: 1.5}
   hitboxOffset: {x: 1, y: 0}
   activeDuration: 0.15
-  vfxOffset: {x: 1, y: 0, z: 0}
+  vfxOffset: {x: 0.5, y: 0.5, z: 0}
   vfxAnimationName: Attack_1
   atkDir: 1
   lastXDir: 1
   lastAttackTime: -Infinity
   lastPogoAttackTime: -Infinity
+  attackIndex: 0
+  ComboAnimationName: Attack_2
+  ComboVFXOffset: {x: 0.5, y: 0.5, z: 0}
+  ComboVFXAnimationName: Attack_2
+  comboSound: {fileID: 8300000, guid: 7a483301955096d4f9d66a765c0dd1d1, type: 3}

@@ -13,6 +13,9 @@ public abstract class AbilitySO : ScriptableObject
     [SerializeField] private string animationStateName;
     protected int animationHash;
 
+    [Header("SFX")]
+    [SerializeField] protected AudioClip abilitySound;
+
     public event Action<int> OnAbilityExecuted;
 
     protected EffectsHandler effectsHandler;

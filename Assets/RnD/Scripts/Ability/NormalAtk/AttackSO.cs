@@ -53,6 +53,7 @@ public class AttackSO : AbilitySO
     public override void OnDestroyAbility()
     {
         input.AttackPressed -= Attack;
+        input.MovementChanged -= GetAttackDirection;
     }
 
     public void Attack()
@@ -75,6 +76,7 @@ public class AttackSO : AbilitySO
         if (effectsHandler != null) {
             effectsHandler.TriggerHitbox(hitboxSize, hitboxOffset, damage, activeDuration, atkDir);
             effectsHandler.PlaySpriteVFX(_vfxAnimHash, vfxOffset);
+            effectsHandler.PlaySound(abilitySound);
         }
         TriggerAnimation(animationHash);
 

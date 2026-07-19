@@ -59,7 +59,10 @@ public class NewPlayerAnimation : MonoBehaviour
     }
 
     private void PlayJump() => ChangeAnimationState(PlayerJump);
-    private void PlayOnAir() => ChangeAnimationState(PlayerOnAir);
+    private void PlayOnAir() {
+        if (IsAnimationLocked()) return;
+        ChangeAnimationState(PlayerOnAir); 
+    } 
     private void PlayLanding() => ChangeAnimationState(PlayerLanding);
     private void PlayHurt() => ChangeAnimationState(PlayerHurt);
     private void PlayAbilityAnimation(int animHash)
@@ -77,7 +80,7 @@ public class NewPlayerAnimation : MonoBehaviour
 
     private bool IsAnimationLocked()
     {
-        if (currentStateHash !=  PlayerWalk && currentStateHash != PlayerIdle)
+        if (currentStateHash !=  PlayerWalk && currentStateHash != PlayerIdle && currentStateHash != PlayerOnAir)
         {
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 

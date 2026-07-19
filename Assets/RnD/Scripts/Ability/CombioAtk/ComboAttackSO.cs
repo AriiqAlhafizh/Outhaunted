@@ -17,6 +17,9 @@ public class ComboAttackSO : AttackSO
     [SerializeField] private string ComboVFXAnimationName;
     private int _ComboVFXAnimHash;
 
+    [Header ("Additional SFX Configuration")]
+    [SerializeField] private AudioClip comboSound;
+
     public override void Initialize(GameObject player, InputReader _input)
     {
         base.Initialize(player, _input);
@@ -30,11 +33,11 @@ public class ComboAttackSO : AttackSO
 
         if (attackIndex == 0)
         {
-            Debug.Log("Attack 1");
             if (effectsHandler != null)
             {
                 effectsHandler.TriggerHitbox(hitboxSize, hitboxOffset, damage, activeDuration, atkDir);
                 effectsHandler.PlaySpriteVFX(_vfxAnimHash, vfxOffset);
+                effectsHandler.PlaySound(abilitySound);
             }
 
             TriggerAnimation(animationHash);
@@ -42,12 +45,11 @@ public class ComboAttackSO : AttackSO
         }
         else
         {
-            Debug.Log("Attack 2");
-
             if (effectsHandler != null)
             {
                 effectsHandler.TriggerHitbox(hitboxSize, hitboxOffset, damage, activeDuration, atkDir);
                 effectsHandler.PlaySpriteVFX(_ComboVFXAnimHash, ComboVFXOffset);
+                effectsHandler.PlaySound(comboSound);
             }
             TriggerAnimation(comboAnimationHash);
             attackIndex = 0;
