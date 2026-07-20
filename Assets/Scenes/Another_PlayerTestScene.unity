@@ -1382,14 +1382,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 328128077524227466, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 328128077524227466, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.9857244
@@ -1428,10 +1420,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3144782927419099345, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052693101160497168, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}

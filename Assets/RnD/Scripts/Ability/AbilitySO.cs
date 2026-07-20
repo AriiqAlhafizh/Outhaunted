@@ -27,19 +27,21 @@ public abstract class AbilitySO : ScriptableObject
     }
 
     public abstract void OnDestroyAbility();
-    public void Tick(float deltaTime)
+    public virtual void Tick(float deltaTime)
     {
         if (_cooldownTimer > 0f)
         {
             _cooldownTimer -= deltaTime;
         }
     }
-
+    public virtual void FixedTick(float fixedDeltaTime)
+    {
+        
+    }
     protected void StartCooldown()
     {
         _cooldownTimer = cooldownDuration;
     }
-
     public float GetCooldownPercentage()
     {
         if (cooldownDuration <= 0) return 0;

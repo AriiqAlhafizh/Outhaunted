@@ -26,10 +26,17 @@ public class AbilityHandler : MonoBehaviour
 
     private void Update()
     {
-        // Alirkan Delta Time ke semua ability runtime
         foreach (var ability in _runtimeAbilities)
         {
             ability.Tick(Time.deltaTime);
+        }
+    }
+    private void FixedUpdate()
+    {
+        float fdt = Time.fixedDeltaTime;
+        foreach (var ability in _runtimeAbilities)
+        {
+            ability.FixedTick(fdt);
         }
     }
 

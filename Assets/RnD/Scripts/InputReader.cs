@@ -117,8 +117,9 @@ public class InputReader : ScriptableObject, InputSystem_Actions.IPlayerActions
         
     }
 
-    public void OnSprint(InputAction.CallbackContext context)
+    public void OnDash(InputAction.CallbackContext context)
     {
-        
+        if (context.performed)
+            DashPressed?.Invoke();
     }
 }
