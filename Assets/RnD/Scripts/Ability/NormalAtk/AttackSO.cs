@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AttackSO", menuName = "ScriptableObjects/Ability/Normal")]
+[CreateAssetMenu(fileName = "AttackSO", menuName = "ScriptableObjects/Ability/Attack/Normal")]
 public class AttackSO : AbilitySO
 {
     [Header("References")]
     [SerializeField] private CharacterData characterData;
+    private AbilityHandler abilityHandler;
     private InputReader input;
     private EnvironmentSensor2D envSensor;
 
@@ -38,6 +39,7 @@ public class AttackSO : AbilitySO
     {
         base.Initialize(player, _input);
         envSensor = player.GetComponent<EnvironmentSensor2D>();
+        abilityHandler = player.GetComponent<AbilityHandler>();
 
         _vfxAnimHash = Animator.StringToHash(vfxAnimationName);
 
@@ -58,6 +60,8 @@ public class AttackSO : AbilitySO
 
     public void Attack()
     {
+        if (!abilityHandler.canUseAbilities) return;
+
         float currentCooldown = cooldownDuration;
         float lastTime = lastAttackTime;
 

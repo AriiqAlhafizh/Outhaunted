@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class CharacterDataManager : MonoBehaviour
 {
     [SerializeField] private CharacterDataAnchorSO runtimeAnchor;
+
+    public event Action OnTemporaryBuffEnded;
 
     private readonly Dictionary<BuffDataSO, Coroutine> _activeCoroutines = new Dictionary<BuffDataSO, Coroutine>();
 
@@ -43,6 +46,7 @@ public class CharacterDataManager : MonoBehaviour
     {
         yield return new WaitForSeconds(buff.duration);
         RemoveBuff(buff);
+        OnTemporaryBuffEnded?.Invoke();
     }
 
     public void TakeDamage(float rawDamage)

@@ -30,7 +30,7 @@ public class NewPlayerMovement : MonoBehaviour
     [SerializeField] private float jumpBufferTime = 0.15f;
 
     private bool isJumping;
-    private bool canJump;
+    public bool canJump;
     private float coyoteTimeCounter;
     private bool wasGrounded;
     private float jumpBufferCounter;

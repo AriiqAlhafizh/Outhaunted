@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5efe8ce5bd6944d41a8c55e1b0563a15, type: 3}
+  m_Name: KuntilanakPhase
+  m_EditorClassIdentifier: Assembly-CSharp::PhaseAbilitySO
+  abilityName: Kuntilanak Phasetough
+  cooldownDuration: 1
+  animationStateName: PhaseThrough
+  abilitySound: {fileID: 8300000, guid: 9286df91f70c8aa4fa37ee95aba2743b, type: 3}
+  characterDataAnchor: {fileID: 11400000, guid: 0e2ecf4ec98dca44ab3094dd2e8340ad, type: 2}
+  phaseBuff: {fileID: 11400000, guid: 2f59fe3190adaa94191b4874141de1b9, type: 2}
+  vfxOffset: {x: 0, y: 0.5, z: 0}
+  vfxAnimationName: PhaseThrough
+  enemyLayerName: Enemy
+  playerLayerName: Player
+  inPhaseMode: 0
+  lastPhaseTime: -Infinity
+  defaultMoveSpeed: 0
+  defaultGravity: 0

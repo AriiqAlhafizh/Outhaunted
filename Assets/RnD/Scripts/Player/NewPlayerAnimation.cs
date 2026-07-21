@@ -14,7 +14,7 @@ public class NewPlayerAnimation : MonoBehaviour
 
     private int currentStateHash;
     private bool isAttacking;
-    private bool isInAbility;
+    public bool isInAbility = false;
 
     public readonly int PlayerHurt = Animator.StringToHash("Hurt");
     public readonly int PlayerIdle = Animator.StringToHash("Idle");
@@ -51,6 +51,7 @@ public class NewPlayerAnimation : MonoBehaviour
     private void HandleMovementAnimation(Vector2 velocity)
     {
         if (IsAnimationLocked()) return;
+        if (isInAbility) return;
 
         if (velocity.magnitude > 0.1f)
             ChangeAnimationState(PlayerWalk);
@@ -61,6 +62,8 @@ public class NewPlayerAnimation : MonoBehaviour
     private void PlayJump() => ChangeAnimationState(PlayerJump);
     private void PlayOnAir() {
         if (IsAnimationLocked()) return;
+        if (isInAbility) return;
+
         ChangeAnimationState(PlayerOnAir); 
     } 
     private void PlayLanding() => ChangeAnimationState(PlayerLanding);

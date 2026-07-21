@@ -7,7 +7,10 @@ public class AbilityHandler : MonoBehaviour
     [SerializeField] private InputReader inputReader;
     [SerializeField] private List<AbilitySO> equippedAbilities;
 
+    public bool canUseAbilities = true;
+
     private List<AbilitySO> _runtimeAbilities = new List<AbilitySO>();
+
     public event Action<int> OnPlayAbilityAnimation;
 
     private void Start()
