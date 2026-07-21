@@ -4,7 +4,7 @@ public enum BossType
     TripleTMascot,
     RayapBesi
 }
-[CreateAssetMenu(fileName = "NewEntity", menuName = "Entity/Boss")]
+[CreateAssetMenu(fileName = "NewEntity", menuName = "ScriptableObjects/Entities/Boss")]
 public class BossData : ScriptableObject
 {
     [Header("Boss Settings")]

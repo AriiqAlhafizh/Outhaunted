@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7287692acee7184da276a7b0f568d84, type: 3}
   m_Name: GlideSO
   m_EditorClassIdentifier: Assembly-CSharp::GlideSO
-  abilityName: 
+  abilityName: Glide
   cooldownDuration: 0
   animationStateName: 
   abilitySound: {fileID: 0}

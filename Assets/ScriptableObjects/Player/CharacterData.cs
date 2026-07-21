@@ -6,7 +6,7 @@ public enum PlayerType
     Kuntilanak,
     Pocong
 }
-[CreateAssetMenu(fileName = "NewEntity", menuName = "Entity/PlayerCharacter")]
+[CreateAssetMenu(fileName = "NewEntity", menuName = "ScriptableObjects/Entities/PlayerCharacter")]
 public class CharacterData : ScriptableObject
 {
     [Header("Player Settings")]
@@ -20,7 +20,8 @@ public class CharacterData : ScriptableObject
     public float moveSpeed;
     public float jumpForce;
     public float attackDamage;
-    public float pogoCooldown;
     public float attackCooldown;
+    public float attackRange;
+    public float pogoCooldown;
     public float iFrameDuration;
 }

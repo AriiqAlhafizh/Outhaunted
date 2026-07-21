@@ -1384,11 +1384,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.9857244
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3773394
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 1674165084419539350, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1422,6 +1422,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2658592529001563507, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
+      propertyPath: equippedAbilities.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2658592529001563507, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
+      propertyPath: 'equippedAbilities.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b64f36a15c2da704ab42e3bddc6cff84, type: 2}
     - target: {fileID: 4052693101160497168, guid: 01e4aa55ef19b7b4aa34db069d415d7d, type: 3}
       propertyPath: m_Name
       value: NotKuntilanak

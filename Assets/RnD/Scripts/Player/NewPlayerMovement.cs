@@ -9,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private InputReader inputReader;
     [SerializeField] private CharacterData characterData; //subject to change
+    [SerializeField] private CharacterDataAnchorSO runtimeCharacterData;
 
     private Rigidbody2D rb;
     private EnvironmentSensor2D environmentSensor;
@@ -48,17 +49,21 @@ public class NewPlayerMovement : MonoBehaviour
         inputReader.JumpPressed += JumpPressed;
         inputReader.JumpReleased += JumpReleased;
 
+        runtimeCharacterData.OnStatChanged += StatsChange;
+
         canMove = true;
         canJump = true;
 
-        moveSpeed = characterData.moveSpeed;
-        jumpForce = characterData.jumpForce;
+        moveSpeed = runtimeCharacterData.GetStat(StatType.MoveSpeed);
+        jumpForce = runtimeCharacterData.GetStat(StatType.JumpForce);
     }
     private void OnDisable()
     {
         inputReader.MovementChanged -= Move;
         inputReader.JumpPressed -= JumpPressed;
         inputReader.JumpReleased -= JumpReleased;
+
+        runtimeCharacterData.OnStatChanged -= StatsChange;
     }
     private void Update()
     {
@@ -70,6 +75,21 @@ public class NewPlayerMovement : MonoBehaviour
     private void Move(Vector2 _movementVector)
     {
         movementVector = _movementVector;
+    }
+
+    private void StatsChange(StatType type, float newValue)
+    {
+        switch (type)
+        {
+            case StatType.MoveSpeed:
+                moveSpeed = newValue;
+                break;
+            case StatType.JumpForce:
+                jumpForce = newValue;
+                break;
+            default:
+                break;
+        }
     }
 
     private void MoveHandler()
