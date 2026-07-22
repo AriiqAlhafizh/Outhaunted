@@ -113,8 +113,7 @@ public class PlayerAttack : MonoBehaviour
         float lastTime = isPogo ? lastPogoAttackTime : lastAttackTime;
 
         if (Time.time >= lastTime + currentCooldown 
-            && canAttack 
-            && !PlayerManager.Instance.inIFrame)
+            && canAttack )
         {
             if (isPogo)
                 lastPogoAttackTime = Time.time;

@@ -175,14 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4339031dc77d842931113560699046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSFX
-  walk: {fileID: 0}
   jump: {fileID: 8300000, guid: b7a0fe4e955880541a42b41b667e0f0b, type: 3}
   land: {fileID: 8300000, guid: 90f04a8f456b211439ea2513589a6882, type: 3}
   combo: {fileID: 8300000, guid: 34772bb8a5c25f84da665558fe07a824, type: 3}
   hurt: {fileID: 8300000, guid: 042f495ddc9ed7a43bdae1fe684bb32b, type: 3}
-  die: {fileID: 0}
   attack: {fileID: 8300000, guid: 7a483301955096d4f9d66a765c0dd1d1, type: 3}
   attackHit: {fileID: 8300000, guid: 99eda897c3e8f414481808654b2302f1, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &4010382558878353055
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,10 +627,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522e6df8b7154354cb5c73502b6482fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicComboAbility
-  dmgMultiplier: 0.5
+  dmgMultiplier: 1
   sizeMultiplier: 0.5
   normalSize: 1
-  maxCombo: 6
+  maxCombo: 10
   curCombo: 0
   redMode: {fileID: 22100000, guid: c7563addef058084d92869be11955eb8, type: 2}
 --- !u!114 &5205309038272070917
@@ -818,7 +817,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1907361128432947040, guid: f08e931767b379f4c9bb49d6443789c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1058,7 +1057,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8508668159973709810, guid: f08e931767b379f4c9bb49d6443789c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

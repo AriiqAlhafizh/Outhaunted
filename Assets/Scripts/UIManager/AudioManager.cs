@@ -11,12 +11,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip T3;
     public AudioClip Rayap;
 
-    [Header("SFX")]
-    public AudioClip AttackPocong;
-    public AudioClip AttackKuntilanak;
-    public AudioClip Jump;
-    public AudioClip Invisible;
-
     public static AudioManager Instance;
 
     private void Awake()
@@ -51,11 +45,4 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PlaySFX(AudioClip clip)
-    {
-        if (clip == null)
-            return;
-
-        sfxSource.PlayOneShot(clip);
-    }
 }

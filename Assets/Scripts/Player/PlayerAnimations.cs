@@ -29,8 +29,19 @@ public class PlayerAnimations : MonoBehaviour
             anim => animator.Add(anim.GetComponent<Animator>())
             );
         defaultController = animator[0].runtimeAnimatorController;
+
+        PlayerManager.Instance.OnDeath += HidePlayer;
     }
 
+    private void OnDisable()
+    {
+        PlayerManager.Instance.OnDeath -= HidePlayer;
+    }
+
+    public void HidePlayer()
+    {
+        animator.ForEach(anim => anim.gameObject.GetComponent<SpriteRenderer>().enabled = false);
+    }
     public void OverrideAnimation()
     {
         foreach (var anim in animator)

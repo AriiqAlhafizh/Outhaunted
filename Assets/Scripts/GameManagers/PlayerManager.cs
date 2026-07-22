@@ -77,10 +77,6 @@ public class PlayerManager : MonoBehaviour
         CurrentCharacter = characterData;
         ResetStats();
     }
-    public void GotoScene(string sceneName)
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
-    }
 
     public void TakeDamage()
     {
@@ -104,6 +100,6 @@ public class PlayerManager : MonoBehaviour
         InGame = false;
         RemovePlayerContext();
         AudioManager.Instance.PlayMusic(AudioManager.Instance.MainMenu);
-        SceneManager.LoadScene("MainMenu");
+        SceneTransitionManager.Instance.TransitionToScene("MainMenu");
     }
 }

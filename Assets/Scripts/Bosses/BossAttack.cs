@@ -30,11 +30,13 @@ public class BossAttack : MonoBehaviour
     {
         if (IsReady)
         {
-            bossSFX.Play(attackPrepSound);
+            if (attackPrepSound != null)
+                bossSFX.Play(attackPrepSound);
             animator.Play(AnimationPrep);
             yield return new WaitForSeconds(DelayBeforeAttack);
 
-            bossSFX.Play(attackSound);
+            if (attackSound != null)
+                bossSFX.Play(attackSound);
             animator.Play(AnimationAttack);
             ActionEvent?.Invoke();
             yield return new WaitForSeconds(Duration);
